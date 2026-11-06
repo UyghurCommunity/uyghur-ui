@@ -67,6 +67,8 @@ Override `--ug-blue`, `--ug-accent`, `--ug-radius`, `--ug-font` and other tokens
 
 SVG assets live in `assets/icons/` and `assets/flags/east-turkistan.svg`. A complete download is linked from the gallery. SVG render options are bounded and labels are escaped. Never pass untrusted markup directly to `innerHTML`; the gallery only inserts the library's fixed validated SVG output.
 
+Installed-package asset subpaths are `@uyghurcommunity/ui/icons/flower` (icon name without an extension) and `@uyghurcommunity/ui/flags/east-turkistan.svg`. The JavaScript render functions are available from the root import or `@uyghurcommunity/ui/icons`.
+
 ## Run and verify
 
 ```sh
