@@ -1,0 +1,30 @@
+{
+  "name": "@uyghurcommunity/ui",
+  "version": "0.1.0",
+  "description": "Uyghur-first RTL UI components, accessible native controllers, SVG icons and an East Turkistan flag asset.",
+  "type": "module",
+  "license": "MIT",
+  "author": "UyghurCommunity",
+  "engines": { "node": ">=20" },
+  "exports": {
+    ".": { "types": "./src/index.d.ts", "import": "./src/index.js" },
+    "./icons": { "types": "./src/icons.d.ts", "import": "./src/icons.js" },
+    "./styles.css": "./src/styles.css",
+    "./font.css": "./src/font.css",
+    "./icons/*": "./assets/icons/*.svg",
+    "./flags/east-turkistan.svg": "./assets/flags/east-turkistan.svg",
+    "./package.json": "./package.json"
+  },
+  "files": ["src", "assets/icons", "assets/flags", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md"],
+  "sideEffects": ["**/*.css"],
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "build:icons": "node scripts/build-icons.mjs",
+    "prepack": "npm run check && npm test"
+  },
+  "repository": { "type": "git", "url": "https://github.com/UyghurCommunity/uyghur-ui.git" },
+  "homepage": "https://uyghurcommunity.github.io/uyghur-ui/",
+  "keywords": ["uyghur", "rtl", "components", "icons", "svg", "accessibility", "east-turkistan"],
+  "publishConfig": { "access": "public" }
+}
