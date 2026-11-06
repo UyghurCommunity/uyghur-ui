@@ -1,4 +1,5 @@
-export { iconSVG, flagSVG, iconNames, directionalIcons } from './icons.js';
+export { iconSVG, flagSVG, iconNames, directionalIcons, iconCatalog, iconCategories, findIcons } from './icons.js';
+export type { IconCategory, IconFilter, IconEntry } from './icons.js';
 export interface Controller { destroy(): void }
 export declare function bindDialog(dialog: HTMLDialogElement, options?: { trigger?: HTMLElement; initialFocus?: HTMLElement }): Controller & { open(): void; close(value?: string): void };
 export declare function bindDisclosure(button: HTMLElement, panel: HTMLElement): Controller & { setOpen(value: boolean): void; toggle(): void };

@@ -1,4 +1,4 @@
-import { bindDialog, bindTabs, bindDisclosure, bindForm, showToast, iconNames, iconSVG, flagSVG } from '../src/index.js';
+import { bindDialog, bindTabs, bindDisclosure, bindForm, showToast, iconNames, iconSVG, flagSVG, iconCatalog, iconCategories, findIcons } from '../src/index.js';
 import { components } from './components.js';
 import { componentSnippet } from './snippets.js';
 const $ = (id) => document.getElementById(id), bindings = [];
@@ -64,19 +64,29 @@ $('copy-flag').addEventListener('click', () => copy(flagSVG({ width: 900 })));
 let theme = 'light';
 $('theme').addEventListener('click', () => { theme = theme === 'light' ? 'dark' : 'light'; document.documentElement.dataset.ugTheme = theme; $('theme').setAttribute('aria-pressed', String(theme === 'dark')); $('theme').innerHTML = iconSVG(theme === 'dark' ? 'sun' : 'moon'); });
 let selectedIcon = 'flower';
+let iconCategory = 'traditional';
+const iconDetails = Object.fromEntries(iconCatalog.map((entry) => [entry.name, entry]));
+const categoryDetails = Object.fromEntries(iconCategories.map((entry) => [entry.id, entry]));
 const iconDialog = bindDialog($('icon-dialog'), { initialFocus: $('icon-dialog-title') }); bindings.push(iconDialog);
 function renderIcons() {
-  const query = $('icon-search').value.trim().toLowerCase(), size = Number($('icon-size').value), names = iconNames.filter((name) => name.includes(query));
-  $('size-label').textContent = `${size}px`; $('icon-count').textContent = iconNames.length; $('icon-status').textContent = `${iconNames.length} سىنبەلگىدىن ${names.length} سى كۆرسىتىلدى`;
+  const size = Number($('icon-size').value), names = findIcons($('icon-search').value, { category: iconCategory });
+  $('size-label').textContent = `${size}px`; $('icon-count').textContent = iconNames.length;
+  $('traditional-count').textContent = findIcons('', { category: 'traditional' }).length;
+  $('icon-status').textContent = `${categoryDetails[iconCategory].ug} · ${names.length} سىنبەلگە كۆرسىتىلدى`;
+  $('icon-empty').hidden = names.length > 0;
   const fragment = document.createDocumentFragment();
   for (const name of names) {
-    const button = document.createElement('button'); button.type = 'button'; button.className = 'icon-tile'; button.setAttribute('aria-label', `${name} سىنبەلگىسىنى كۆرۈش`); button.innerHTML = iconSVG(name, { size }); const label = document.createElement('span'); label.lang = 'en'; label.dir = 'ltr'; label.textContent = name; button.append(label);
-    button.addEventListener('click', () => { selectedIcon = name; $('icon-large').innerHTML = iconSVG(name, { size: 80, label: name }); $('icon-dialog-title').textContent = name; $('icon-download').href = `assets/icons/${name}.svg`; $('icon-download').download = `${name}.svg`; iconDialog.open(); }); fragment.append(button);
+    const entry = iconDetails[name], button = document.createElement('button'); button.type = 'button'; button.className = 'icon-tile'; button.setAttribute('aria-label', `${entry.ug} سىنبەلگىسىنى كۆرۈش`); button.innerHTML = iconSVG(name, { size });
+    const label = document.createElement('span'), slug = document.createElement('span'); label.className = 'icon-label'; label.lang = 'ug'; label.dir = 'rtl'; label.textContent = entry.ug; slug.className = 'icon-name'; slug.lang = 'en'; slug.dir = 'ltr'; slug.textContent = name; button.append(label, slug);
+    button.addEventListener('click', () => { selectedIcon = name; $('icon-large').innerHTML = iconSVG(name, { size: 80, label: entry.ug }); $('icon-dialog-title').textContent = entry.ug; $('icon-dialog-name').textContent = `${entry.en} / ${name}`; $('icon-dialog-category').textContent = categoryDetails[entry.category].ug; $('icon-download').href = `assets/icons/${name}.svg`; $('icon-download').download = `${name}.svg`; iconDialog.open(); }); fragment.append(button);
   }
   $('icon-grid').replaceChildren(fragment);
 }
+document.querySelectorAll('[data-icon-total]').forEach((node) => { node.textContent = findIcons('', { category: node.dataset.iconTotal }).length; });
+document.querySelectorAll('[data-icon-category]').forEach((button) => button.addEventListener('click', () => { iconCategory = button.dataset.iconCategory; document.querySelectorAll('[data-icon-category]').forEach((item) => item.setAttribute('aria-pressed', String(item === button))); renderIcons(); }));
+$('icon-reset').addEventListener('click', () => { iconCategory = 'all'; $('icon-search').value = ''; document.querySelectorAll('[data-icon-category]').forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.iconCategory === 'all'))); renderIcons(); $('icon-search').focus(); });
 $('icon-search').addEventListener('input', renderIcons); $('icon-size').addEventListener('input', renderIcons);
-$('icon-copy').addEventListener('click', () => copy(iconSVG(selectedIcon, { size: Number($('icon-size').value), label: selectedIcon })));
+$('icon-copy').addEventListener('click', () => copy(iconSVG(selectedIcon, { size: Number($('icon-size').value), label: iconDetails[selectedIcon].ug })));
 const motion = matchMedia('(prefers-reduced-motion: reduce)'); let paused = false, inView = true;
 function syncMotion() { const stopped = paused || motion.matches; document.documentElement.dataset.motion = stopped || document.hidden || !inView ? 'paused' : 'running'; $('motion').disabled = motion.matches; $('motion').setAttribute('aria-pressed', String(stopped)); $('motion').textContent = motion.matches ? 'ھەرىكەت ئازايتىلغان' : paused ? 'داۋاملاشتۇرۇش ▷' : 'توختىتىش Ⅱ'; }
 $('motion').hidden = false; $('motion').addEventListener('click', () => { paused = !paused; syncMotion(); }); motion.addEventListener('change', syncMotion); document.addEventListener('visibilitychange', syncMotion);

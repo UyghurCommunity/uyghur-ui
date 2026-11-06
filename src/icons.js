@@ -1,3 +1,6 @@
+import { traditionalDrawings } from './traditional-drawings.js';
+import { iconLabels, iconCategories } from './icon-labels.js';
+export { iconCategories } from './icon-labels.js';
 /** Original 24×24 stroke drawings. The flag is a separate public-domain asset. */
 const drawings = {
   'arrow-left': '<path d="M19 12H5m6-6-6 6 6 6"/>',
@@ -50,8 +53,25 @@ const drawings = {
   'flower': '<path d="M12 11C5 8 7 2 12 4c5-2 7 4 0 7Zm1 1c3-7 9-5 7 0 2 5-4 7-7 0Zm-1 1c7 3 5 9 0 7-5 2-7-4 0-7Zm-1-1c-3 7-9 5-7 0-2-5 4-7 7 0Z"/>',
   'almond': '<path d="M12 2C3 8 4 18 12 22c8-4 9-14 0-20Zm0 5c-4 4-4 8 0 11m0-5 4-4m-4 7-4-3"/>',
   'doppa': '<path d="m3 10 9-6 9 6-2 9-7 3-7-3Zm0 0 9 3 9-3m-9 3v9M7 11l5-4 5 4"/>',
+  ...traditionalDrawings,
 };
 export const iconNames = Object.freeze(Object.keys(drawings).sort());
+export const iconCatalog = Object.freeze(iconNames.map((name) => {
+  if (!Object.hasOwn(iconLabels, name)) throw new Error(`Missing icon label: ${name}`);
+  return Object.freeze({ name, ...iconLabels[name] });
+}).sort((a, b) => Number(a.category === 'general') - Number(b.category === 'general') || (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)));
+const normalizeSearch = (text) => text.normalize('NFKC').toLowerCase().replace(/[’'ʻʼ]/g, '').replace(/[-_\s]+/g, ' ').trim();
+/** Search names, Uyghur labels, English labels and aliases; category and query combine. */
+export function findIcons(query = '', { category = 'all' } = {}) {
+  if (typeof query !== 'string') throw new TypeError('Icon query must be a string');
+  if (!iconCategories.some((entry) => entry.id === category)) throw new RangeError('Unknown icon category');
+  const terms = normalizeSearch(query).split(' ').filter(Boolean);
+  return iconCatalog.filter((entry) => {
+    const matchesCategory = category === 'all' || (category === 'traditional' ? entry.category !== 'general' : entry.category === category);
+    const haystack = normalizeSearch([entry.name, entry.ug, entry.en, ...entry.keywords].join(' '));
+    return matchesCategory && terms.every((term) => haystack.includes(term));
+  }).map((entry) => entry.name);
+}
 export const directionalIcons = Object.freeze(['arrow-left', 'arrow-right', 'chevron-left', 'chevron-right']);
 export function escapeMarkup(value) {
   return String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

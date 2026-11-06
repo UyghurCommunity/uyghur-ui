@@ -1,0 +1,700 @@
+{
+  "version": "0.2.0",
+  "categories": [
+    {
+      "id": "all",
+      "ug": "ھەممىسى",
+      "en": "All icons"
+    },
+    {
+      "id": "traditional",
+      "ug": "مىراس",
+      "en": "Uyghur-inspired"
+    },
+    {
+      "id": "music",
+      "ug": "سازلار",
+      "en": "Instruments"
+    },
+    {
+      "id": "textiles",
+      "ug": "نەقىش ۋە توقۇمىچىلىق",
+      "en": "Textiles and motifs"
+    },
+    {
+      "id": "architecture",
+      "ug": "بىناكارلىق",
+      "en": "Architecture"
+    },
+    {
+      "id": "table",
+      "ug": "داستىخان",
+      "en": "Food and tea"
+    },
+    {
+      "id": "garden",
+      "ug": "باغ",
+      "en": "Garden"
+    },
+    {
+      "id": "general",
+      "ug": "كۆرۈنمە يۈز",
+      "en": "Interface"
+    }
+  ],
+  "icons": [
+    {
+      "name": "almond",
+      "ug": "بادام نەقشى",
+      "en": "Almond motif",
+      "category": "textiles",
+      "keywords": [
+        "badam",
+        "paisley",
+        "ornament",
+        "نەقىش"
+      ]
+    },
+    {
+      "name": "apricot",
+      "ug": "ئۆرۈك",
+      "en": "Apricot",
+      "category": "garden",
+      "keywords": [
+        "oruk",
+        "fruit",
+        "باغ",
+        "مېۋە"
+      ]
+    },
+    {
+      "name": "archway",
+      "ug": "راۋاق",
+      "en": "Arched gateway",
+      "category": "architecture",
+      "keywords": [
+        "arch",
+        "gateway",
+        "ئەگمە دەرۋازا"
+      ]
+    },
+    {
+      "name": "atlas",
+      "ug": "ئەتلەس",
+      "en": "Atlas silk",
+      "category": "textiles",
+      "keywords": [
+        "etles",
+        "ikat",
+        "silk",
+        "رەخت"
+      ]
+    },
+    {
+      "name": "aywan",
+      "ug": "ئايۋان",
+      "en": "Aywan",
+      "category": "architecture",
+      "keywords": [
+        "eywan",
+        "veranda",
+        "courtyard",
+        "ھويلا"
+      ]
+    },
+    {
+      "name": "carpet",
+      "ug": "گىلەم",
+      "en": "Carpet",
+      "category": "textiles",
+      "keywords": [
+        "gilem",
+        "rug",
+        "woven"
+      ]
+    },
+    {
+      "name": "carved-door",
+      "ug": "ئويما ئىشىك",
+      "en": "Carved door",
+      "category": "architecture",
+      "keywords": [
+        "woodwork",
+        "oyma",
+        "ئىشىك"
+      ]
+    },
+    {
+      "name": "dap",
+      "ug": "داپ",
+      "en": "Dap",
+      "category": "music",
+      "keywords": [
+        "daph",
+        "frame drum",
+        "tambourine",
+        "ساز"
+      ]
+    },
+    {
+      "name": "doppa",
+      "ug": "دوپپا",
+      "en": "Doppa",
+      "category": "textiles",
+      "keywords": [
+        "döppä",
+        "do ppa",
+        "cap",
+        "hat",
+        "كەشتە"
+      ]
+    },
+    {
+      "name": "dutar",
+      "ug": "دۇتار",
+      "en": "Dutar",
+      "category": "music",
+      "keywords": [
+        "doutar",
+        "dotar",
+        "two string lute",
+        "ساز"
+      ]
+    },
+    {
+      "name": "embroidery",
+      "ug": "كەشتە",
+      "en": "Embroidery",
+      "category": "textiles",
+      "keywords": [
+        "keshte",
+        "needle",
+        "thread",
+        "يىپ"
+      ]
+    },
+    {
+      "name": "flower",
+      "ug": "گۈل نەقشى",
+      "en": "Floral motif",
+      "category": "textiles",
+      "keywords": [
+        "gul",
+        "rosette",
+        "ornament",
+        "نەقىش"
+      ]
+    },
+    {
+      "name": "ghijek",
+      "ug": "غېجەك",
+      "en": "Ghijek",
+      "category": "music",
+      "keywords": [
+        "ghijak",
+        "ghichak",
+        "غىجەك",
+        "bowed fiddle",
+        "ساز"
+      ]
+    },
+    {
+      "name": "grapes",
+      "ug": "ئۈزۈم",
+      "en": "Grapes",
+      "category": "garden",
+      "keywords": [
+        "uzum",
+        "vine",
+        "fruit",
+        "باغ",
+        "مېۋە"
+      ]
+    },
+    {
+      "name": "laghman",
+      "ug": "لەغمەن",
+      "en": "Laghman",
+      "category": "table",
+      "keywords": [
+        "lagman",
+        "leghmen",
+        "noodles",
+        "ئاش"
+      ]
+    },
+    {
+      "name": "lattice-window",
+      "ug": "تورلۇق دېرىزە",
+      "en": "Lattice window",
+      "category": "architecture",
+      "keywords": [
+        "penjire",
+        "panjire",
+        "woodwork",
+        "پەنجىرە"
+      ]
+    },
+    {
+      "name": "loom",
+      "ug": "توقۇش دەستگاھى",
+      "en": "Loom",
+      "category": "textiles",
+      "keywords": [
+        "toqumichiliq",
+        "weaving",
+        "توقۇمىچىلىق"
+      ]
+    },
+    {
+      "name": "nan",
+      "ug": "نان",
+      "en": "Nan bread",
+      "category": "table",
+      "keywords": [
+        "naan",
+        "bread",
+        "tonur",
+        "تونۇر"
+      ]
+    },
+    {
+      "name": "polo",
+      "ug": "پولۇ",
+      "en": "Polo",
+      "category": "table",
+      "keywords": [
+        "polu",
+        "pilaf",
+        "rice",
+        "گۈرۈچ",
+        "پولو"
+      ]
+    },
+    {
+      "name": "pomegranate",
+      "ug": "ئانار",
+      "en": "Pomegranate",
+      "category": "table",
+      "keywords": [
+        "anar",
+        "fruit",
+        "مېۋە"
+      ]
+    },
+    {
+      "name": "rawap",
+      "ug": "راۋاپ",
+      "en": "Rawap",
+      "category": "music",
+      "keywords": [
+        "rawab",
+        "rubab",
+        "راۋاب",
+        "ساز"
+      ]
+    },
+    {
+      "name": "samsa",
+      "ug": "سامسا",
+      "en": "Samsa",
+      "category": "table",
+      "keywords": [
+        "samosa",
+        "pastry",
+        "samsa"
+      ]
+    },
+    {
+      "name": "satar",
+      "ug": "ساتار",
+      "en": "Satar",
+      "category": "music",
+      "keywords": [
+        "sattar",
+        "bowed lute",
+        "ساز"
+      ]
+    },
+    {
+      "name": "spindle",
+      "ug": "ئۇرچۇق",
+      "en": "Spindle",
+      "category": "textiles",
+      "keywords": [
+        "urchuq",
+        "yarn",
+        "spinning",
+        "يىپ"
+      ]
+    },
+    {
+      "name": "tambur",
+      "ug": "تەمبۈر",
+      "en": "Tambur",
+      "category": "music",
+      "keywords": [
+        "tembor",
+        "tanbur",
+        "تەمبۇر",
+        "ساز"
+      ]
+    },
+    {
+      "name": "tea-bowl",
+      "ug": "پىيالە",
+      "en": "Tea bowl",
+      "category": "table",
+      "keywords": [
+        "piyale",
+        "pigale",
+        "tea",
+        "cup",
+        "پىگالە",
+        "چاي"
+      ]
+    },
+    {
+      "name": "teapot",
+      "ug": "چەينەك",
+      "en": "Teapot",
+      "category": "table",
+      "keywords": [
+        "cheynek",
+        "chogun",
+        "tea",
+        "چۆگۈن",
+        "چاي"
+      ]
+    },
+    {
+      "name": "arrow-down",
+      "ug": "تۆۋەنگە",
+      "en": "Arrow down",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "arrow-left",
+      "ug": "سولغا",
+      "en": "Arrow left",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "arrow-right",
+      "ug": "ئوڭغا",
+      "en": "Arrow right",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "arrow-up",
+      "ug": "يۇقىرىغا",
+      "en": "Arrow up",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "book",
+      "ug": "كىتاب",
+      "en": "Book",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "calendar",
+      "ug": "كالېندار",
+      "en": "Calendar",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "check",
+      "ug": "تەستىق",
+      "en": "Check",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "check-circle",
+      "ug": "تەستىق بەلگىسى",
+      "en": "Check circle",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "chevron-down",
+      "ug": "تۆۋەن ئوق",
+      "en": "Chevron down",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "chevron-left",
+      "ug": "سول ئوق",
+      "en": "Chevron left",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "chevron-right",
+      "ug": "ئوڭ ئوق",
+      "en": "Chevron right",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "chevron-up",
+      "ug": "يۇقىرى ئوق",
+      "en": "Chevron up",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "close",
+      "ug": "تاقاش",
+      "en": "Close",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "code",
+      "ug": "كود",
+      "en": "Code",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "copy",
+      "ug": "كۆچۈرۈش",
+      "en": "Copy",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "direction-ltr",
+      "ug": "سولدىن ئوڭغا",
+      "en": "Left to right",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "direction-rtl",
+      "ug": "ئوڭدىن سولغا",
+      "en": "Right to left",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "download",
+      "ug": "چۈشۈرۈش",
+      "en": "Download",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "edit",
+      "ug": "تەھرىرلەش",
+      "en": "Edit",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "external-link",
+      "ug": "تاشقى ئۇلانما",
+      "en": "External link",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "globe",
+      "ug": "يەر شارى",
+      "en": "Globe",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "heart",
+      "ug": "يۈرەك",
+      "en": "Heart",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "home",
+      "ug": "باش بەت",
+      "en": "Home",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "image",
+      "ug": "سۈرەت",
+      "en": "Image",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "info",
+      "ug": "ئۇچۇر",
+      "en": "Information",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "keyboard",
+      "ug": "كۇنۇپكا تاختىسى",
+      "en": "Keyboard",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "language",
+      "ug": "تىل",
+      "en": "Language",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "link",
+      "ug": "ئۇلانما",
+      "en": "Link",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "mail",
+      "ug": "ئېلخەت",
+      "en": "Mail",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "menu",
+      "ug": "تىزىملىك",
+      "en": "Menu",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "minus",
+      "ug": "كېمەيتىش",
+      "en": "Minus",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "moon",
+      "ug": "ئاي",
+      "en": "Moon",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "palette",
+      "ug": "رەڭ تاختىسى",
+      "en": "Palette",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "pause",
+      "ug": "توختىتىش",
+      "en": "Pause",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "play",
+      "ug": "قويۇش",
+      "en": "Play",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "plus",
+      "ug": "قوشۇش",
+      "en": "Plus",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "redo",
+      "ug": "قايتا ئىشلەش",
+      "en": "Redo",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "search",
+      "ug": "ئىزدەش",
+      "en": "Search",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "settings",
+      "ug": "تەڭشەك",
+      "en": "Settings",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "star",
+      "ug": "يۇلتۇز",
+      "en": "Star",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "sun",
+      "ug": "قۇياش",
+      "en": "Sun",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "trash",
+      "ug": "ئۆچۈرۈش",
+      "en": "Trash",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "undo",
+      "ug": "قايتۇرۇش",
+      "en": "Undo",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "upload",
+      "ug": "يۈكلەش",
+      "en": "Upload",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "user",
+      "ug": "ئىشلەتكۈچى",
+      "en": "User",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "users",
+      "ug": "جامائەت",
+      "en": "Community",
+      "category": "general",
+      "keywords": []
+    },
+    {
+      "name": "warning",
+      "ug": "ئاگاھلاندۇرۇش",
+      "en": "Warning",
+      "category": "general",
+      "keywords": []
+    }
+  ]
+}
