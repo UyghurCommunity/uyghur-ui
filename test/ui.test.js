@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { runInNewContext } from 'node:vm';
 import { iconSVG, flagSVG, iconNames, bindDialog, bindDisclosure, bindTabs, validateForm, bindForm, showToast } from '../src/index.js';
 import { components } from '../docs/components.js';
 import { componentSnippet } from '../docs/snippets.js';
@@ -15,7 +16,7 @@ class Node {
   append(...nodes) { nodes.forEach((node) => { node.parent = this; this.children.push(node); }); }
   remove() { this.isConnected = false; if (this.parent) this.parent.children = this.parent.children.filter((n) => n !== this); }
   contains(node) { return node === this || this.children.some((n) => n.contains(node)); }
-  closest(selector) { if (selector === '[role="tab"]' && this.getAttribute('role') === 'tab' || selector === '[role="tablist"]' && this.getAttribute('role') === 'tablist' || selector === '[data-ug-close]' && this.getAttribute('data-ug-close') !== null) return this; return this.parent?.closest(selector) ?? null; }
+  closest(selector) { if (selector === '[role="tab"]' && this.getAttribute('role') === 'tab' || selector === '[role="tablist"]' && this.getAttribute('role') === 'tablist' || selector === '[data-ug-close]' && this.getAttribute('data-ug-close') !== null || selector === '.ug-ui' && this.className?.split(/\s+/).includes('ug-ui')) return this; return this.parent?.closest(selector) ?? null; }
   focus() { this.ownerDocument.activeElement = this; }
 }
 function documentMock(dir = 'rtl') { const doc = { documentElement: { dir }, nodes: new Map(), createElement: () => new Node(doc), getElementById: (id) => doc.nodes.get(id), defaultView: { getComputedStyle: (node) => ({ direction: node.dir || dir }) } }; return doc; }
@@ -51,6 +52,29 @@ test('copied gallery snippets carry the Uyghur scope and rendered SVG rather tha
     const placeholders = [...component.html.matchAll(/data-ug-icon="([a-z-]+)"/g)];
     for (const [, name] of placeholders) assert.ok(snippet.includes(iconSVG(name)));
   }
+});
+test('copied feedback script creates its own live region and wires a persistent dismissible toast from a blank page', () => {
+  const doc = documentMock(), scope = new Node(doc), button = new Node(doc), deliveries = [];
+  scope.className = 'ug-ui'; scope.append(button); doc.nodes.set('toast-demo', button);
+  assert.equal(doc.getElementById('notifications'), undefined);
+  const feedback = components.find((component) => component.id === 'feedback');
+  // Supply the real imported controller, then execute the rest of the copied module unchanged.
+  const script = feedback.js.replace(/^import \{ showToast \} from '@uyghurcommunity\/ui';\n/, '');
+  runInNewContext(script, { document: doc, showToast(...args) { deliveries.push(args); return showToast(...args); } });
+  const region = scope.children.find((node) => node.className === 'ug-toast-region');
+  assert.ok(region);
+  assert.equal(region.getAttribute('role'), 'status');
+  assert.equal(region.getAttribute('aria-live'), 'polite');
+  assert.equal(region.getAttribute('aria-relevant'), 'additions text');
+  assert.equal(region.children.length, 0); assert.equal(deliveries.length, 0);
+  button.emit('click');
+  assert.equal(deliveries.length, 1); assert.equal(deliveries[0][0], region);
+  assert.equal(deliveries[0][2].duration, 0);
+  assert.equal(region.children.length, 1);
+  assert.equal(region.children[0].children[0].textContent, 'مىسال ئۇقتۇرۇش.');
+  assert.equal(region.children[0].children[1].getAttribute('aria-label'), 'ئۇقتۇرۇشنى تاقاش');
+  region.children[0].children[1].emit('click'); assert.equal(region.children.length, 0);
+  button.emit('click'); assert.equal(region.children.length, 1);
 });
 test('native dialog binding opens, restores focus, delegates close and cleans up', () => {
   const doc = documentMock(), trigger = new Node(doc), input = new Node(doc), dialog = new Node(doc), closeButton = new Node(doc);

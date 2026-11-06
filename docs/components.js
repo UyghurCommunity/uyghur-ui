@@ -37,6 +37,6 @@ export const components = [
   {
     id: 'feedback', title: 'ئۇقتۇرۇش ۋە جەريان', category: 'feedback', description: 'ئۇچۇرلارنى تېكىست بىلەن ئېنىق كۆرسىتىڭ. مۇھىم ئۇچۇرغا ۋاقىت چەكلىمىسى قويماڭ.',
     html: `<div class="ug-alert"><span data-ug-icon="info"></span><p>بۇ مىسال ئۇچۇر. بەتتىكى ھەقىقىي جەريان ۋە نەتىجىلەرنى مۇشۇ شەكىلدە ئېنىق كۆرسەتسىڭىز بولىدۇ.</p></div><div class="ug-field"><label class="ug-label" for="demo-progress">كۆرۈنۈش مىسالى: %60</label><progress class="ug-progress" id="demo-progress" value="60" max="100">60%</progress></div><button class="ug-button ug-button--secondary" id="toast-demo" type="button">ئۇقتۇرۇشنى سىناش <span data-ug-icon="check-circle"></span></button>`,
-    js: `import { showToast } from '@uyghurcommunity/ui';\n// <div id="notifications" class="ug-toast-region" role="status" aria-live="polite"></div>\nshowToast(document.getElementById('notifications'), 'مىسال ئۇقتۇرۇش.', { duration: 0 });`,
+    js: `import { showToast } from '@uyghurcommunity/ui';\nconst toastButton = document.getElementById('toast-demo');\nconst toastRegion = document.createElement('div');\ntoastRegion.className = 'ug-toast-region';\ntoastRegion.setAttribute('role', 'status');\ntoastRegion.setAttribute('aria-live', 'polite');\ntoastRegion.setAttribute('aria-relevant', 'additions text');\ntoastButton.closest('.ug-ui').append(toastRegion);\ntoastButton.addEventListener('click', () => {\n  showToast(toastRegion, 'مىسال ئۇقتۇرۇش.', { duration: 0 });\n});`,
   },
 ];
