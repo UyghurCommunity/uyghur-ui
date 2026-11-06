@@ -16,4 +16,5 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run build:icons && git diff --exit-code -- assets downloads
+      - run: npm run build:docs && git diff --exit-code -- guide index.html assets/docs-search.json
       - run: npm pack --dry-run --ignore-scripts

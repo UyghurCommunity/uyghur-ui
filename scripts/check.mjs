@@ -15,12 +15,12 @@ for (const [, references] of galleryHTML.matchAll(/\b(?:for|aria-controls|aria-l
 for (const [, ref] of galleryHTML.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
   if (/^(https?:|data:|mailto:)/.test(ref)) continue;
   if (ref.startsWith('#')) { if (!ids.includes(ref.slice(1))) throw new Error(`Missing anchor ${ref}`); }
-  else await access(resolve(root, ref));
+  else await access(resolve(root, ref.split(/[?#]/)[0]));
 }
-for (const file of ['src/index.js', 'src/icons.js', 'src/icon-labels.js', 'src/traditional-drawings.js', 'scripts/build-icons.mjs', 'scripts/zip.mjs', 'docs/app.js', 'docs/components.js', 'docs/snippets.js']) execFileSync(process.execPath, ['--check', resolve(root, file)]);
+for (const file of ['src/index.js', 'src/icons.js', 'src/icon-labels.js', 'src/traditional-drawings.js', 'scripts/build-icons.mjs', 'scripts/build-docs.mjs', 'scripts/zip.mjs', 'docs/app.js', 'docs/components.js', 'docs/snippets.js', 'docs/docs-shell.js', 'docs/site-shell.js', 'docs/guide-content.js']) execFileSync(process.execPath, ['--check', resolve(root, file)]);
 const galleryScript = await readFile(resolve(root, 'docs/app.js'), 'utf8');
 for (const [, ref] of galleryScript.matchAll(/\$\('([^']+)'\)/g)) if (!ids.includes(ref)) throw new Error(`Missing gallery JS target ${ref}`);
-for (const file of ['src/styles.css','src/font.css','docs/site.css']) {
+for (const file of ['src/styles.css','src/font.css','docs/site.css','docs/documentation.css']) {
   const css = await readFile(resolve(root, file), 'utf8');
   if ((css.match(/\{/g)||[]).length !== (css.match(/\}/g)||[]).length) throw new Error(`CSS blocks: ${file}`);
 }

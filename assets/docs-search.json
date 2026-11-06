@@ -1,0 +1,1290 @@
+{
+  "version": "0.2.0",
+  "entries": [
+    {
+      "title": "ئۇيغۇرچە قۇرۇشنى باشلاڭ",
+      "en": "Introduction",
+      "description": "ئۇيغۇرچە كۆرۈنمە يۈز، مەدەنىيەتتىن ئىلھام ئالغان سىنبەلگىلەر ۋە ئاددىي تور تېخنىكىسى بىر يەردە.",
+      "href": "guide/introduction.html",
+      "keywords": [
+        "introduction",
+        "بىر بۆلەكتىن پۈتۈن بىر كۆرۈنمە يۈزگىچە",
+        "توپلام ئىچىدە نېمىلەر بار؟",
+        "قايسى يەردىن باشلايمەن؟",
+        "تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟",
+        "بىر بۆلەكتىن پۈتۈن بىر كۆرۈنمە يۈزگىچە ئۇيغۇرچە UI بولسا ئۇيغۇرچە تور بەت قۇرۇشقا ئىشلىتىدىغان CSS بۆلەكلىرى، كىچىك JavaScript كونتروللىرى ۋە SVG سىنبەلگىلەر توپلىمى. بەتنىڭ تىلى ۋە يۆنىلىشىنى ئۆزىڭىز بەلگىلەپ، لازىملىق بۆلەكنى تۈرىڭىزگە قوشىسىز. كۇنۇپكا، رامكا، كارتا ۋە يىغىلىدىغان مەزمۇن يەرلىك HTML ئۈستىگە قۇرۇلغان. كۆزنەك، بەتكۈچ، تىزىملىك ۋە ئۇقتۇرۇشقا ئايرىم كونترول بار. بۇ شەكىل ئاددىي تور بەتتىمۇ، رامكا ئىشلىتىدىغان تۈردىمۇ بىرلا بۆلەك ئۇسلۇبىنى ساقلايدۇ. توپلام ئىچىدە نېمىلەر بار؟ بۆلەك ئىشلىتىش ئورنى كۇنۇپكا ۋە فورما كونترول، ئېنىق بەلگە، ئۇيغۇرچە خاتالىق ئۇچۇرى ۋە ياردەم تېكىستى. كۆزنەك ۋە بەتكۈچ يەرلىك modal كۆزنەك، فوكۇس قايتۇرۇش ۋە RTL ئوق كۇنۇپكىلىرى. كارتا، بەلگە ۋە تىزىملىك مەزمۇننى گۇرۇپپىلاش، ھالەتنى كۆرسىتىش ۋە يولباشلاش. 74 SVG سىنبەلگە 27 مەدەنىيەت سىنبەلگىسى، ئىككى تىللىق نام ۋە ئىزدەش يىپ ئۇچلىرى. ALKATIP Basma سىرتقى ئادرېستىن يۈكلىنىدىغان خەت نۇسخىسى ۋە زاپاس",
+        "خەتلەر. قايسى يەردىن باشلايمەن؟ قاچىلاش بۆلىكىدىن تۈرىڭىزگە ماس ئۇسۇلنى تاللاڭ. تېز باشلاش مىسالى بىلەن ھەقىقىي كۆزنەك ۋە فورما قۇرۇڭ. بۆلەكلەر ۋە سىنبەلگىلەر قوللانمىسىدىن لازىملىقىنى تېپىڭ. رەڭ ۋە خەتنى خاسلاشتۇرۇڭ ، ئاندىن كۇنۇپكا تاختىسى بىلەن سىناڭ . ھازىرقى نەشر · 0.2.0 قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ. تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟ كۈتۈپخانا تور مۇلازىمىتى، ئىشلەتكۈچى ھېسابى ياكى سانلىق مەلۇمات ساقلاشنى قوشمايدۇ. فورما نەتىجىسىنى قەيەرگە ئەۋەتىش، قايسى سانلىق مەلۇماتنى ساقلاش ۋە مەزمۇن ئىجازەتنامىسىنى قانداق كۆرسىتىشنى تۈرىڭىز بەلگىلەيدۇ. كۆرگەزمىدىكى فورما پەقەت يەرلىك سىناق. كود ۋە ئەسلى SVG سىزىقلىرى MIT ئىجازەتنامىسىدە. خەت نۇسخىسى ۋە بايراقنىڭ مەنبە ئۇچۇرىنى مەنبە خاتىرىسى دىن كۆرۈڭ."
+      ]
+    },
+    {
+      "title": "قاچىلاش",
+      "en": "Installation",
+      "description": "GitHub نەشر بوغچىسىنى قاچىلاڭ ياكى رېپو مەنبەسىنى بىۋاسىتە HTTP ئارقىلىق ئىشلىتىڭ.",
+      "href": "guide/installation.html",
+      "keywords": [
+        "installation",
+        "ئالدىن تەييارلىق",
+        "نەشر بوغچىسىنى قاچىلاش",
+        "قۇرۇلۇش قورالى بار تۈر",
+        "قۇرۇلۇش قورالى يوق ئاددىي HTML",
+        "قاچىلاشنى تەكشۈرۈش",
+        "ئالدىن تەييارلىق بوغچا بىلەن ئىشلەش ئۈچۈن Node.js 20+ ۋە ئۆز تۈرىڭىزنىڭ بوغچا باشقۇرغۇچىسى لازىم. كۈتۈپخانىنىڭ ئىجرا ۋاقتىدا باشقا JavaScript بوغچىسىغا تايىنىشچانلىقى يوق. تۈرىڭىزدە بار قۇرۇلۇش قورالىنى داۋاملىق ئىشلىتەلەيسىز. توغرا قاچىلاش ئادرېسى ھازىرچە يالغۇز npm install @uyghurcommunity/ui نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.2.0 نەشر ئارخىپىنى قاچىلايدۇ. نەشر بوغچىسىنى قاچىلاش npm npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.2.0/uyghurcommunity-ui-0.2.0.tgz pnpm pnpm add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.2.0/uyghurcommunity-ui-0.2.0.tgz Yarn yarn add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.2.0/uyghurcommunity-ui-0.2.0.tgz بۇ ئۈچ ئۇسۇلدىن تۈرىڭىزدە ئىشلىتىۋاتقان بىرىنى تاللاڭ. تۈرىڭىزنىڭ قۇلۇپ ھۆججىتىنى ساقلاڭ؛ شۇنداقتا كوماندىدىكى باشقىلارمۇ ئوخشاش بوغچا مەزمۇنىنى قاچىلايدۇ. قۇرۇلۇش",
+        "قورالى بار تۈر تۈرىڭىزنىڭ JavaScript كىرىش ھۆججىتىگە ئۇسلۇب ۋە لازىملىق كونترولنى كىرگۈزۈڭ. CSS نىڭ ئىچىدىكى خەت ھۆججىتىمۇ بىللە يۈكلىنىدۇ. import '@uyghurcommunity/ui/styles.css'; import { bindDialog, iconSVG } from '@uyghurcommunity/ui'; HTML ياكى رامكا تەركىبىدىكى سىرتقى قاچىغا ug-ui نى قوشۇڭ. ئۇيغۇرچە مەزمۇنغا lang=\"ug\" dir=\"rtl\" بەلگىلەڭ. <main class=\"ug-ui\" lang=\"ug\" dir=\"rtl\"> <button class=\"ug-button\" type=\"button\">باشلاڭ</button> </main> قۇرۇلۇش قورالى يوق ئاددىي HTML رېپونى چۈشۈرۈپ، مىسال بېتىڭىزنى ئۇنىڭ تۈپ مۇندەرىجىسىگە قويۇڭ. تۆۋەندىكى يوللار شۇ ئورۇنغا ماس كېلىدۇ؛ بېتىڭىزنى باشقا مۇندەرىجىگە يۆتكىسىڭىز، نىسپىي يوللارنىمۇ تەڭشەڭ. git clone https://github.com/UyghurCommunity/uyghur-ui.git cd uyghur-ui python3 -m http.server 4173 --bind 127.0.0.1 <link rel=\"stylesheet\" href=\"./src/styles.css\"> <script type=\"module\"> import { iconSVG } from './src/index.js';",
+        "document.getElementById('mark').innerHTML = iconSVG('dutar'); </script> بۇ قىسقا مىسال ئۈچۈن بېتىڭىزدە <span id=\"mark\"></span> بولۇشى كېرەك. تولۇق ھۆججەتنى تېز باشلاش بۆلىكىدىن كۆچۈرۈڭ. ES module ھۆججەتلىرىنى HTTP ئارقىلىق ئېچىڭ؛ file:// ئارقىلىق ئېچىشقا تايانماڭ. قاچىلاشنى تەكشۈرۈش node --input-type=module -e \"import { iconNames } from '@uyghurcommunity/ui'; console.log(iconNames.length)\" 0.2.0 نەشرىدە نەتىجە 74 بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ."
+      ]
+    },
+    {
+      "title": "تېز باشلاش",
+      "en": "Quick start",
+      "description": "بىر تولۇق HTML ھۆججىتى بىلەن بەلگىلىك فورما ۋە فوكۇسنى قايتۇرىدىغان كۆزنەك قۇرۇڭ.",
+      "href": "guide/quick-start.html",
+      "keywords": [
+        "quick-start",
+        "تۇنجى بېتىڭىز",
+        "مىسالنى قانداق سىنايمەن؟",
+        "قاچىلانغان بوغچىغا ماسلاشتۇرۇش",
+        "كېيىنكى قەدەم",
+        "تۇنجى بېتىڭىز بۇ مىسالنى رېپونىڭ تۈپ مۇندەرىجىسىگە starter.html نامىدا ساقلاڭ. يەرلىك HTTP مۇلازىمېتىرىنى قوزغىتىپ، http://127.0.0.1:4173/starter.html نى ئېچىڭ. بۇ يولدا قۇرۇلۇش قورالى ياكى npm قاچىلاش قەدىمى لازىم ئەمەس. <!doctype html> <html lang=\"ug\" dir=\"rtl\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"> <title>مېنىڭ تۇنجى ئۇيغۇرچە بېتىم</title> <link rel=\"stylesheet\" href=\"./src/styles.css\"> <style>main { max-inline-size: 38rem; margin-inline: auto; padding: 2rem; }</style> </head> <body class=\"ug-ui\"> <main> <h1>بىرلىكتە قۇرايلى.</h1> <form id=\"hello-form\"> <div class=\"ug-field\"> <label class=\"ug-label\" for=\"name\">ئىسمىڭىز</label> <input class=\"ug-input\" id=\"name\" name=\"name\" required minlength=\"2\" maxlength=\"80\" dir=\"auto\" aria-describedby=\"name-help name-error\" data-ug-error=\"name-error\"> <span class=\"ug-hint\" id=\"name-help\">كەم",
+        "دېگەندە ئىككى ھەرپ كىرگۈزۈڭ.</span> <span class=\"ug-error\" id=\"name-error\"></span> </div> <button class=\"ug-button\" type=\"submit\">تەكشۈرۈش</button> <p id=\"form-result\" role=\"status\"></p> </form> <button class=\"ug-button ug-button--secondary\" id=\"open-settings\" type=\"button\">تەڭشەكنى ئېچىش</button> <dialog class=\"ug-dialog\" id=\"settings\" aria-labelledby=\"settings-title\"> <h2 id=\"settings-title\" tabindex=\"-1\">كۆرۈنۈش تەڭشىكى</h2> <p>Escape ياكى تاقاش كۇنۇپكىسى بىلەن قايتىڭ.</p> <button class=\"ug-button\" type=\"button\" data-ug-close>تاقاش</button> </dialog> </main> <script type=\"module\"> import { bindDialog, bindForm } from './src/index.js'; const dialog = bindDialog(document.getElementById('settings'), { trigger: document.getElementById('open-settings'), initialFocus: document.getElementById('settings-title'), }); const form = bindForm(document.getElementById('hello-form'), { onValid() {",
+        "document.getElementById('form-result').textContent = 'فورما توغرا. بۇ يەرلىك سىناق؛ مەزمۇن ئەۋەتىلمىدى.'; }, }); window.addEventListener('pagehide', (event) => { if (!event.persisted) { dialog.destroy(); form.destroy(); } }); </script> </body> </html> مىسالنى قانداق سىنايمەن؟ فورمىنى بوش قالدۇرۇپ تەكشۈرۈڭ؛ خاتالىق تېكىستى كۆرۈنىدۇ ۋە فوكۇس بىرىنچى خاتا رامكىغا بارىدۇ. ئىككى ياكى ئۇنىڭدىن كۆپ ھەرپ كىرگۈزۈڭ؛ يەرلىك نەتىجە ئۇچۇرى چىقىدۇ. كۆزنەكنى ئېچىڭ، Tab بىلەن يۆتكىلىڭ ۋە Escape بىلەن تاقاڭ. فوكۇس ئېچىش كۇنۇپكىسىغا قايتسۇن. قاچىلانغان بوغچىغا ماسلاشتۇرۇش قۇرۇلۇش قورالى بار تۈرگە كۆچۈرگەندە نىسپىي CSS ئۇلانمىسىنىڭ ئورنىغا تۈرىڭىزنىڭ كىرىش ھۆججىتىدە بوغچا CSS نى import قىلىڭ؛ كونترول import يولىنىمۇ بوغچا نامىغا ئالماشتۇرۇڭ. import '@uyghurcommunity/ui/styles.css'; import { bindDialog, bindForm } from '@uyghurcommunity/ui'; فورما نەتىجىسى مىسالدىكى onValid پەقەت ئېكراندىكى يەرلىك ئۇچۇرنى",
+        "يېڭىلايدۇ. ھەقىقىي ساقلاش ياكى ئەۋەتىش ئۈچۈن ئۆز مۇلازىمېتىرىڭىز ۋە مۇلازىمېتىر تەرەپ تەكشۈرۈشى لازىم. كېيىنكى قەدەم كارتا ۋە يولباشلاش بۆلەكلىرى نى قوشۇڭ، رەڭنى خاسلاشتۇرۇڭ ياكى مەدەنىيەت سىنبەلگىسى نى تاللاڭ."
+      ]
+    },
+    {
+      "title": "بۆلەكلەر",
+      "en": "Components",
+      "description": "ھەر بىر بۆلەكنىڭ HTML ئۇسلۇبى، JavaScript تەلىپى ۋە بىۋاسىتە سىناق مىسالى.",
+      "href": "guide/components.html",
+      "keywords": [
+        "components",
+        "لازىملىق بۆلەكنى تاللاڭ",
+        "كۇنۇپكا ۋە ئۇلانما",
+        "رامكا، تاللاش ۋە گۇرۇپپا",
+        "بۆلەكلەرنى بىرلەشتۈرۈش",
+        "لازىملىق بۆلەكنى تاللاڭ ئۇسلۇب ھۆججىتىنى بىر قېتىم يۈكلەپ، مەزمۇننى ug-ui قاچىسىغا قويۇڭ. كۆرگەزمىدىكى كود كۆچۈرۈش كۇنۇپكىسى HTML، لازىملىق كونترول ۋە تەييار SVG نى بىللە بېرىدۇ. بۆلەك ئاساسىي سىنىپ ياكى كونترول مىسال كۇنۇپكا ug-button سىناش فورما ug-field · ug-input · bindForm سىناش سۆزلىشىش كۆزنىكى ug-dialog · bindDialog سىناش بەتكۈچ ug-tabs · bindTabs سىناش يولباشلاش ug-nav · bindDisclosure سىناش كارتا ۋە بەلگە ug-card · ug-badge · ug-avatar سىناش يىغىلىدىغان مەزمۇن ug-accordion · details سىناش ئۇقتۇرۇش ۋە جەريان ug-alert · ug-progress · showToast سىناش كۇنۇپكا ۋە ئۇلانما بەت ئىچىدە ھەرىكەت ئىجرا قىلغاندا button ، باشقا ئادرېسقا بارغاندا a ئىشلىتىڭ. شەكىل سىنىپى ئېلېمېنتنىڭ ئەسلى مەنىسىنى ئالماشتۇرمايدۇ. <div class=\"ug-row\"> <button class=\"ug-button\" type=\"button\">ساقلاش</button> <button class=\"ug-button ug-button--secondary\" type=\"button\">بىكار قىلىش</button> <button class=\"ug-button",
+        "ug-button--danger\" type=\"button\">ئۆچۈرۈش</button> <a class=\"ug-button ug-button--ghost\" href=\"./installation.html\">قاچىلاش</a> </div> ug-button--small كىچىك كۆرۈنۈش ئۈچۈن، ug-button--icon پەقەت سىنبەلگىلىك كۇنۇپكا ئۈچۈن. كېيىنكىسىگە چوقۇم aria-label ياكى كۆرۈنىدىغان نام بېرىڭ. رامكا، تاللاش ۋە گۇرۇپپا رامكىنىڭ بەلگىسىنى label for بىلەن باغلاڭ. رادىئو تاللاشلىرى ئۈچۈن fieldset ۋە legend نى ئىشلىتىڭ. خاتالىقنى رەڭدىن باشقا تېكىست بىلەنمۇ كۆرسىتىڭ. <div class=\"ug-field\"> <label class=\"ug-label\" for=\"email\">ئېلخەت</label> <input class=\"ug-input\" id=\"email\" name=\"email\" type=\"email\" required dir=\"ltr\" aria-describedby=\"email-error\" data-ug-error=\"email-error\"> <span class=\"ug-error\" id=\"email-error\"></span> </div> تاللاش ۋە ئۇزۇن تېكىست ئۈچۈن ug-select ، ug-textarea بار. تاللاش بەلگىسى ۋە ئالماشتۇرغۇچقا ug-check ، ug-switch ئىشلىتىڭ. ئۇلارنىڭ ئىچىدە ھەقىقىي input بولىدۇ. بۆلەكلەرنى بىرلەشتۈرۈش",
+        "<div class=\"ug-columns\"> <article class=\"ug-card\"> <span class=\"ug-badge\">ئوچۇق مەنبە</span> <h2>بىر ئىدىيە، كۆپ ئىمكانىيەت.</h2> <p>تۈرىڭىزنىڭ ھەقىقىي مەزمۇنىنى بۇ يەرگە قويۇڭ.</p> </article> <aside class=\"ug-alert\"><p>داۋاملاشتۇرۇشتىن بۇرۇن مەزمۇننى تەكشۈرۈڭ.</p></aside> </div> ug-row بۆلەكلەرنى بىر قۇرغا تىزىپ، تار ئېكراندا كېيىنكى قۇرغا يۆتكەيدۇ. ug-columns ئىككى ستوننى كىچىك ئېكراندا بىر ستونغا ئايلاندۇرىدۇ. كۆپرەك كونترول لازىم بولسا JavaScript API نى كۆرۈڭ."
+      ]
+    },
+    {
+      "title": "JavaScript API",
+      "en": "JavaScript API",
+      "description": "كونترولنى باغلاش، ئىشلىتىش ۋە تازىلاش؛ SVG ھاسىل قىلىش ۋە سىنبەلگە ئىزدەش كۆرۈنمە يۈزى.",
+      "href": "guide/javascript.html",
+      "keywords": [
+        "javascript",
+        "كىرگۈزۈش ۋە ھايات دەۋرى",
+        "bindDialog",
+        "bindDisclosure ۋە bindTabs",
+        "validateForm ۋە bindForm",
+        "showToast",
+        "SVG ۋە ئىزدەش API",
+        "پارامېتىر ۋە خاتالىق",
+        "كىرگۈزۈش ۋە ھايات دەۋرى import { bindDialog, bindDisclosure, bindTabs, bindForm, validateForm, showToast, iconSVG, flagSVG, iconNames, directionalIcons, iconCatalog, iconCategories, findIcons, } from '@uyghurcommunity/ui'; يىلتىز import ھۆججىتى يۈكلەنگەندە DOM غا كىرمەيدۇ. كونترولنى باغلاشنى ئېلېمېنت قۇرۇلغاندىن كېيىن قىلىڭ. رامكا تەركىبى ياكى بەت پارچىسى ئۆچۈرۈلگەندە ئۇنىڭ destroy() نى چاقىرىڭ؛ يېڭى DOM غا يېڭى كونترول باغلاڭ. bindDialog const dialog = bindDialog(document.getElementById('settings'), { trigger: document.getElementById('open-settings'), initialFocus: document.getElementById('settings-title'), }); dialog.open(); dialog.close('saved'); // When the owning view is removed: dialog.destroy(); بىرىنچى پارامېتىر showModal() ۋە close() نى قوللايدىغان يەرلىك dialog بولۇشى كېرەك. ئۇنىڭغا aria-label ياكى aria-labelledby بېرىڭ. ئىچىدىكى data-ug-close كۇنۇپكىسى تاقايدۇ؛ قىممىتى native",
+        "close نەتىجىسىگە ئۆتىدۇ. تاقىغاندا ئالدىنقى فوكۇس ئەگەر ھېلىمۇ بەتتە بولسا قايتۇرۇلىدۇ. بۇ كونترول يەرلىك dialog قوللىشىنىڭ ئورنىنى باسىدىغان polyfill ئەمەس. bindDisclosure ۋە bindTabs const menu = bindDisclosure(button, panel); menu.setOpen(true); menu.toggle(); menu.destroy(); const tabs = bindTabs(document.getElementById('tabs')); tabs.select(document.getElementById('tab-two'), true); tabs.destroy(); Disclosure غا button ۋە panel بېرىڭ، HTML دا aria-controls نى توغرا باغلاڭ. ئۇ expanded ۋە hidden ھالىتىنى باشقۇرىدۇ؛ ئىچكى مەزمۇندا Escape بېسىلسا يېپىلىدۇ. Tabs قاچىسى ئىچىدىكى بىرىنچى role=\"tablist\" غا باغلىنىدۇ. ھەر بىر tab نىڭ aria-controls قىممىتى شۇ قاچىدىكى ئۆزگىچە panel غا باغلانسۇن. aria-labelledby بىلەن panel نامىنى كۆرسىتىڭ. كەم دېگەندە بىر ئىشلەتكىلى بولىدىغان tab لازىم؛ تاللانغان tab بەلگىلەنمىگەن بولسا، بىرىنچى ئىشلەتكىلى بولىدىغان tab تاللىنىدۇ. select(tab, true)",
+        "تاللىغاندىن كېيىن فوكۇسنىمۇ يۆتكەيدۇ؛ چەكلەنگەن ياكى باشقا گۇرۇپپىدىكى tab تاللانسا RangeError چىقىدۇ. validateForm ۋە bindForm const errors = validateForm(form, { messages: { email: 'ئېلخەت ئادرېسىنى قايتا تەكشۈرۈڭ.' }, }); // errors: [{ field, message }] const controller = bindForm(form, { messages: { name: 'ئىسمىڭىزنى تولدۇرۇڭ.' }, onValid(form, event) { // Your application handles this valid submission. }, }); controller.validate(); controller.destroy(); messages رامكىنىڭ name قىممىتىدىن خاتالىق تېكىستىگە بارىدىغان خەرىتە. ئۆز ئۇچۇرىڭىز بولمىسا ئادەتتىكى validity خاتالىقلىرىغا ماس ئۇيغۇرچە سۈكۈتتىكى ئۇچۇر ئىشلىتىلىدۇ. ئايرىم customError ياكى stepMismatch ھالىتىدە native خاتالىق تېكىستى توركۆرگۈچ تىلىدا قايتىشى مۇمكىن؛ تولۇق يەرلىكلەشتۈرۈش ئۈچۈن شۇ رامكىغا ئۆز ئۇچۇرىڭىزنى بېرىڭ. data-ug-error خاتالىق span نىڭ ID سىغا، aria-describedby ياردەم ۋە خاتالىق ID لىرىغا باغلانسۇن. validateForm",
+        "نەتىجە تىزىملىكىنى قايتۇرىدۇ ۋە رامكىلارنىڭ خاتالىق ھالىتىنى يېڭىلايدۇ. bindForm باغلانغان ۋاقىتتا novalidate نى باشقۇرۇپ، خاتا فورمىنىڭ بىرىنچى رامكىسىغا فوكۇس يۆتكەيدۇ. onValid بولسا توغرا يوللاشنى يەرلىك callback تا بىر تەرەپ قىلىدۇ؛ بولمىسا توغرا native يوللاش داۋاملىشىدۇ. destroy() ئەسلى novalidate، باشقۇرۇلغان aria-invalid ۋە خاتالىق تېكىستىنى ئەسلىگە قايتۇرىدۇ. showToast <div id=\"notifications\" class=\"ug-toast-region\" role=\"status\" aria-live=\"polite\" aria-relevant=\"additions text\"></div> const toast = showToast( document.getElementById('notifications'), 'مەزمۇن ساقلىنىشقا تەييار.', { duration: 0, dismissLabel: 'ئۇقتۇرۇشنى تاقاش' }, ); // toast.element is the created element. // toast.dismiss() and toast.destroy() both remove it. ئۇقتۇرۇش مەزمۇنى HTML ئەمەس، ئاددىي تېكىست سۈپىتىدە قويۇلىدۇ. سۈكۈتتىكى ۋاقىت 8000 ms ؛ duration: 0 بولسا ئادەم تاقىغۇچە قالىدۇ. مۇھىم نەتىجە ياكى خاتالىق",
+        "ئۈچۈن ۋاقىت چەكلىمىسىز ئۇچۇرنى تاللاڭ. SVG ۋە ئىزدەش API نام نەتىجە iconSVG(name, { size, strokeWidth, label }) SVG تېكىستى. سۈكۈتتىكى چوڭلۇق 24، strokeWidth بولسا 1.7. flagSVG({ width, label }) كەڭلىك/ئېگىزلىك نىسبىتى 3:2 بولغان بايراق SVG تېكىستى. findIcons(query, { category }) سۆز ۋە تۈرگە ماس سىنبەلگە ناملىرىدىن يېڭى تىزىملىك. iconNames · directionalIcons سىنبەلگە ناملىرى ۋە قوش يۆنىلىشلىك ئوق تاللاشقا ياردەمچى ناملار. iconCatalog · iconCategories ئۆزگەرتكىلى بولمايدىغان ئىككى تىللىق metadata. بۇ SVG/ئىزدەش export لىرى يىلتىز import ۋە @uyghurcommunity/ui/icons دا بار. escapeMarkup(value) پەقەت icons تارماق import ىدا بار؛ ئۇ markup ئۈچۈن بەلگىلەرنى escape قىلىدۇ، URL ياكى CSS تەكشۈرگۈچ ئەمەس. تەپسىلاتنى سىنبەلگە قوللانمىسى دىن كۆرۈڭ. پارامېتىر ۋە خاتالىق يوق ياكى ماس كەلمەيدىغان DOM ئېلېمېنتى ئۈچۈن TypeError چىقىشى مۇمكىن. سىنبەلگە نامى ۋە تۈر نامى allowlist بويىچە تەكشۈرۈلىدۇ. icon",
+        "چوڭلۇقى پۈتۈن سان 12–256 ، strokeWidth بولسا 0.5–4 ؛ flag كەڭلىكى پۈتۈن سان 24–1800 بولسۇن. نام بەلگىسى 160 ھەرپتىن ئاشمىسۇن. ئۆچۈرۈلگەن binding نى قايتا open/select/validate/setOpen قىلىش ئورنىغا يېڭى binding قۇرۇڭ."
+      ]
+    },
+    {
+      "title": "سىنبەلگىلەر ۋە مەدەنىيەت توپلىمى",
+      "en": "Icons and cultural collection",
+      "description": "74 SVG سىنبەلگە، 27 مەدەنىيەت بەلگىسى، ئۇيغۇرچە ئىزدەش ۋە مۇستەقىل ھۆججەتلەر.",
+      "href": "guide/icons.html",
+      "keywords": [
+        "icons",
+        "ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە",
+        "JavaScript بىلەن SVG ھاسىل قىلىش",
+        "نام ۋە تۈر بويىچە ئىزدەش",
+        "مۇستەقىل SVG ۋە JSON",
+        "رەڭ ۋە يۆنىلىش",
+        "ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە 0.2.0 نەشرىدە 74 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 27 سى مەدەنىيەت توپلىمىغا كىرىدۇ. بۇ نەشر 24 يېڭى سىزىق قوشتى. دۇتار، راۋاپ، ساتار، ئەتلەس، توقۇش دەستگاھى، ئايۋان، نان ۋە چاي سايمانلىرىنى كۆرگەزمىدىن تاللاپ سىناڭ . بۇلار رەقەملىك كۆرۈنمە يۈز ئۈچۈن ئەسلىدىن سىزىلغان ئاددىي مەدەنىيەت پىكتوگراممىلىرى. رايونغا قاراپ شەكىل ۋە ئاتىلىش ئۆزگىرىدۇ؛ بىر تارىخىي بۇيۇمنىڭ قۇرۇلۇش سىزىقى دەپ ئىشلەتمەڭ. سۈرەت ۋە مەزمۇننىڭ پايدىلىنىش مەنبەلىرى مەنبە خاتىرىسى دە بار. JavaScript بىلەن SVG ھاسىل قىلىش import { iconSVG, flagSVG } from '@uyghurcommunity/ui'; const dutar = iconSVG('dutar', { size: 48, label: 'دۇتار' }); const decorative = iconSVG('flower', { size: 24 }); const flag = flagSVG({ width: 180, label: 'شەرقىي تۈركىستان بايرىقى' }); document.getElementById('instrument').innerHTML = dutar; ئاخىرقى قۇردىكى قاچىڭىز <span id=\"instrument\"></span> بولسۇن. كۈتۈپخانا مەلۇم",
+        "سىنبەلگە نامىنىلا قوبۇل قىلىپ، label نى escape قىلىدۇ. باشقا مەنبەدىن كەلگەن خالىغان HTML نى بۇ ئۇسۇلدا كىرگۈزمەڭ. مەنىسى بار يالغۇز سىنبەلگىگە ئۇيغۇرچە label بېرىڭ؛ ئۇنىڭغا role=\"img\" قوشۇلىدۇ. بەلگە بوش بولسا سىنبەلگە بېزەك سۈپىتىدە aria-hidden=\"true\" بولىدۇ. ئىچىدە سىنبەلگە بار كۇنۇپكىنىڭ ئۆزىگە نام بېرىشنىمۇ ئۇنتۇماڭ. نام ۋە تۈر بويىچە ئىزدەش import { findIcons, iconCatalog, iconCategories } from '@uyghurcommunity/ui'; findIcons('راۋاب'); // ['rawap'] findIcons('ikat'); // ['atlas'] findIcons('', { category: 'music' }); // six instrument names const details = iconCatalog.find((icon) => icon.name === 'dutar'); console.log(details.ug, details.en, details.category); تۈر نامى مەزمۇن all 74 سىنبەلگىنىڭ ھەممىسى. traditional 27 مەدەنىيەت سىنبەلگىسى ۋە نەقىش. music · textiles · architecture سازلار، توقۇمىچىلىق/نەقىش ۋە بىناكارلىق. table · garden · general داستىخان، باغ ۋە ئادەتتىكى كۆرۈنمە",
+        "يۈز سىنبەلگىلىرى. ئىزدەش ئۇيغۇرچە نام، ئىنگلىزچە نام ۋە يىپ ئۇچلىرىنى ئۆز ئىچىگە ئالىدۇ. تۈر ۋە سوئال بىللە سۈزۈلىدۇ؛ مەسىلەن ساز نامىنى داستىخان تۈرىدە ئىزدىگەندە بوش نەتىجە چىقىشى نورمال. مۇستەقىل SVG ۋە JSON مەدەنىيەت SVG توپلىمى — 27 سىنبەلگە ۋە بايراق. تولۇق SVG توپلىمى — 74 سىنبەلگە ۋە بايراق. ئىككى تىللىق JSON — نام، تۈر ۋە ئىزدەش يىپ ئۇچلىرى. قاچىلانغان بوغچىدىكى ھۆججەت تارماق يوللىرى: @uyghurcommunity/ui/icons/dutar @uyghurcommunity/ui/flags/east-turkistan.svg @uyghurcommunity/ui/catalog.json سىنبەلگە تارماق يولىغا .svg قوشۇلمايدۇ. رېپودىكى ھەقىقىي ھۆججەت يولى بولسا assets/icons/dutar.svg . بوغچا يولىنى static asset URL غا ئايلاندۇرۇش ئۇسۇلى تۈرىڭىزنىڭ قۇرۇلۇش قورالىغا باغلىق؛ ھۆججەتنى ئۆز public مۇندەرىجىڭىزگە كۆچۈرۈپ، ئادەتتىكى img بىلەنمۇ كۆرسىتەلەيسىز. رەڭ ۋە يۆنىلىش <span class=\"instrument\" id=\"instrument\"></span> <style> .instrument { color: #086aa7; } </style> سىنبەلگە",
+        "سىزىقى currentColor غا ئەگىشىدۇ؛ سىرتقى img ھۆججىتى ئىچىدىكى رەڭ بولسا بەتنىڭ color قىممىتىگە ئۆزلۈكىدىن ۋارىسلىق قىلمايدۇ. رەڭنى خاسلاشتۇرۇشقا inline SVG قولاي. SVG لار RTL دا ئۆزلۈكىدىن ئەينەككە ئايلاندۇرۇلمايدۇ؛ ھەرىكەت مەنىسىگە ماس ئوقنى تاللاڭ. بايراقنىڭ ئاي ۋە يۇلتۇز شەكلىمۇ ئەينەككە ئايلاندۇرۇلمايدۇ."
+      ]
+    },
+    {
+      "title": "رەڭ، خەت ۋە خاسلاشتۇرۇش",
+      "en": "Theming",
+      "description": "CSS ئۆزگەرگۈچىلىرى بىلەن بۆلەكلەرنى مەھسۇلاتىڭىزنىڭ رەڭ ۋە خەت تىلىغا ماسلاشتۇرۇڭ.",
+      "href": "guide/theming.html",
+      "keywords": [
+        "theming",
+        "ئاساسىي CSS ئۆزگەرگۈچىلىرى",
+        "قاراڭغۇ كۆرۈنۈش",
+        "ALKATIP Basma ۋە زاپاس خەت",
+        "بوشلۇق ۋە چوڭلۇق",
+        "ئاساسىي CSS ئۆزگەرگۈچىلىرى توپلام CSS ئۆزگەرگۈچىلىرىنى ئىشلىتىدۇ. ئۆز CSS ھۆججىتىڭىزنى كۈتۈپخانا ئۇسلۇبىدىن كېيىن يۈكلەپ، ئۆزگەرتىشنى بىر قاچىنىڭ دائىرىسىگە بەلگىلەڭ. ئۆزگەرگۈچى مەنىسى سۈكۈتتىكى قىممەت --ug-blue ئاساسىي ھەرىكەت رەڭگى #086aa7 --ug-blue-hover ئاساسىي كۇنۇپكا hover رەڭگى #075687 --ug-accent تەكىتلەش رەڭگى #559ee2 --ug-surface · --ug-bg كارتا ۋە بەت تەگلىكى #fff · #f4f7f9 --ug-text · --ug-muted ئاساسىي ۋە ياردەم تېكىست رەڭگى #152d3d · #566b78 --ug-line · --ug-soft سىزىق ۋە يېنىك تەگلىك #c9d7df · #e8f3fc --ug-radius كونترول يۇمىلاق بۇلۇڭى 10px --ug-focus · --ug-danger فوكۇس ۋە خاتالىق رەڭگى #126ca4 · #b43137 .my-product { --ug-blue: #146650; --ug-blue-hover: #0c503e; --ug-accent: #2b8a6b; --ug-focus: #146650; --ug-radius: 14px; } قاراڭغۇ كۆرۈنۈش كۆرۈنمە يۈز قاچىسى ياكى html ئېلېمېنتىغا data-ug-theme=\"dark\" قوشۇڭ. بۇ attribute نى ئېلىۋەتسىڭىز سۈكۈتتىكى رەڭلەرگە قايتىدۇ.",
+        "تاللاشنى ساقلاشنى تۈرىڭىز باشقۇرىدۇ. <main class=\"ug-ui\" data-ug-theme=\"dark\" lang=\"ug\" dir=\"rtl\"> <button class=\"ug-button\" type=\"button\">داۋاملاشتۇرۇش</button> </main> document.documentElement.dataset.ugTheme = 'dark'; // Return to the default light palette: delete document.documentElement.dataset.ugTheme; ALKATIP Basma ۋە زاپاس خەت styles.css نىڭ ئىچىدىن font.css يۈكلىنىدۇ. ئۇ ALKATIP Basma نى خوجايىن تەمىنلىگەن OnlineWebFonts ئادرېسلىرىدىن WOFF2، WOFF، TTF تەرتىپىدە سورايدۇ. font-display: swap ئارقىلىق خەت كېلىشتىن بۇرۇن زاپاس خەتتە مەزمۇن كۆرۈنىدۇ؛ خەت binary ھۆججىتى بوغچىغا قوشۇلمىغان. .my-product { --ug-font: \"ALKATIP Basma\", Tahoma, serif; } .my-product .technical-value { font-family: ui-monospace, \"ALKATIP Basma\", monospace; } باشقا خەتنى ئىشلىتىش ئۈچۈن ئۇنىڭ توردا ئىشلىتىش ھوقۇقى ۋە يۈكلەش ئۇسۇلىنى تەكشۈرۈپ، ئۆز خەت ئۇسلۇبىڭىزنى تەمىنلەڭ. قاتتىق CSP ياكى سىرتقى تەلەپسىز",
+        "ئورۇنلاشتۇرۇش ئۈچۈن خەت import تەلىپىنىمۇ ئۆزىڭىزگە ماسلاشتۇرۇشىڭىز كېرەك؛ يالغۇز token نى ئالماشتۇرۇش بار بولغان font import نى ئېلىۋەتمەيدۇ. بوشلۇق ۋە چوڭلۇق بارلىق نەرسىگە بىر line-height بەرمەڭ. ئۇيغۇرچە ئوقۇش مەزمۇنىغا يېتەرلىك قۇر ئارىلىقى قالدۇرۇپ، كود ۋە قىسقا تېخنىكىلىق قىممەتنى ئايرىم LTR قاچىدا ساقلاڭ. ئۆزگەرتكەن رەڭلىرىڭىزنى ئادەتتىكى، hover، چەكلەنگەن، خاتا ۋە فوكۇسلانغان ھالەتلەردە قايتا تەكشۈرۈڭ."
+      ]
+    },
+    {
+      "title": "RTL ۋە ئارىلاش يېزىق",
+      "en": "RTL and mixed text",
+      "description": "ئۇيغۇرچە يۆنىلىش، ئىنگلىزچە تېخنىكىلىق قىممەت ۋە سانلارنى بىر بەتتە ئېنىق ساقلاش.",
+      "href": "guide/rtl.html",
+      "keywords": [
+        "rtl",
+        "بەت تىلى ۋە ئاساسىي يۆنىلىش",
+        "سان، ئادرېس ۋە بوغچا نامى",
+        "يۆنىلىشكە ئەگىشىدىغان CSS",
+        "بەتكۈچ ۋە ئوق مەنىسى",
+        "تېكىستنى ساقلاشتا ئېھتىياتچان بولۇڭ",
+        "بەت تىلى ۋە ئاساسىي يۆنىلىش <html lang=\"ug\" dir=\"rtl\"> <body class=\"ug-ui\">...</body> </html> lang تىلنى، dir يېزىق يۆنىلىشىنى بەلگىلەيدۇ. مەزمۇن تىلى ئۆزگەرگەن پارچىدا شۇ پارچىنىڭ تىلى ۋە يۆنىلىشىنى ئايرىم بەلگىلەڭ. خەتنى راستقا توغرىلاش يالغۇز ئۆزى RTL مەنىسىنى بەلگىلىمەيدۇ. سان، ئادرېس ۋە بوغچا نامى تېخنىكىلىق قىممەتلەرنى ئايرىۋېتىش تىنىش بەلگىلىرىنىڭ ئەتراپتىكى جۈملىگە ئارىلىشىپ كېتىشىنى ئازايتىدۇ. مەزمۇننى ئۆزگەرتىشنىڭ ئورنىغا bdi ۋە توغرا dir ئارقىلىق كۆرسىتىڭ. <p>بوغچا: <bdi dir=\"ltr\" lang=\"en\">@uyghurcommunity/ui</bdi></p> <p>نەشر: <bdi dir=\"ltr\">0.2.0</bdi></p> <p>ئۇلانما: <bdi dir=\"ltr\">https://example.com/ug?q=123</bdi></p> <label for=\"email\">ئېلخەت</label> <input id=\"email\" type=\"email\" dir=\"ltr\"> <textarea aria-label=\"مەزمۇن\" dir=\"auto\"></textarea> dir=\"auto\" يۆنىلىشى ئالدىن بەلگىلىك بولمىغان ئىشلەتكۈچى تېكىستىگە قولاي. بوغچا نامى، كود ۋە ئېلخەت دېگەندەك يۆنىلىشى ئېنىق",
+        "قىممەتلەرگە ltr ئىشلىتىڭ. يۆنىلىشكە ئەگىشىدىغان CSS .panel { padding-inline: 1.25rem; margin-inline: auto; border-inline-start: 3px solid var(--ug-blue); text-align: start; max-inline-size: 48rem; } بوشلۇق ۋە ئورۇن ئۈچۈن logical property ئىشلىتىش بىر بۆلەكنى RTL ۋە LTR قاچىلاردا قايتا ئىشلىتىشكە ياردەم بېرىدۇ. فورما رامكىسىغا ماۋزۇ نامى ۋە label باغلاش بولسا ئىككى يۆنىلىشتە ئوخشاشلا لازىم. بەتكۈچ ۋە ئوق مەنىسى bindTabs tablist نىڭ كۆرۈنۈش يۆنىلىشىگە قاراپ سول/ئوڭ كۇنۇپكا ھەرىكىتىنى ماسلاشتۇرىدۇ. تىك tablist ئۈچۈن aria-orientation=\"vertical\" بەلگىلەڭ؛ ئۇنىڭدا يۇقىرى/تۆۋەن كۇنۇپكىلىرى ئىشلىتىلىدۇ. SVG ئوقلار ئاپتوماتىك ئەينەككە ئايلاندۇرۇلمايدۇ، شۇڭا «كېيىنكى» ھەرىكەتنىڭ مەنىسىگە ماس بەلگىنى تاللاڭ. تېكىستنى ساقلاشتا ئېھتىياتچان بولۇڭ كۆرۈنۈشتىكى بىر مەسىلىنى ھەل قىلىش ئۈچۈن بارلىق يۆنىلىش ياكى ئۇلاش بەلگىلىرىنى ئومۇميۈزلۈك ئۆچۈرمەڭ. ئۇلار مەزمۇننىڭ شەكلى ۋە مەنىسىگە تەسىر قىلىشى مۇمكىن.",
+        "ئالدى بىلەن HTML قاچا يۆنىلىشىنى تەكشۈرۈڭ؛ Unicode تەكشۈرۈشى لازىم بولسا Uyghur Text تا ئەسلى تېكىستنى ساقلاپ، ئۆزگىرىشنى ئالدىن كۆرۈڭ."
+      ]
+    },
+    {
+      "title": "قولاي ئىشلىتىش",
+      "en": "Accessibility",
+      "description": "كۇنۇپكا تاختىسى، ئېنىق نام، فورما ئۇچۇرى ۋە ھەرىكەت تەڭشىكى بىلەن ھەقىقىي ئىشلىتىشنى تەكشۈرۈڭ.",
+      "href": "guide/accessibility.html",
+      "keywords": [
+        "accessibility",
+        "يەرلىك ئېلېمېنتتىن باشلاڭ",
+        "كۇنۇپكا تاختىسى بىلەن سىناش",
+        "كونترولنىڭ ئېنىق نامى",
+        "خاتالىق ۋە نەتىجە",
+        "ھەرىكەت ۋە كۆرىنىش",
+        "تۈرىڭىزدە قايتا تەكشۈرۈڭ",
+        "يەرلىك ئېلېمېنتتىن باشلاڭ كۇنۇپكىغا button، ئۇلانمىغا a، رامكىغا input ۋە label، يىغىلىدىغان مەزمۇنغا details/summary ئىشلىتىڭ. توغرا ئېلېمېنتنى تاللاش ئۇنىڭ كۇنۇپكا تاختىسى ۋە ياردەمچى تېخنىكا ھەرىكىتىنى ساقلايدۇ. مەنىسىز div غا role قوشۇشتىن بۇرۇن ماس يەرلىك ئېلېمېنت بار-يوقلۇقىنى تەكشۈرۈڭ. كۇنۇپكا تاختىسى بىلەن سىناش ئورۇن سىناق ئادەتتىكى بەت Tab ۋە Shift+Tab بىلەن ھەممە كونترولغا يېتىپ بېرىڭ؛ فوكۇس سىزىقى كۆرۈنسۇن. يەرلىك dialog فوكۇس كۆزنەك ئىچىدە قالسۇن، Escape تاقىسۇن، تاقىغاندا قوزغاتقۇچقا قايتسۇن. Tabs RTL سول/ئوڭ ياكى تىك يۇقىرى/تۆۋەن، Home ۋە End نى سىناڭ. چەكلەنگەن tab ئۆتۈپ كېتىلسۇن. Disclosure كۇنۇپكا بىلەن ئېچىپ، ئىچكى مەزمۇندا Escape ئارقىلىق يېپىڭ. ئۇقتۇرۇش مۇھىم ئۇچۇرنى ئوقۇشقا ۋاقىت يېتىپ، تاقاش كۇنۇپكىسىغا يەتكىلى بولسۇن. كونترولنىڭ ئېنىق نامى بەلگە ۋە ياردەم تېكىستى كۆرۈنۈپ تۇرسۇن. placeholder نى label نىڭ ئورنىغا ئىشلەتمەڭ. پەقەت سىنبەلگىلىك كۇنۇپكىغا قىسقا،",
+        "ھەرىكەتنى چۈشەندۈرىدىغان نام بېرىڭ. <button class=\"ug-button ug-button--icon\" type=\"button\" aria-label=\"ئىزدەش\"> <!-- Decorative search SVG goes here. --> </button> <label class=\"ug-label\" for=\"full-name\">ئىسمىڭىز</label> <input class=\"ug-input\" id=\"full-name\" name=\"name\" required aria-describedby=\"full-name-help full-name-error\" data-ug-error=\"full-name-error\"> <span class=\"ug-hint\" id=\"full-name-help\">تولۇق ئىسمىڭىزنى كىرگۈزۈڭ.</span> <span class=\"ug-error\" id=\"full-name-error\"></span> خاتالىق ۋە نەتىجە خاتالىقنى رەڭ بىلەنلا ئەمەس، رامكا يېنىدىكى تېكىست بىلەنمۇ چۈشەندۈرۈڭ. bindForm بۇ تېكىستنى تولدۇرۇپ، aria-invalid ھالىتىنى يېڭىلايدۇ. مۇلازىمېتىردىن كەلگەن خاتالىقنىمۇ يوقىتىپ قويماي، شۇنداق ئېنىق كۆرسىتىڭ. ئادەتتىكى نەتىجە ئۇچۇرىغا role=\"status\" aria-live=\"polite\" ئىشلىتىڭ. مۇھىم ئۇچۇرنى قىسقا ۋاقىتتىن كېيىن ئاپتوماتىك يوقاتماڭ؛ showToast(..., { duration: 0 }) ئادەم تاقىغۇچە قالىدۇ.",
+        "فوكۇسنى زۆرۈرسىز يۆتكىمەڭ. ھەرىكەت ۋە كۆرىنىش كۈتۈپخانا ئۇسلۇبى prefers-reduced-motion تاللىشىنى ھۆرمەت قىلىدۇ. ئۆزىڭىز قوشقان چوڭ ھەرىكەتكە توختىتىش كونترولىنى تەمىنلەڭ؛ مەزمۇننى پەقەت ھەرىكەتتىن كېيىنلا كۆرۈنىدىغان قىلىپ قويمىغايسىز. رەڭنى ئۆزگەرتكەندە تېكىست/تەگلىك پەرقىنى، چوڭايتىش ۋە تار ئېكراندا ئوقۇشنى قايتا تەكشۈرۈڭ. تۈرىڭىزدە قايتا تەكشۈرۈڭ توپلام native HTML ۋە ئېنىق ARIA مۇناسىۋەتلىرىنى ئىشلىتىدۇ، ئەمما بۇ تۈرىڭىزگە مۇستەقىل گۇۋاھنامە بەرمەيدۇ. ھەقىقىي مەزمۇن، ھەقىقىي توركۆرگۈچ ۋە ئېكران ئوقۇغۇچتا سىناڭ. مەسىلە يوللىغاندا توركۆرگۈچ نامى، باسقان كۇنۇپكىلار ۋە ئەڭ كىچىك قايتا سىناش مىسالىنى قوشۇڭ."
+      ]
+    },
+    {
+      "title": "كۆپ سورىلىدىغان سوئاللار",
+      "en": "FAQ and troubleshooting",
+      "description": "قاچىلاش، خەت يۈكلىنىشى، copy، SSR ۋە بۆلەكلەرنىڭ ئادەتتىكى مەسىلىلىرىگە جاۋاب.",
+      "href": "guide/faq.html",
+      "keywords": [
+        "faq",
+        "npm بوغچىنى تاپالمىدى، نېمە قىلىمەن؟",
+        "كۇنۇپكا ئاددىي HTML غا ئوخشايدۇ",
+        "خەت ALKATIP Basma دا كۆرۈنمىدى",
+        "كۆزنەك ياكى بەتكۈچ ئىشلىمىدى",
+        "كۆچۈرۈش كۇنۇپكىسى ئىشلىمىدى",
+        "SSR ياكى React/Vue دا ئىشلىتەمدۇ؟",
+        "بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟",
+        "مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟",
+        "npm بوغچىنى تاپالمىدى، نېمە قىلىمەن؟ npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن. GitHub ئارخىپىنىڭ تولۇق ئادرېسى بار بۇيرۇق نى ئىشلىتىڭ. Node نىڭ 20 ياكى ئۇنىڭدىن يۇقىرى نەشرىنى تاللاپ، بۇيرۇقنى تۈرىڭىزنىڭ ئىچىدە ئىجرا قىلىڭ. كۇنۇپكا ئاددىي HTML غا ئوخشايدۇ styles.css نىڭ يۈكلەنگەنلىكىنى ۋە توغرا نىسپىي يولنى تەكشۈرۈڭ. قىسمىڭىزنى ug-ui قاچىسىغا قويۇڭ. قۇرۇلۇش قورالى يوق بەتتە bare package import ئىشلىتىش ئۈچۈن import map ياكى باشقا ھەل قىلىش لازىم؛ ئاددىي مىسالدا ./src/index.js نى ئىشلىتىڭ. خەت ALKATIP Basma دا كۆرۈنمىدى خەت سىرتقى OnlineWebFonts ساھىبىدىن يۈكلىنىدۇ. تور ئۇلىنىشى، CSP ۋە خەت تەلىپىنىڭ نەتىجىسىنى تەكشۈرۈڭ. ئۇ يەتمىسە زاپاس خەتتە مەزمۇن يەنىلا كۆرۈنىدۇ. بوغچا خەت binary سىنى ساقلىمايدۇ؛ خەت تاللىشىڭىزنى خەت قوللانمىسى دىكىدەك باشقۇرۇڭ. كۆزنەك ياكى بەتكۈچ ئىشلىمىدى DOM ياسالغاندىن كېيىن binding قۇرغانلىقىڭىزنى، dialog نىڭ accessible نامى بارلىقىنى، tab/panel ID",
+        "باغلىنىشىنىڭ توغرىلىقىنى تەكشۈرۈڭ. ھەر بىر panel قاچا ئىچىدە بولسۇن. Native dialog، ES module ۋە زامانىۋى CSS نى قوللايدىغان توركۆرگۈچ ئىشلىتىڭ؛ كونا توركۆرگۈچكە polyfill بۇ توپلامدا قوشۇلمىغان. كۆچۈرۈش كۇنۇپكىسى ئىشلىمىدى توركۆرگۈچ clipboard ھوقۇقىنى چەكلىشى مۇمكىن. كۆرگەزمە ۋە قوللانمىدا ئاددىي تاللاپ كۆچۈرۈش ئۇسۇلىدىن پايدىلىنىڭ؛ SVG نى ھۆججەت قىلىپ چۈشۈرۈشمۇ بار. ئۆز تۈرىڭىزدە clipboard ئەمەلگە ئاشمىسا قولدا كۆچۈرگىلى بولىدىغان تېكىست تەمىنلەڭ. SSR ياكى React/Vue دا ئىشلىتەمدۇ؟ DOM غا كىرمەيدىغان import، iconSVG ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا destroy() قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ تەييار React/Vue wrapper بۇ نەشرگە قوشۇلمىغان. بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟ كۈتۈپخانا ئۆزى فورما مۇلازىمىتى، analytics ياكى ھېسابات",
+        "API سىنى قوشمايدۇ. ئۇسلۇبنىڭ سىرتقى خەت تەلىپى بار؛ GitHub ئۇلانمىلىرىنى ئېچىش ياكى تۈرىڭىزگە ئۆزىڭىز قوشقان API ئايرىم ھەرىكەت. كۆرسىتىش مىساللىرىدا مەزمۇن يەرلىك بىر تەرەپ قىلىنىدۇ. مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟ GitHub Issues دا قايتا سىناش قەدەملىرى، كۈتكەن ۋە كۆرۈلگەن نەتىجە، نەشر ۋە توركۆرگۈچ ئۇچۇرىنى يېزىڭ. مەدەنىيەت سىنبەلگىسىگە تۈزىتىش تەكلىپ قىلغاندا ئېنىق مەنبە ياكى رايونلۇق ئاتىلىشنى قوشۇڭ. پارول، token ياكى شەخسىي سانلىق مەلۇماتنى مىسالغا قوشماڭ."
+      ]
+    },
+    {
+      "title": "نەشر خاتىرىسى",
+      "en": "Changelog",
+      "description": "ئېلان قىلىنغان بوغچا نەشرلىرى ۋە ھەر بىر نەشرگە كىرگەن ھەقىقىي ئۆزگىرىشلەر.",
+      "href": "guide/changelog.html",
+      "keywords": [
+        "changelog",
+        "0.2.0 · مەدەنىيەت سىنبەلگىلىرى",
+        "0.1.0 · تۇنجى UI توپلىمى",
+        "قوللانما ۋە بوغچا نەشرى",
+        "0.2.0 · مەدەنىيەت سىنبەلگىلىرى 24 يېڭى SVG سىنبەلگە قوشۇلدى. توپلام ھازىر 74 سىنبەلگىنى ئۆز ئىچىگە ئالىدۇ؛ مەدەنىيەت توپلىمىدا بۇرۇنقى دوپپا، بادام ۋە گۈل نەقىشلىرىنى قوشقاندا 27 سىنبەلگە بار. دۇتار، تەمبۈر، راۋاپ، غېجەك، ساتار ۋە داپ. ئەتلەس، گىلەم، كەشتە، توقۇش دەستگاھى ۋە ئۇرچۇق. ئايۋان، راۋاق، ئويما ئىشىك ۋە تورلۇق دېرىزە. نان، سامسا، پولۇ، لەغمەن، چەينەك، پىيالە، ئانار، ئۈزۈم ۋە ئۆرۈك. ئىككى تىللىق نام، تۈرلەر ۋە يىپ ئۇچلىرى؛ iconCatalog ، iconCategories ، findIcons export لىرى. تولۇق ۋە مەدەنىيەت توپلىمى ئۈچۈن ئايرىم ZIP، JSON metadata ۋە قايتا ھاسىل قىلغىلى بولىدىغان asset قۇرۇلۇشى. 0.2.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى . 0.1.0 · تۇنجى UI توپلىمى CSS بۆلەكلىرى، يەرلىك كۆزنەك، RTL بەتكۈچ، فورما تەكشۈرۈش، disclosure ۋە ئاددىي تېكىست ئۇقتۇرۇشى ئېلان قىلىندى. تۇنجى توپلامدا 50 SVG سىنبەلگە، شەرقىي تۈركىستان بايرىقى، ALKATIP Basma خەت ئۇلانمىسى ۋە TypeScript ئېنىقلىمىلىرى بار ئىدى. 0.1.0",
+        "نەشر ئارخىپى ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن 0.2.0 قاچىلاش ئۇسۇلى نى تاللاڭ. قوللانما ۋە بوغچا نەشرى بۇ قوللانما ھازىرقى 0.2.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ. نەشرنى يېڭىلاش نەشرى بەلگىلەنگەن GitHub ئارخىپ يولىنى ئىشلىتىڭ. يېڭى بوغچا قاچىلاشتىن بۇرۇن ئۆز تۈرىڭىزدىكى فورما، كۆزنەك، بەتكۈچ ۋە سىنبەلگە import لىرىنى تەكشۈرۈڭ."
+      ]
+    },
+    {
+      "title": "كۇنۇپكىلار",
+      "en": "buttons",
+      "description": "ئاساسىي، ئىككىلەمچى، ئاددىي ۋە سىنبەلگىلىك كۇنۇپكىلار.",
+      "href": "index.html#component-buttons",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "actions"
+      ]
+    },
+    {
+      "title": "فورما ۋە كىرگۈزۈش رامكىلىرى",
+      "en": "forms",
+      "description": "ئېنىق بەلگە، ياردەم تېكىستى ۋە ئۇيغۇرچە خاتالىق ئۇچۇرى. بۇ يەرلىك سىناق فورمىسى.",
+      "href": "index.html#component-forms",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "forms"
+      ]
+    },
+    {
+      "title": "سۆزلىشىش كۆزنىكى",
+      "en": "dialog",
+      "description": "فوكۇسنى ئىچىدە ساقلايدىغان يەرلىك كۆزنەك. Escape بىلەن ياكى تاقاش كۇنۇپكىسىدا قايتىڭ.",
+      "href": "index.html#component-dialog",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "actions"
+      ]
+    },
+    {
+      "title": "بەتكۈچلەر",
+      "en": "tabs",
+      "description": "ئوڭدىن سولغا يۆنىلىشكە ماس ئوق كۇنۇپكىلىرى، Home ۋە End بىلەن ئىشلىتىڭ.",
+      "href": "index.html#component-tabs",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "layout"
+      ]
+    },
+    {
+      "title": "تىزىملىك ۋە يولباشلاش",
+      "en": "navigation",
+      "description": "ھەقىقىي ئۇلانمىلار ۋە ئېكران چوڭلۇقىغا ماس يىغىلىدىغان تىزىملىك.",
+      "href": "index.html#component-navigation",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "layout"
+      ]
+    },
+    {
+      "title": "كارتا ۋە بەلگىلەر",
+      "en": "cards",
+      "description": "بۆلەكلەرنى بىرلەشتۈرۈڭ. ھالەتنى رەڭ بىلەنلا ئىپادىلىمەڭ؛ تېكىست بەلگىسىمۇ بار بولسۇن.",
+      "href": "index.html#component-cards",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "layout"
+      ]
+    },
+    {
+      "title": "يىغىلىدىغان مەزمۇن",
+      "en": "accordion",
+      "description": "يەرلىك details ۋە summary بىلەن مەزمۇننى ئېچىڭ. JavaScript تەلەپ قىلمايدۇ.",
+      "href": "index.html#component-accordion",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "layout"
+      ]
+    },
+    {
+      "title": "ئۇقتۇرۇش ۋە جەريان",
+      "en": "feedback",
+      "description": "ئۇچۇرلارنى تېكىست بىلەن ئېنىق كۆرسىتىڭ. مۇھىم ئۇچۇرغا ۋاقىت چەكلىمىسى قويماڭ.",
+      "href": "index.html#component-feedback",
+      "keywords": [
+        "component",
+        "بۆلەك",
+        "feedback"
+      ]
+    },
+    {
+      "title": "بادام نەقشى",
+      "en": "Almond motif",
+      "description": "بادام نەقشى · almond · SVG",
+      "href": "index.html#icon-almond",
+      "keywords": [
+        "almond",
+        "textiles",
+        "badam",
+        "paisley",
+        "ornament",
+        "نەقىش",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئۆرۈك",
+      "en": "Apricot",
+      "description": "ئۆرۈك · apricot · SVG",
+      "href": "index.html#icon-apricot",
+      "keywords": [
+        "apricot",
+        "garden",
+        "oruk",
+        "fruit",
+        "باغ",
+        "مېۋە",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "راۋاق",
+      "en": "Arched gateway",
+      "description": "راۋاق · archway · SVG",
+      "href": "index.html#icon-archway",
+      "keywords": [
+        "archway",
+        "architecture",
+        "arch",
+        "gateway",
+        "ئەگمە دەرۋازا",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئەتلەس",
+      "en": "Atlas silk",
+      "description": "ئەتلەس · atlas · SVG",
+      "href": "index.html#icon-atlas",
+      "keywords": [
+        "atlas",
+        "textiles",
+        "etles",
+        "ikat",
+        "silk",
+        "رەخت",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئايۋان",
+      "en": "Aywan",
+      "description": "ئايۋان · aywan · SVG",
+      "href": "index.html#icon-aywan",
+      "keywords": [
+        "aywan",
+        "architecture",
+        "eywan",
+        "veranda",
+        "courtyard",
+        "ھويلا",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "گىلەم",
+      "en": "Carpet",
+      "description": "گىلەم · carpet · SVG",
+      "href": "index.html#icon-carpet",
+      "keywords": [
+        "carpet",
+        "textiles",
+        "gilem",
+        "rug",
+        "woven",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئويما ئىشىك",
+      "en": "Carved door",
+      "description": "ئويما ئىشىك · carved-door · SVG",
+      "href": "index.html#icon-carved-door",
+      "keywords": [
+        "carved-door",
+        "architecture",
+        "woodwork",
+        "oyma",
+        "ئىشىك",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "داپ",
+      "en": "Dap",
+      "description": "داپ · dap · SVG",
+      "href": "index.html#icon-dap",
+      "keywords": [
+        "dap",
+        "music",
+        "daph",
+        "frame drum",
+        "tambourine",
+        "ساز",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "دوپپا",
+      "en": "Doppa",
+      "description": "دوپپا · doppa · SVG",
+      "href": "index.html#icon-doppa",
+      "keywords": [
+        "doppa",
+        "textiles",
+        "döppä",
+        "do ppa",
+        "cap",
+        "hat",
+        "كەشتە",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "دۇتار",
+      "en": "Dutar",
+      "description": "دۇتار · dutar · SVG",
+      "href": "index.html#icon-dutar",
+      "keywords": [
+        "dutar",
+        "music",
+        "doutar",
+        "dotar",
+        "two string lute",
+        "ساز",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كەشتە",
+      "en": "Embroidery",
+      "description": "كەشتە · embroidery · SVG",
+      "href": "index.html#icon-embroidery",
+      "keywords": [
+        "embroidery",
+        "textiles",
+        "keshte",
+        "needle",
+        "thread",
+        "يىپ",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "گۈل نەقشى",
+      "en": "Floral motif",
+      "description": "گۈل نەقشى · flower · SVG",
+      "href": "index.html#icon-flower",
+      "keywords": [
+        "flower",
+        "textiles",
+        "gul",
+        "rosette",
+        "ornament",
+        "نەقىش",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "غېجەك",
+      "en": "Ghijek",
+      "description": "غېجەك · ghijek · SVG",
+      "href": "index.html#icon-ghijek",
+      "keywords": [
+        "ghijek",
+        "music",
+        "ghijak",
+        "ghichak",
+        "غىجەك",
+        "bowed fiddle",
+        "ساز",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئۈزۈم",
+      "en": "Grapes",
+      "description": "ئۈزۈم · grapes · SVG",
+      "href": "index.html#icon-grapes",
+      "keywords": [
+        "grapes",
+        "garden",
+        "uzum",
+        "vine",
+        "fruit",
+        "باغ",
+        "مېۋە",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "لەغمەن",
+      "en": "Laghman",
+      "description": "لەغمەن · laghman · SVG",
+      "href": "index.html#icon-laghman",
+      "keywords": [
+        "laghman",
+        "table",
+        "lagman",
+        "leghmen",
+        "noodles",
+        "ئاش",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تورلۇق دېرىزە",
+      "en": "Lattice window",
+      "description": "تورلۇق دېرىزە · lattice-window · SVG",
+      "href": "index.html#icon-lattice-window",
+      "keywords": [
+        "lattice-window",
+        "architecture",
+        "penjire",
+        "panjire",
+        "woodwork",
+        "پەنجىرە",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "توقۇش دەستگاھى",
+      "en": "Loom",
+      "description": "توقۇش دەستگاھى · loom · SVG",
+      "href": "index.html#icon-loom",
+      "keywords": [
+        "loom",
+        "textiles",
+        "toqumichiliq",
+        "weaving",
+        "توقۇمىچىلىق",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "نان",
+      "en": "Nan bread",
+      "description": "نان · nan · SVG",
+      "href": "index.html#icon-nan",
+      "keywords": [
+        "nan",
+        "table",
+        "naan",
+        "bread",
+        "tonur",
+        "تونۇر",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "پولۇ",
+      "en": "Polo",
+      "description": "پولۇ · polo · SVG",
+      "href": "index.html#icon-polo",
+      "keywords": [
+        "polo",
+        "table",
+        "polu",
+        "pilaf",
+        "rice",
+        "گۈرۈچ",
+        "پولو",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئانار",
+      "en": "Pomegranate",
+      "description": "ئانار · pomegranate · SVG",
+      "href": "index.html#icon-pomegranate",
+      "keywords": [
+        "pomegranate",
+        "table",
+        "anar",
+        "fruit",
+        "مېۋە",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "راۋاپ",
+      "en": "Rawap",
+      "description": "راۋاپ · rawap · SVG",
+      "href": "index.html#icon-rawap",
+      "keywords": [
+        "rawap",
+        "music",
+        "rawab",
+        "rubab",
+        "راۋاب",
+        "ساز",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "سامسا",
+      "en": "Samsa",
+      "description": "سامسا · samsa · SVG",
+      "href": "index.html#icon-samsa",
+      "keywords": [
+        "samsa",
+        "table",
+        "samosa",
+        "pastry",
+        "samsa",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ساتار",
+      "en": "Satar",
+      "description": "ساتار · satar · SVG",
+      "href": "index.html#icon-satar",
+      "keywords": [
+        "satar",
+        "music",
+        "sattar",
+        "bowed lute",
+        "ساز",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئۇرچۇق",
+      "en": "Spindle",
+      "description": "ئۇرچۇق · spindle · SVG",
+      "href": "index.html#icon-spindle",
+      "keywords": [
+        "spindle",
+        "textiles",
+        "urchuq",
+        "yarn",
+        "spinning",
+        "يىپ",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تەمبۈر",
+      "en": "Tambur",
+      "description": "تەمبۈر · tambur · SVG",
+      "href": "index.html#icon-tambur",
+      "keywords": [
+        "tambur",
+        "music",
+        "tembor",
+        "tanbur",
+        "تەمبۇر",
+        "ساز",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "پىيالە",
+      "en": "Tea bowl",
+      "description": "پىيالە · tea-bowl · SVG",
+      "href": "index.html#icon-tea-bowl",
+      "keywords": [
+        "tea-bowl",
+        "table",
+        "piyale",
+        "pigale",
+        "tea",
+        "cup",
+        "پىگالە",
+        "چاي",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "چەينەك",
+      "en": "Teapot",
+      "description": "چەينەك · teapot · SVG",
+      "href": "index.html#icon-teapot",
+      "keywords": [
+        "teapot",
+        "table",
+        "cheynek",
+        "chogun",
+        "tea",
+        "چۆگۈن",
+        "چاي",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تۆۋەنگە",
+      "en": "Arrow down",
+      "description": "تۆۋەنگە · arrow-down · SVG",
+      "href": "index.html#icon-arrow-down",
+      "keywords": [
+        "arrow-down",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "سولغا",
+      "en": "Arrow left",
+      "description": "سولغا · arrow-left · SVG",
+      "href": "index.html#icon-arrow-left",
+      "keywords": [
+        "arrow-left",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئوڭغا",
+      "en": "Arrow right",
+      "description": "ئوڭغا · arrow-right · SVG",
+      "href": "index.html#icon-arrow-right",
+      "keywords": [
+        "arrow-right",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "يۇقىرىغا",
+      "en": "Arrow up",
+      "description": "يۇقىرىغا · arrow-up · SVG",
+      "href": "index.html#icon-arrow-up",
+      "keywords": [
+        "arrow-up",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كىتاب",
+      "en": "Book",
+      "description": "كىتاب · book · SVG",
+      "href": "index.html#icon-book",
+      "keywords": [
+        "book",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كالېندار",
+      "en": "Calendar",
+      "description": "كالېندار · calendar · SVG",
+      "href": "index.html#icon-calendar",
+      "keywords": [
+        "calendar",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تەستىق",
+      "en": "Check",
+      "description": "تەستىق · check · SVG",
+      "href": "index.html#icon-check",
+      "keywords": [
+        "check",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تەستىق بەلگىسى",
+      "en": "Check circle",
+      "description": "تەستىق بەلگىسى · check-circle · SVG",
+      "href": "index.html#icon-check-circle",
+      "keywords": [
+        "check-circle",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تۆۋەن ئوق",
+      "en": "Chevron down",
+      "description": "تۆۋەن ئوق · chevron-down · SVG",
+      "href": "index.html#icon-chevron-down",
+      "keywords": [
+        "chevron-down",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "سول ئوق",
+      "en": "Chevron left",
+      "description": "سول ئوق · chevron-left · SVG",
+      "href": "index.html#icon-chevron-left",
+      "keywords": [
+        "chevron-left",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئوڭ ئوق",
+      "en": "Chevron right",
+      "description": "ئوڭ ئوق · chevron-right · SVG",
+      "href": "index.html#icon-chevron-right",
+      "keywords": [
+        "chevron-right",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "يۇقىرى ئوق",
+      "en": "Chevron up",
+      "description": "يۇقىرى ئوق · chevron-up · SVG",
+      "href": "index.html#icon-chevron-up",
+      "keywords": [
+        "chevron-up",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تاقاش",
+      "en": "Close",
+      "description": "تاقاش · close · SVG",
+      "href": "index.html#icon-close",
+      "keywords": [
+        "close",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كود",
+      "en": "Code",
+      "description": "كود · code · SVG",
+      "href": "index.html#icon-code",
+      "keywords": [
+        "code",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كۆچۈرۈش",
+      "en": "Copy",
+      "description": "كۆچۈرۈش · copy · SVG",
+      "href": "index.html#icon-copy",
+      "keywords": [
+        "copy",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "سولدىن ئوڭغا",
+      "en": "Left to right",
+      "description": "سولدىن ئوڭغا · direction-ltr · SVG",
+      "href": "index.html#icon-direction-ltr",
+      "keywords": [
+        "direction-ltr",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئوڭدىن سولغا",
+      "en": "Right to left",
+      "description": "ئوڭدىن سولغا · direction-rtl · SVG",
+      "href": "index.html#icon-direction-rtl",
+      "keywords": [
+        "direction-rtl",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "چۈشۈرۈش",
+      "en": "Download",
+      "description": "چۈشۈرۈش · download · SVG",
+      "href": "index.html#icon-download",
+      "keywords": [
+        "download",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تەھرىرلەش",
+      "en": "Edit",
+      "description": "تەھرىرلەش · edit · SVG",
+      "href": "index.html#icon-edit",
+      "keywords": [
+        "edit",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تاشقى ئۇلانما",
+      "en": "External link",
+      "description": "تاشقى ئۇلانما · external-link · SVG",
+      "href": "index.html#icon-external-link",
+      "keywords": [
+        "external-link",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "يەر شارى",
+      "en": "Globe",
+      "description": "يەر شارى · globe · SVG",
+      "href": "index.html#icon-globe",
+      "keywords": [
+        "globe",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "يۈرەك",
+      "en": "Heart",
+      "description": "يۈرەك · heart · SVG",
+      "href": "index.html#icon-heart",
+      "keywords": [
+        "heart",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "باش بەت",
+      "en": "Home",
+      "description": "باش بەت · home · SVG",
+      "href": "index.html#icon-home",
+      "keywords": [
+        "home",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "سۈرەت",
+      "en": "Image",
+      "description": "سۈرەت · image · SVG",
+      "href": "index.html#icon-image",
+      "keywords": [
+        "image",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئۇچۇر",
+      "en": "Information",
+      "description": "ئۇچۇر · info · SVG",
+      "href": "index.html#icon-info",
+      "keywords": [
+        "info",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كۇنۇپكا تاختىسى",
+      "en": "Keyboard",
+      "description": "كۇنۇپكا تاختىسى · keyboard · SVG",
+      "href": "index.html#icon-keyboard",
+      "keywords": [
+        "keyboard",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تىل",
+      "en": "Language",
+      "description": "تىل · language · SVG",
+      "href": "index.html#icon-language",
+      "keywords": [
+        "language",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئۇلانما",
+      "en": "Link",
+      "description": "ئۇلانما · link · SVG",
+      "href": "index.html#icon-link",
+      "keywords": [
+        "link",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئېلخەت",
+      "en": "Mail",
+      "description": "ئېلخەت · mail · SVG",
+      "href": "index.html#icon-mail",
+      "keywords": [
+        "mail",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تىزىملىك",
+      "en": "Menu",
+      "description": "تىزىملىك · menu · SVG",
+      "href": "index.html#icon-menu",
+      "keywords": [
+        "menu",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "كېمەيتىش",
+      "en": "Minus",
+      "description": "كېمەيتىش · minus · SVG",
+      "href": "index.html#icon-minus",
+      "keywords": [
+        "minus",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئاي",
+      "en": "Moon",
+      "description": "ئاي · moon · SVG",
+      "href": "index.html#icon-moon",
+      "keywords": [
+        "moon",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "رەڭ تاختىسى",
+      "en": "Palette",
+      "description": "رەڭ تاختىسى · palette · SVG",
+      "href": "index.html#icon-palette",
+      "keywords": [
+        "palette",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "توختىتىش",
+      "en": "Pause",
+      "description": "توختىتىش · pause · SVG",
+      "href": "index.html#icon-pause",
+      "keywords": [
+        "pause",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "قويۇش",
+      "en": "Play",
+      "description": "قويۇش · play · SVG",
+      "href": "index.html#icon-play",
+      "keywords": [
+        "play",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "قوشۇش",
+      "en": "Plus",
+      "description": "قوشۇش · plus · SVG",
+      "href": "index.html#icon-plus",
+      "keywords": [
+        "plus",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "قايتا ئىشلەش",
+      "en": "Redo",
+      "description": "قايتا ئىشلەش · redo · SVG",
+      "href": "index.html#icon-redo",
+      "keywords": [
+        "redo",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئىزدەش",
+      "en": "Search",
+      "description": "ئىزدەش · search · SVG",
+      "href": "index.html#icon-search",
+      "keywords": [
+        "search",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "تەڭشەك",
+      "en": "Settings",
+      "description": "تەڭشەك · settings · SVG",
+      "href": "index.html#icon-settings",
+      "keywords": [
+        "settings",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "يۇلتۇز",
+      "en": "Star",
+      "description": "يۇلتۇز · star · SVG",
+      "href": "index.html#icon-star",
+      "keywords": [
+        "star",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "قۇياش",
+      "en": "Sun",
+      "description": "قۇياش · sun · SVG",
+      "href": "index.html#icon-sun",
+      "keywords": [
+        "sun",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئۆچۈرۈش",
+      "en": "Trash",
+      "description": "ئۆچۈرۈش · trash · SVG",
+      "href": "index.html#icon-trash",
+      "keywords": [
+        "trash",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "قايتۇرۇش",
+      "en": "Undo",
+      "description": "قايتۇرۇش · undo · SVG",
+      "href": "index.html#icon-undo",
+      "keywords": [
+        "undo",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "يۈكلەش",
+      "en": "Upload",
+      "description": "يۈكلەش · upload · SVG",
+      "href": "index.html#icon-upload",
+      "keywords": [
+        "upload",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئىشلەتكۈچى",
+      "en": "User",
+      "description": "ئىشلەتكۈچى · user · SVG",
+      "href": "index.html#icon-user",
+      "keywords": [
+        "user",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "جامائەت",
+      "en": "Community",
+      "description": "جامائەت · users · SVG",
+      "href": "index.html#icon-users",
+      "keywords": [
+        "users",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "ئاگاھلاندۇرۇش",
+      "en": "Warning",
+      "description": "ئاگاھلاندۇرۇش · warning · SVG",
+      "href": "index.html#icon-warning",
+      "keywords": [
+        "warning",
+        "general",
+        "icon",
+        "سىنبەلگە"
+      ]
+    },
+    {
+      "title": "شەرقىي تۈركىستان بايرىقى",
+      "en": "East Turkistan flag",
+      "description": "بايراق SVG ھۆججىتى ۋە ئىشلىتىش ئۇسۇلى.",
+      "href": "index.html#flag",
+      "keywords": [
+        "flag",
+        "SVG",
+        "بايراق"
+      ]
+    }
+  ]
+}
