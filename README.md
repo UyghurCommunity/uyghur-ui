@@ -129,6 +129,14 @@ Package file exports:
 
 The [metadata](assets/maps/east-turkistan.metadata.json), [original extracted GeoJSON](assets/maps/east-turkistan.source.geojson) and [map notes](assets/maps/README.md) record source checksums, geographic extent and reproducible generation details.
 
+## Interaction gallery
+
+[Try the six original interactions](https://uyghurcommunity.github.io/uyghur-ui/interactions.html): embroidery spotlight, Doppa depth card, Atlas selection, local envelope animation, map comparison and ornament ripple. The presentation takes inspiration from [Aceternity’s interaction gallery](https://ui.aceternity.com/interactions); the implementations and cultural artwork are original, with no Aceternity source or runtime dependency.
+
+Each demo has touch and keyboard controls, a shared pause control, reduced-motion support and a complete HTML/CSS/JavaScript example to copy or download. The comparison download embeds both map SVGs, and every standalone example registers the supplied ALKATIP Basma font URLs. Font binaries are not bundled. The envelope is a local visual demonstration and sends no message.
+
+These are website examples, separate from the unchanged v0.3.0 package exports. Source: `docs/interactions-data.js`, `docs/interaction-controls.js`, `docs/interaction-demo.css` and `docs/interaction-document.js`. `build:docs` renders `interactions.html` from the same examples and shared documentation shell.
+
 ## Run and verify
 
 ```sh
@@ -145,6 +153,6 @@ The gallery has working previews and copyable HTML/JavaScript. Demo form values 
 
 `build:map` regenerates the map SVGs, metadata and JavaScript geometry module offline from the committed source GeoJSON. `build:icons` regenerates the outline/color icon files, catalog and deterministic ZIP downloads using Node only. CI checks that generated files match the committed assets.
 
-`build:docs` produces eleven static Uyghur guide pages and the local full-text search index from `docs/guide-content.js`. The guides cover installation, a complete quick start, components, JavaScript APIs, icons, theming, RTL, accessibility, troubleshooting and release history. All guide prose is readable without JavaScript. Search, code-copy helpers, mobile navigation and theme preferences enhance the static pages in the browser. Keep generated `guide/`, `index.html` navigation and `assets/docs-search.json` committed for GitHub Pages.
+`build:docs` produces eleven static Uyghur guide pages and the local full-text search index from `docs/guide-content.js`. The guides cover installation, a complete quick start, components, JavaScript APIs, icons, theming, RTL, accessibility, troubleshooting and release history. All guide prose is readable without JavaScript. Search, code-copy helpers, mobile navigation and theme preferences enhance the static pages in the browser. Keep generated `guide/`, `interactions.html`, `index.html` navigation and `assets/docs-search.json` committed for GitHub Pages.
 
 Code and original icons: [MIT](LICENSE). Natural Earth map data: public domain. Flag, cultural references and external-font details: [third-party notices](THIRD_PARTY_NOTICES.md).

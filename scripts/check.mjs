@@ -5,27 +5,42 @@ import { resolve } from 'node:path';
 import { iconSVG, iconNames, coloredIconNames, flagSVG, iconCatalog } from '../src/icons.js';
 import { components } from '../docs/components.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
-const html = await readFile(resolve(root, 'index.html'), 'utf8');
-const galleryHTML = html + '\n' + components.map((component) => component.html).join('\n');
-const ids = [...galleryHTML.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]);
-if (ids.length !== new Set(ids).size) throw new Error('Duplicate HTML ID');
-for (const [, references] of galleryHTML.matchAll(/\b(?:for|aria-controls|aria-labelledby|aria-describedby)="([^"]+)"/g)) {
-  for (const ref of references.split(/\s+/)) if (!ids.includes(ref)) throw new Error(`Missing label/ARIA target ${ref}`);
+const documentIDs = new Map();
+for (const filename of ['index.html', 'interactions.html']) {
+  const html = await readFile(resolve(root, filename), 'utf8');
+  const markup = html + (filename === 'index.html' ? '\n' + components.map((component) => component.html).join('\n') : '');
+  const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]);
+  if (ids.length !== new Set(ids).size) throw new Error(`${filename}: duplicate HTML ID`);
+  for (const [, references] of markup.matchAll(/\b(?:for|aria-controls|aria-labelledby|aria-describedby)="([^"]+)"/g)) {
+    for (const ref of references.split(/\s+/)) if (!ids.includes(ref)) throw new Error(`${filename}: missing label/ARIA target ${ref}`);
+  }
+  for (const [, ref] of markup.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
+    if (/^(https?:|data:|mailto:)/.test(ref)) continue;
+    if (ref.startsWith('#')) { if (!ids.includes(ref.slice(1))) throw new Error(`${filename}: missing anchor ${ref}`); }
+    else await access(resolve(root, ref.split(/[?#]/)[0]));
+  }
+  documentIDs.set(filename, ids);
 }
-for (const [, ref] of galleryHTML.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
-  if (/^(https?:|data:|mailto:)/.test(ref)) continue;
-  if (ref.startsWith('#')) { if (!ids.includes(ref.slice(1))) throw new Error(`Missing anchor ${ref}`); }
-  else await access(resolve(root, ref.split(/[?#]/)[0]));
-}
-for (const file of [
+const scriptFiles = [
   'src/index.js', 'src/icons.js', 'src/icon-labels.js', 'src/traditional-drawings.js',
   'src/reference-clothing.js', 'src/reference-places.js', 'src/heritage-color.js', 'src/maps.js', 'src/map-data.js',
   'scripts/build-map.mjs', 'scripts/build-icons.mjs', 'scripts/build-docs.mjs', 'scripts/check.mjs', 'scripts/check-docs.mjs', 'scripts/zip.mjs',
-  'docs/app.js', 'docs/components.js', 'docs/snippets.js', 'docs/docs-shell.js', 'docs/site-shell.js', 'docs/guide-content.js',
-]) execFileSync(process.execPath, ['--check', resolve(root, file)]);
-const galleryScript = await readFile(resolve(root, 'docs/app.js'), 'utf8');
-for (const [, ref] of galleryScript.matchAll(/\$\('([^']+)'\)/g)) if (!ids.includes(ref)) throw new Error(`Missing gallery JS target ${ref}`);
-for (const file of ['src/styles.css','src/font.css','docs/site.css','docs/documentation.css']) {
+  ...(await readdir(resolve(root, 'docs'))).filter((name) => name.endsWith('.js')).map((name) => `docs/${name}`),
+];
+for (const file of scriptFiles) {
+  const filename = resolve(root, file);
+  execFileSync(process.execPath, ['--check', filename]);
+}
+for (const [page, script] of [['index.html', 'docs/app.js'], ['interactions.html', 'docs/interactions.js']]) {
+  const ids = documentIDs.get(page), source = await readFile(resolve(root, script), 'utf8');
+  const patterns = [
+    /\$\(\s*['"]([a-zA-Z][\w:-]*)['"]\s*\)/g,
+    /\bgetElementById\(\s*['"]([a-zA-Z][\w:-]*)['"]\s*\)/g,
+    /\bquerySelector(?:All)?\(\s*['"]#([a-zA-Z][\w:-]*)['"]\s*\)/g,
+  ];
+  for (const pattern of patterns) for (const [, ref] of source.matchAll(pattern)) if (!ids.includes(ref)) throw new Error(`${script}: missing ${page} target ${ref}`);
+}
+for (const file of ['src/styles.css','src/font.css','docs/site.css','docs/documentation.css','docs/interactions.css','docs/interaction-demo.css']) {
   const css = await readFile(resolve(root, file), 'utf8');
   if ((css.match(/\{/g)||[]).length !== (css.match(/\}/g)||[]).length) throw new Error(`CSS blocks: ${file}`);
 }
@@ -39,4 +54,5 @@ if (JSON.stringify(stored) !== JSON.stringify(iconNames.map((name) => `${name}.s
 const storedColor = (await readdir(resolve(root, 'assets/icons/color'))).sort();
 if (JSON.stringify(storedColor) !== JSON.stringify(coloredIconNames.map((name) => `${name}.svg`).sort())) throw new Error('Color SVG files do not match the public catalog');
 if (await readFile(resolve(root,'assets/flags/east-turkistan.svg'),'utf8') !== flagSVG({width:900})) throw new Error('Stale flag asset');
-console.log(`Checked documentation assets, ${ids.length} IDs, CSS, JavaScript, ${iconNames.length} outline SVG icons and ${coloredIconNames.length} color variants.`);
+const idCount = [...documentIDs.values()].reduce((count, ids) => count + ids.length, 0);
+console.log(`Checked documentation assets, gallery/interactions (${idCount} IDs), CSS, JavaScript, ${iconNames.length} outline SVG icons and ${coloredIconNames.length} color variants.`);

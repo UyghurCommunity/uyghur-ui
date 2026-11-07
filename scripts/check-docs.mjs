@@ -6,10 +6,10 @@ import { guidePages } from '../docs/guide-content.js';
 import { components } from '../docs/components.js';
 import { iconCatalog } from '../src/icons.js';
 import { prepareSearchIndex, searchDocumentation } from '../docs/docs-shell.js';
-import { siteVersion, themeBootstrap } from '../docs/site-shell.js';
+import { siteVersion, themeBootstrap, interactionsMetadata } from '../docs/site-shell.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const rootHTML = resolve(root, 'index.html'), cache = new Map();
+const rootHTML = resolve(root, 'index.html'), interactionsHTML = resolve(root, 'interactions.html'), cache = new Map();
 const dynamicGalleryIDs = new Set([
   ...components.map(({ id }) => `component-${id}`),
   ...iconCatalog.map(({ name }) => `icon-${name}`),
@@ -98,15 +98,16 @@ function checkShell(file, doc, active) {
     const current = anchors.filter(({ attrs }) => attrs.get('aria-current') === 'page');
     if (current.length !== 1) fail(file, 'each documentation navigation needs exactly one current page');
     const destination = new URL(current[0].attrs.get('href'), pathToFileURL(file));
-    const expected = active === 'gallery' ? pathToFileURL(rootHTML).href + '#components' : pathToFileURL(resolve(root, `guide/${active}.html`)).href;
+    const expected = active === 'gallery' ? pathToFileURL(rootHTML).href + '#components' : active === 'interactions' ? pathToFileURL(interactionsHTML).href : pathToFileURL(resolve(root, `guide/${active}.html`)).href;
     if (destination.href !== expected) fail(file, 'documentation navigation marks the wrong current page');
     for (const page of guidePages) if (!anchors.some(({ attrs }) => fileURLToPath(new URL(attrs.get('href'), pathToFileURL(file))) === resolve(root, `guide/${page.slug}.html`))) fail(file, `navigation omits ${page.slug}`);
+    if (!anchors.some(({ attrs }) => fileURLToPath(new URL(attrs.get('href'), pathToFileURL(file))) === interactionsHTML)) fail(file, 'navigation omits interactions.html');
   }
 }
 
 const expectedGuideNames = [...guidePages.map(({ slug }) => `${slug}.html`), 'index.html'].sort();
 assert.deepEqual((await readdir(resolve(root, 'guide'))).filter((name) => name.endsWith('.html')).sort(), expectedGuideNames, 'generated guide page set is stale');
-for (const file of [rootHTML, ...expectedGuideNames.map((name) => resolve(root, 'guide', name))]) {
+for (const file of [rootHTML, interactionsHTML, ...expectedGuideNames.map((name) => resolve(root, 'guide', name))]) {
   const doc = await document(file), { html, nodes, ids } = doc;
   const htmlNode = nodes.find(({ name }) => name === 'html');
   if (htmlNode?.attrs.get('lang') !== 'ug' || htmlNode.attrs.get('dir') !== 'rtl') fail(file, 'document must declare lang="ug" dir="rtl"');
@@ -126,7 +127,11 @@ for (const file of [rootHTML, ...expectedGuideNames.map((name) => resolve(root, 
   }
   if (!nodes.some(({ name, attrs }) => name === 'meta' && attrs.get('name') === 'description' && attrs.get('content'))) fail(file, 'missing description');
   const page = guidePages.find(({ slug }) => file === resolve(root, `guide/${slug}.html`));
-  checkShell(file, doc, page?.slug || 'gallery');
+  checkShell(file, doc, page?.slug || (file === interactionsHTML ? 'interactions' : 'gallery'));
+  if (file === interactionsHTML) {
+    if (ids.get('main')?.name !== 'main') fail(file, 'interactions page needs a main landmark with id="main"');
+    for (const { id } of interactionsMetadata) if (!ids.has(`interaction-${id}`)) fail(file, `missing real interaction anchor interaction-${id}`);
+  }
   if (!page) continue;
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1];
   const description = nodes.find(({ name, attrs }) => name === 'meta' && attrs.get('name') === 'description')?.attrs.get('content');
@@ -149,11 +154,12 @@ assert.equal(payload.version, siteVersion, 'documentation search version is stal
 const expectedHrefs = new Set([
   ...guidePages.map(({ slug }) => `guide/${slug}.html`),
   ...components.map(({ id }) => `index.html#component-${id}`),
+  ...interactionsMetadata.map(({ id }) => `interactions.html#interaction-${id}`),
   ...iconCatalog.map(({ name }) => `index.html#icon-${name}`),
   'index.html#flag',
   'index.html#map',
 ]);
-const expectedEntryCount = guidePages.length + components.length + iconCatalog.length + 2;
+const expectedEntryCount = guidePages.length + components.length + interactionsMetadata.length + iconCatalog.length + 2;
 assert.equal(expectedHrefs.size, expectedEntryCount, 'documentation source inventory has duplicate destinations');
 assert.equal(payload.entries.length, expectedEntryCount, 'documentation index is incomplete');
 assert.deepEqual(new Set(payload.entries.map(({ href }) => href)), expectedHrefs, 'documentation index destinations differ from its real sources');
@@ -168,6 +174,10 @@ for (const icon of iconCatalog) {
   const entry = payload.entries.find(({ href }) => href === `index.html#icon-${icon.name}`);
   assert.ok(entry && entry.title === icon.ug && entry.en === icon.en && icon.keywords.every((word) => entry.keywords.includes(word)), `search metadata is stale for ${icon.name}`);
 }
+for (const interaction of interactionsMetadata) {
+  const entry = payload.entries.find(({ href }) => href === `interactions.html#interaction-${interaction.id}`);
+  assert.ok(entry && entry.title === interaction.title && entry.en === interaction.en && entry.description === interaction.description && interaction.keywords.every((word) => entry.keywords.includes(word)), `search metadata is stale for interaction ${interaction.id}`);
+}
 for (const entry of payload.entries) await localTarget(rootHTML, entry.href);
 for (const [query, expected] of [['قاچىلاش', 'guide/installation.html'], ['installation', 'guide/installation.html'], ['راۋاپ', 'index.html#icon-rawap'], ['rawab', 'index.html#icon-rawap'], ['dialog', 'index.html#component-dialog'], ['كۇنۇپكىلار', 'index.html#component-buttons']]) {
   assert.ok(searchDocumentation(prepared, query, { limit: 50 }).some(({ href }) => href === new URL(expected, 'https://documentation.invalid/uyghur-ui/').href), `documentation search lost destination for ${query}`);
@@ -177,4 +187,8 @@ const mapDestination = new URL('index.html#map', 'https://documentation.invalid/
 for (const query of mapQueries) {
   assert.ok(searchDocumentation(prepared, query, { limit: 50 }).some(({ href }) => href === mapDestination), `documentation search lost the map for ${query}`);
 }
-console.log(`Checked ${guidePages.length} static guide pages, gallery/redirect, labels/ARIA, ${localReferences} local references, and all ${expectedEntryCount} searchable destinations.`);
+for (const { id, title, en } of interactionsMetadata) {
+  const destination = new URL(`interactions.html#interaction-${id}`, 'https://documentation.invalid/uyghur-ui/').href;
+  for (const query of [title, en]) assert.ok(searchDocumentation(prepared, query, { limit: 50 }).some(({ href }) => href === destination), `documentation search lost interaction ${id} for ${query}`);
+}
+console.log(`Checked ${guidePages.length} static guide pages, gallery/interactions/redirect, labels/ARIA, ${localReferences} local references, and all ${expectedEntryCount} searchable destinations.`);

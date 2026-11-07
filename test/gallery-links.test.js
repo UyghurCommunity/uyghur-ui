@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { bindGalleryLinks } from '../docs/gallery-links.js';
-function fixture(hash = '#component-buttons') {
+function fixture(hash = '#component-buttons', page = 'index.html', onReveal) {
   const events = () => ({ handlers: new Map(), addEventListener(name, fn) { this.handlers.set(name, fn); }, removeEventListener(name) { this.handlers.delete(name); }, emit(name, event = {}) { this.handlers.get(name)?.(event); } });
   const win = events(), doc = events(), frames = new Map(); let next = 1, calls = 0;
-  win.location = { href: `https://uyghurcommunity.github.io/uyghur-ui/index.html${hash}` };
+  win.location = { href: `https://uyghurcommunity.github.io/uyghur-ui/${page}${hash}` };
   win.requestAnimationFrame = (fn) => { const id = next++; frames.set(id, fn); return id; }; win.cancelAnimationFrame = (id) => frames.delete(id);
-  const ui = bindGalleryLinks(win, doc, () => calls++);
+  const ui = bindGalleryLinks(win, doc, () => { calls++; onReveal?.(); });
   return { win, doc, ui, calls: () => calls, flush() { const pending = [...frames.values()]; frames.clear(); pending.forEach((fn) => fn()); }, click(href, extra = {}, attrs = {}) { const anchor = { href, target: attrs.target || '', hasAttribute: (name) => Boolean(attrs[name]) }; doc.emit('click', { button: 0, target: { closest: () => anchor }, ...extra }); } };
 }
 test('reselecting a filtered component or closed icon at the current hash reveals it after native dialog close', () => {
@@ -14,6 +14,24 @@ test('reselecting a filtered component or closed icon at the current hash reveal
     const f = fixture(hash); f.click(`index.html${hash}`); assert.equal(f.calls(), 0); f.flush(); assert.equal(f.calls(), 1);
     f.click(`index.html${hash}`); f.flush(); assert.equal(f.calls(), 2);
   }
+});
+test('repeated interaction search links wait for native dialog close before revealing a filtered target', () => {
+  const state = { dialogOpen: true, query: 'send', category: 'actions', targetHidden: true, focused: false };
+  const f = fixture('#interaction-compare', 'interactions.html', () => {
+    assert.equal(state.dialogOpen, false, 'focus returns after the search dialog has closed');
+    state.query = ''; state.category = 'all'; state.targetHidden = false; state.focused = true;
+  });
+  for (let repeat = 0; repeat < 2; repeat++) {
+    Object.assign(state, { dialogOpen: true, query: 'send', category: 'actions', targetHidden: true, focused: false });
+    f.click('interactions.html#interaction-compare');
+    assert.equal(f.calls(), repeat); assert.equal(state.targetHidden, true); assert.equal(state.focused, false);
+    // The documentation shell closes its native dialog in the same click turn.
+    state.dialogOpen = false; f.flush();
+    assert.equal(f.calls(), repeat + 1); assert.equal(state.query, ''); assert.equal(state.category, 'all');
+    assert.equal(state.targetHidden, false); assert.equal(state.focused, true);
+  }
+  f.click('index.html#interaction-compare'); f.flush(); assert.equal(f.calls(), 2, 'cross-page links keep native navigation');
+  f.ui.destroy();
 });
 test('changed fragments use native hash navigation and a real hashchange event', () => {
   const f = fixture(); f.click('index.html#component-forms'); f.flush(); assert.equal(f.calls(), 0);

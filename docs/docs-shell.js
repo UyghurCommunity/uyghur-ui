@@ -11,7 +11,7 @@ export function normalizeDocsQuery(value) {
 
 /** Search results can only navigate to an HTML page in this documentation site. */
 export function resolveSearchHref(href, indexURL) {
-  if (typeof href !== 'string' || !/^(?:guide\/[a-z0-9-]+\.html|index\.html)(?:#[a-z0-9-]+)?$/.test(href)) return null;
+  if (typeof href !== 'string' || !/^(?:guide\/[a-z0-9-]+\.html|index\.html|interactions\.html)(?:#[a-z0-9-]+)?$/.test(href)) return null;
   let index;
   try { index = new URL(indexURL); } catch { return null; }
   if (!['http:', 'https:'].includes(index.protocol) || !index.pathname.endsWith('/assets/docs-search.json')) return null;

@@ -8,7 +8,7 @@ export function bindGalleryLinks(win, doc, reveal) {
     if (!anchor || anchor.hasAttribute('download') || anchor.target && anchor.target !== '_self') return;
     let target, current;
     try { current = new URL(win.location.href); target = new URL(anchor.href, current); } catch { return; }
-    if (target.origin !== current.origin || target.pathname !== current.pathname || target.search !== current.search || target.hash !== current.hash || !/^#(?:icon|component)-[a-z0-9-]+$/.test(target.hash)) return;
+    if (target.origin !== current.origin || target.pathname !== current.pathname || target.search !== current.search || target.hash !== current.hash || !/^#(?:icon|component|interaction)-[a-z0-9-]+$/.test(target.hash)) return;
     if (frame) win.cancelAnimationFrame(frame);
     // Let the search dialog close and native link navigation finish before returning focus.
     frame = win.requestAnimationFrame(() => { frame = null; if (!destroyed) reveal(); });

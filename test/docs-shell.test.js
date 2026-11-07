@@ -78,9 +78,24 @@ function fixture() {
 test('search destinations stay inside the actual project base and reject traversal, schemes and non-documents', () => {
   assert.equal(resolveSearchHref('guide/installation.html', INDEX), 'https://example.test/uyghur-ui/guide/installation.html');
   assert.equal(resolveSearchHref('index.html#icons', INDEX), 'https://example.test/uyghur-ui/index.html#icons');
-  for (const href of ['https://evil.test/', '//evil.test/', 'javascript:alert(1)', '../index.html', 'guide/../index.html', 'guide/%2e%2e/index.html', 'guide/a.html?secret=x', 'assets/icons/dutar.svg', 'index.html#<img>']) assert.equal(resolveSearchHref(href, INDEX), null);
+  assert.equal(resolveSearchHref('interactions.html', INDEX), 'https://example.test/uyghur-ui/interactions.html');
+  for (const id of ['spotlight', 'tilt', 'selection', 'send', 'compare', 'ripple']) {
+    assert.equal(resolveSearchHref(`interactions.html#interaction-${id}`, INDEX), `https://example.test/uyghur-ui/interactions.html#interaction-${id}`);
+  }
+  for (const href of ['https://evil.test/', '//evil.test/', 'javascript:alert(1)', '../index.html', 'guide/../index.html', 'guide/%2e%2e/index.html', 'guide/a.html?secret=x', 'assets/icons/dutar.svg', 'index.html#<img>',
+    '../interactions.html', 'guide/../interactions.html', '%2e%2e/interactions.html', 'interactions.html/../index.html', 'interactions.html?secret=x', 'interactions.html#../send', 'interactions.html#<img>', 'interactions.html#interaction-%2fcompare',
+  ]) assert.equal(resolveSearchHref(href, INDEX), null);
   assert.equal(resolveSearchHref('index.html', 'file:///assets/docs-search.json'), null);
   assert.equal(resolveSearchHref('index.html', 'https://example.test/other.json'), null);
+});
+test('interaction search results retain the project base and remain searchable after route validation', () => {
+  const entries = prepareSearchIndex({ version: '0.3.0', entries: [
+    { title: 'خەرىتە سېلىشتۇرۇش', en: 'Map comparison', description: 'سىزىق بىلەن رەڭنى سېلىشتۇرۇڭ.', href: 'interactions.html#interaction-compare', keywords: ['compare', 'slider', 'خەرىتە'] },
+    { title: 'Wrong path', en: 'Traversal', description: 'Rejected', href: 'guide/../interactions.html#interaction-compare', keywords: ['compare'] },
+  ] }, INDEX);
+  assert.equal(entries.length, 1);
+  const destination = 'https://example.test/uyghur-ui/interactions.html#interaction-compare';
+  for (const query of ['خەرىتە', 'Map comparison', 'slider']) assert.equal(searchDocumentation(entries, query)[0].href, destination);
 });
 test('validated search data drops unsafe rows and duplicates, preserves plain text and snapshots aliases', () => {
   const rows = structuredClone(payload); rows.entries.push({ ...rows.entries[0] }, { ...rows.entries[0], href: 'https://evil.test' });
