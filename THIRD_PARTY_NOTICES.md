@@ -22,3 +22,7 @@ The East Turkistan map outline and filled assets use the **Xinjiang admin-1 feat
 ALKATIP Basma is linked using the project owner's supplied OnlineWebFonts WOFF2/WOFF/TTF URLs. Font binaries are not bundled or covered by the MIT code license.
 
 Accessibility references: [W3C modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/), [W3C form labels](https://www.w3.org/WAI/tutorials/forms/labels/), and [W3C form validation](https://www.w3.org/WAI/tutorials/forms/validation/). The library uses native HTML controls and does not claim independent assistive-technology certification.
+
+## Reused UyghurCommunity modules
+
+Uyghur UI 0.4.0 includes unchanged source copies from `@uyghurcommunity/keyboard` 0.1.1 and `@uyghurcommunity/text` 0.1.0 under `src/vendor/`. Their MIT licenses remain beside the source. `src/vendor/README.md` records the source repositories, versions and SHA-256 checksums. The writing controller composes these modules; normalization and cleanup require an explicit preview and apply action. Font binaries are not bundled. The optional React adapter is separately packaged under the same MIT license and uses React as a peer dependency.

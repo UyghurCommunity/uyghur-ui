@@ -3,10 +3,15 @@ export type { IconCategory, IconFilter, IconEntry, IconVariant } from './icons.j
 export { mapSVG, mapMetadata } from './maps.js';
 export type { MapMetadata } from './maps.js';
 export interface Controller { destroy(): void }
-export declare function bindDialog(dialog: HTMLDialogElement, options?: { trigger?: HTMLElement; initialFocus?: HTMLElement }): Controller & { open(): void; close(value?: string): void };
+export declare function bindDialog(dialog: HTMLDialogElement, options?: { trigger?: HTMLElement; initialFocus?: HTMLElement; dismissOutside?: boolean }): Controller & { open(): void; close(value?: string): void };
 export declare function bindDisclosure(button: HTMLElement, panel: HTMLElement): Controller & { setOpen(value: boolean): void; toggle(): void };
 export declare function bindTabs(container: HTMLElement): Controller & { select(tab: HTMLElement, focus?: boolean): void };
 export interface FormError { field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement; message: string }
 export declare function validateForm(form: HTMLFormElement, options?: { messages?: Record<string, string> }): FormError[];
 export declare function bindForm(form: HTMLFormElement, options?: { messages?: Record<string, string>; onValid?: (form: HTMLFormElement, event: SubmitEvent) => void }): Controller & { validate(): FormError[] };
 export declare function showToast(region: HTMLElement, message: string, options?: { duration?: number; dismissLabel?: string }): Controller & { element: HTMLElement; dismiss(): void };
+
+export * from './writing.js';
+export * from './application.js';
+export * from './interactions.js';
+export * from './themes.js';

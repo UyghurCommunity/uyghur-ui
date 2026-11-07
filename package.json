@@ -1,39 +1,95 @@
 {
   "name": "@uyghurcommunity/ui",
-  "version": "0.3.0",
-  "description": "Uyghur-first RTL UI components, accessible native controllers, SVG icons with heritage color variants, and East Turkistan flag and map assets.",
+  "version": "0.4.0",
+  "description": "Uyghur RTL components, writing tools, cultural themes, native application controls, SVG assets and optional motion.",
   "type": "module",
   "license": "MIT",
   "author": "UyghurCommunity",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "exports": {
-    ".": { "types": "./src/index.d.ts", "import": "./src/index.js" },
-    "./icons": { "types": "./src/icons.d.ts", "import": "./src/icons.js" },
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./icons": {
+      "types": "./src/icons.d.ts",
+      "import": "./src/icons.js"
+    },
     "./styles.css": "./src/styles.css",
     "./font.css": "./src/font.css",
     "./icons/*": "./assets/icons/*.svg",
     "./icons/color/*": "./assets/icons/color/*.svg",
     "./catalog.json": "./assets/icon-catalog.json",
     "./flags/east-turkistan.svg": "./assets/flags/east-turkistan.svg",
-    "./maps": { "types": "./src/maps.d.ts", "import": "./src/maps.js" },
+    "./maps": {
+      "types": "./src/maps.d.ts",
+      "import": "./src/maps.js"
+    },
     "./maps/east-turkistan-outline.svg": "./assets/maps/east-turkistan-outline.svg",
     "./maps/east-turkistan-filled.svg": "./assets/maps/east-turkistan-filled.svg",
     "./maps/metadata.json": "./assets/maps/east-turkistan.metadata.json",
     "./maps/source.geojson": "./assets/maps/east-turkistan.source.geojson",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./writing": {
+      "types": "./src/writing.d.ts",
+      "import": "./src/writing.js"
+    },
+    "./application": {
+      "types": "./src/application.d.ts",
+      "import": "./src/application.js"
+    },
+    "./application.css": "./src/application.css",
+    "./interactions": {
+      "types": "./src/interactions.d.ts",
+      "import": "./src/interactions.js"
+    },
+    "./interactions.css": "./src/interactions.css",
+    "./themes": {
+      "types": "./src/themes.d.ts",
+      "import": "./src/themes.js"
+    },
+    "./blocks.css": "./src/blocks.css"
   },
-  "files": ["src", "assets/icons", "assets/flags", "assets/maps", "assets/icon-catalog.json", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "src",
+    "assets/icons",
+    "assets/flags",
+    "assets/maps",
+    "assets/icon-catalog.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "test": "node --test",
     "check": "node scripts/check.mjs && node scripts/check-docs.mjs",
     "build:icons": "node scripts/build-icons.mjs",
     "build:map": "node scripts/build-map.mjs",
     "build:docs": "node scripts/build-docs.mjs",
-    "prepack": "npm run check && npm test"
+    "prepack": "npm run check && npm test",
+    "build:registry": "node scripts/build-registry.mjs",
+    "build:react-example": "node scripts/build-react-example.mjs"
   },
-  "repository": { "type": "git", "url": "https://github.com/UyghurCommunity/uyghur-ui.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UyghurCommunity/uyghur-ui.git"
+  },
   "homepage": "https://uyghurcommunity.github.io/uyghur-ui/",
-  "keywords": ["uyghur", "rtl", "components", "icons", "svg", "accessibility", "east-turkistan"],
-  "publishConfig": { "access": "public" }
+  "keywords": [
+    "uyghur",
+    "rtl",
+    "components",
+    "icons",
+    "svg",
+    "accessibility",
+    "east-turkistan"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

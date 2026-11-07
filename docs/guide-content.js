@@ -1,9 +1,35 @@
 import { escapeMarkup } from '../src/icons.js';
 
-const release = 'https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.3.0/uyghurcommunity-ui-0.3.0.tgz';
+const release = 'https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz';
 const code = (language, source) => `<pre data-language="${language}"><code>${escapeMarkup(source.trim())}</code></pre>`;
 const note = (title, text) => `<aside class="doc-callout"><strong>${title}</strong><p>${text}</p></aside>`;
 const table = (headings, rows) => `<div class="doc-table"><table><thead><tr>${headings.map((x) => `<th scope="col">${x}</th>`).join('')}</tr></thead><tbody>${rows.map((row) => `<tr>${row.map((x) => `<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+
+
+const release040 = 'https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/';
+const starterRelease = 'https://github.com/UyghurCommunity/uyghur-starters/releases/download/v0.2.0/uyghurcommunity-create-0.2.0.tgz';
+const additions040 = {
+  introduction: `<h2 id="intro-040">يېزىق، قوللىنىشچان بۆلەك ۋە ئىككى تىللىق قوللانما</h2><p>0.4.0 دە ئۇيغۇرچە يېزىق كونتروللىغۇچى، ئىزدەپ تاللاش، ئېچىلما تىزىملىك، يان كۆزنەك، سانلىق مەلۇمات جەدۋىلى، تۆت ئۇسلۇب ۋە React بوغچىسى قوشۇلدى. <a href="../lab.html">تەجرىبەخانا</a>دا سىناڭ، <a href="en/introduction.html" lang="en">English documentation</a> نى ئوقۇڭ ياكى <a href="../community.html">ھەمكارلىق قوللانمىسى</a>دىن تۆھپە يولىنى تاللاڭ.</p>`,
+  installation: `<h2 id="install-react">React بوغچىسى</h2>${code('sh',`npm install ${release040}uyghurcommunity-ui-0.4.0.tgz ${release040}uyghurcommunity-ui-react-0.4.0.tgz`)}${code('jsx',`import '@uyghurcommunity/ui/styles.css';
+import { Button, Icon, Dialog, Tabs, UyghurInput, Interaction } from '@uyghurcommunity/ui-react';
+export function Hello() {
+  return <main className="ug-ui" lang="ug" dir="rtl"><Button>باشلاڭ</Button><Icon name="dutar" /></main>;
+}`)}<p>React نى قوللىنىشچان تۈرىڭىز تەمىنلەيدۇ. تەركىبلەرنىڭ props ۋە ھايات دەۋرى ئۈچۈن React بوغچىسىنىڭ README سىنى كۆرۈڭ؛ بىر ئېلېمېنتقا ئىككى كونترولنى بىرگە باغلىماڭ. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن.</p><h2 id="install-cli">تورسىز بۆلەك قاچىلاش</h2>${code('sh',`npm install --save-dev ${starterRelease}
+npx create-uyghur --ui-list
+npx create-uyghur --ui combobox --dir examples/new-combobox`)}<p>CLI 0.2.0 نىڭ تاللاشلىرى: writing-field، dialog، combobox، dropdown، drawer، data-table. <code dir="ltr">--dir</code> ئۈچۈن يېڭى نىسپىي مۇندەرىجە تاللاڭ؛ بۇ قورال يەرلىك قېلىپ ئىشلىتىدۇ، تورغا ئېلان قىلمايدۇ.</p>`,
+  components: `<h2 id="components-application">قوللىنىشچان بۆلەكلەر ۋە React</h2><p><a href="../lab.html#lab-components">تەجرىبەخانىدا</a> ئىزدەپ تاللاش، ئېچىلما تىزىملىك، يان كۆزنەك ۋە جەدۋەلنىڭ ھەقىقىي HTML مىساللىرى بار. كونتروللارنى بىرلەشتۈرگەن باشقۇرۇش تاختىسى (يان تىزىملىك ۋە جەدۋەل) ۋە ماقالە تەھرىرلىگۈچ (يېزىق، ئالدىن كۆرۈش ۋە يەرلىك چىقىرىش) نىمۇ كۆچۈرۈپ ئىشلەتكىلى بولىدۇ. ئۇسلۇب يولى <code dir="ltr">@uyghurcommunity/ui/blocks.css</code>، ئاساسىي CSS ئىچىدىنمۇ يۈكلىنىدۇ. جەدۋەل يەرلىك قۇرلارنى سۈزۈپ، رەتلەپ ۋە بەتلەيدۇ؛ سانلىق مەلۇماتنى ئېلىش ياكى ساقلاشنى تۈرىڭىز باشقۇرىدۇ. ھەر كونترولنىڭ <code dir="ltr">destroy()</code> نى ھەقىقىي unmount ۋاقتىدا چاقىرىڭ.</p><p><code dir="ltr">@uyghurcommunity/ui-react</code> بولسا ئايرىم بوغچا؛ Button، Icon، Dialog، Tabs، UyghurInput ۋە Interaction نى export قىلىدۇ. <a href="installation.html#install-react">نەشر ئارخىپىدىن قاچىلاڭ</a>.</p>`,
+  javascript: `<h2 id="api-writing">ئۇيغۇرچە يېزىق كونتروللىغۇچى</h2>${code('js',`import { bindUyghurInput } from '@uyghurcommunity/ui/writing';
+const writing = bindUyghurInput(root, { maxLength: 10000, onChange(value) { console.log(value); } });
+const preview = writing.previewCleanup();
+console.log(preview, writing.validate());
+// writing.applyCleanup(); writing.undoCleanup(); writing.destroy();`)}<p>كونترول getValue، setValue، previewCleanup(options?)، applyCleanup، undoCleanup، validate ۋە destroy نى تەمىنلەيدۇ. validate نەتىجىسى <code dir="ltr">{valid,message,length,maxLength}</code>؛ setValue، applyCleanup ۋە undoCleanup boolean قايتۇرىدۇ. ئالدى بىلەن ئۆزگەرتىشنى كۆرۈپ، ئاندىن قوللىنىڭ؛ ئەسلى تېكىستنى قايتۇرۇش ئىمكانىيىتىنى ساقلاڭ. <a href="../lab.html#lab-writing">يېزىق مىسالى</a>نى سىناڭ.</p><h2 id="api-application">قوللىنىشچان كونترول API</h2>${table(['نام','تاللاش ۋە قايتىدىغان ئۇسۇل'],[['bindCombobox(root,{onChange?})','open، close، getValue، select(value)، destroy.'],['bindDropdown(root)','open، close، toggle، destroy.'],['bindDrawer(root,{initialFocus?,dismissOutside?})','open، close، destroy.'],['bindDataTable(root,{pageSize:5})','getState، setPage(oneBasedPage)، refresh، destroy.']])}<p>كىرگۈزۈش يولى <code dir="ltr">@uyghurcommunity/ui/application</code>. لازىملىق markup نى <a href="../lab.html#lab-components">تەجرىبەخانا</a>دىن ئېلىڭ. bindDialog نىڭ يېڭى dismissOutside تاللىشى سۈكۈتتە true؛ سىرتنى باسقاندا تاقاشنى خالىمىسىڭىز false قىلىڭ. ناملىق تاقاش كۇنۇپكىسى يەنىلا بولسۇن.</p><h2 id="api-interactions">جانلاندۇرۇشنى بوغچا سۈپىتىدە ئىشلىتىش</h2>${code('js',`import '@uyghurcommunity/ui/interactions.css';
+import { interactionBindings, bindSpotlight, bindTilt, bindSelection, bindSend, bindCompare, bindRipple } from '@uyghurcommunity/ui/interactions';`)}<p>كونتروللار syncMotion، reset ۋە destroy قايتۇرىدۇ. motionAllowed تاللىشى بىلەن توختىتىش، كۆرۈنۈش ۋە ھەرىكەتنى ئازايتىش تەڭشىكىنى تۈرىڭىزگە باغلاڭ. send پەقەت يەرلىك جانلاندۇرۇش؛ خەت ئەۋەتمەيدۇ.</p>`,
+  theming: `<h2 id="theme-presets">تۆت ئۇسلۇب ۋە CSS/JSON چىقىرىش</h2>${code('js',`import { createTheme, exportThemeCSS, exportThemeJSON } from '@uyghurcommunity/ui/themes';
+const theme = createTheme('doppa');
+const css = exportThemeCSS(theme, { selector: '.my-product' });
+const json = exportThemeJSON(theme);`)}<p>ئۇسلۇب ناملىرى doppa، atlas، desert، ceramic. createTheme نىڭ ئىككىنچى پارامېتىرى accent، radius، fontSize، lineHeight ۋە mode نى خاسلاشتۇرىدۇ؛ نەتىجە چوڭقۇر توڭلىتىلغان <code dir="ltr">{id,name,tokens}</code>. CSS نىڭ سۈكۈتتىكى selector ى .ug-ui. <a href="../lab.html#lab-themes">ئۇسلۇب خىزمەت ئۈستىلى</a>دە ئالدىن كۆرۈپ، چىقىرىش ھۆججىتىنى ئاساسىي ئۇسلۇبتىن كېيىن يۈكلەڭ. JSON ئۆزى ئۇسلۇب قوللانمايدۇ.</p>`,
+  changelog: `<h2 id="changes-040">0.4.0 · يېزىق ۋە قوللىنىشچان UI</h2><p>ئۇيغۇرچە يېزىق، combobox، dropdown، drawer ۋە data table كونتروللىرى قوشۇلدى. جانلاندۇرۇش كونتروللىرى core بوغچىغا كىرگۈزۈلۈپ، interactions.css ئايرىم export قىلىندى؛ تۆت theme، CSS/JSON چىقىرىش، React 0.4.0، CLI 0.2.0، تەجرىبەخانا، ئىككى تىللىق 22 قوللانما ۋە ھەمكارلىق قېلىپلىرى قوشۇلدى.</p><p>يېڭى تارماق يوللار writing، application، interactions ۋە themes. bindDialog نىڭ dismissOutside تاللىشى سۈكۈتتە true. سىنبەلگە سانى 110 سىزىقلىق ۋە 63 رەڭلىك بولۇپ ساقلاندى؛ خەرىتە مەنبەسى ئۆز پېتىدە. <a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.4.0">0.4.0 نەشرى</a>.</p>`,
+};
 
 /** Authored documentation; generator escapes code before emitting static HTML. */
 export const guidePages = Object.freeze([
@@ -26,10 +52,10 @@ ${table(['بۆلەك', 'ئىشلىتىش ئورنى'], [
 ])}
 <h2 id="intro-path">قايسى يەردىن باشلايمەن؟</h2>
 <ol><li><a href="installation.html">قاچىلاش</a> بۆلىكىدىن تۈرىڭىزگە ماس ئۇسۇلنى تاللاڭ.</li><li><a href="quick-start.html">تېز باشلاش</a> مىسالى بىلەن ھەقىقىي كۆزنەك ۋە فورما قۇرۇڭ.</li><li><a href="components.html">بۆلەكلەر</a> ۋە <a href="icons.html">سىنبەلگىلەر</a> قوللانمىسىدىن لازىملىقىنى تېپىڭ.</li><li><a href="theming.html">رەڭ ۋە خەتنى خاسلاشتۇرۇڭ</a>، ئاندىن <a href="accessibility.html">كۇنۇپكا تاختىسى بىلەن سىناڭ</a>.</li></ol>
-${note('ھازىرقى نەشر · 0.3.0', 'قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ.')}
+${note('ھازىرقى نەشر · 0.4.0', 'قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ.')}
 <h2 id="intro-interactions">جانلىق UI نى سىناڭ</h2>
 <p><a href="../interactions.html">جانلىق تەسىرلەر كۆرگەزمىسى</a>دىن 6 ئەسلى مىسالنى سىناڭ. ھەر مىسالدا HTML، CSS ۋە JavaScript نى تولۇق كۆچۈرۈش ياكى بىر HTML ھۆججىتى قىلىپ چۈشۈرۈش بار. كۆرگەزمىنىڭ ئۈستىدىكى كۇنۇپكا ھەرىكەتنى توختىتىدۇ؛ سىستېمىنىڭ ھەرىكەتنى ئازايتىش تەڭشىكىگە ئەمەل قىلىنىدۇ. تاللاش، كۇنۇپكا ۋە سۈرگۈچلەر كۇنۇپكا تاختىسى بىلەنمۇ ئىشلەيدۇ.</p>
-<p>بۇلار تور كۆرگەزمىسىنىڭ مۇستەقىل مىساللىرى؛ <code dir="ltr">0.3.0</code> بوغچىسىغا يېڭى npm export قوشۇلمىغان. «كودىنى كۆرۈش ۋە ئىشلىتىش» نى ئېچىپ، تولۇق HTML نى كۆچۈرۈپ <code dir="ltr">demo.html</code> نامىدا ساقلاڭ ياكى بىۋاسىتە چۈشۈرۈڭ. خەت جانلاندۇرۇش مىسالى پەقەت يەرلىك سىناق، ئۇچۇر ئەۋەتمەيدۇ. خەرىتە مىسالى چۈشۈرۈلگەن HTML غا ھەر ئىككى SVG نى ئۆز ئىچىگە ئالىدۇ.</p>
+<p>0.4.0 نەشرىدە بۇ مىساللارنىڭ كونتروللىرى <code dir="ltr">@uyghurcommunity/ui/interactions</code> ۋە ئايرىم CSS يولىدا بار. «كودىنى كۆرۈش ۋە ئىشلىتىش» نى ئېچىپ، تولۇق HTML نى كۆچۈرۈپ <code dir="ltr">demo.html</code> نامىدا ساقلاڭ ياكى بىۋاسىتە چۈشۈرۈڭ. خەت جانلاندۇرۇش مىسالى پەقەت يەرلىك سىناق، ئۇچۇر ئەۋەتمەيدۇ. خەرىتە مىسالى چۈشۈرۈلگەن HTML غا ھەر ئىككى SVG نى ئۆز ئىچىگە ئالىدۇ.</p>
 <h2 id="intro-principles">تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟</h2>
 <p>كۈتۈپخانا تور مۇلازىمىتى، ئىشلەتكۈچى ھېسابى ياكى سانلىق مەلۇمات ساقلاشنى قوشمايدۇ. فورما نەتىجىسىنى قەيەرگە ئەۋەتىش، قايسى سانلىق مەلۇماتنى ساقلاش ۋە مەزمۇن ئىجازەتنامىسىنى قانداق كۆرسىتىشنى تۈرىڭىز بەلگىلەيدۇ. كۆرگەزمىدىكى فورما پەقەت يەرلىك سىناق.</p>
 <p>كود ۋە ئەسلى سىنبەلگە سىزىقلىرى MIT ئىجازەتنامىسىدە. Natural Earth خەرىتە سانلىق مەلۇماتى ئاممىۋى مۈلۈك. خەت، بايراق، خەرىتە ۋە كۆرۈنۈش پايدىلىنىش مەنبەلىرىنى <a href="../THIRD_PARTY_NOTICES.md">مەنبە خاتىرىسى</a>دىن كۆرۈڭ.</p>`,
@@ -40,7 +66,7 @@ ${note('ھازىرقى نەشر · 0.3.0', 'قاچىلاش بوغچىسى GitHub
     body: `
 <h2 id="install-requirements">ئالدىن تەييارلىق</h2>
 <p>بوغچا بىلەن ئىشلەش ئۈچۈن <bdi dir="ltr" lang="en">Node.js 20+</bdi> ۋە ئۆز تۈرىڭىزنىڭ بوغچا باشقۇرغۇچىسى لازىم. كۈتۈپخانىنىڭ ئىجرا ۋاقتىدا باشقا JavaScript بوغچىسىغا تايىنىشچانلىقى يوق. تۈرىڭىزدە بار قۇرۇلۇش قورالىنى داۋاملىق ئىشلىتەلەيسىز.</p>
-${note('توغرا قاچىلاش ئادرېسى', 'ھازىرچە يالغۇز <code dir="ltr">npm install @uyghurcommunity/ui</code> نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.3.0 نەشر ئارخىپىنى قاچىلايدۇ.')}
+${note('توغرا قاچىلاش ئادرېسى', 'ھازىرچە يالغۇز <code dir="ltr">npm install @uyghurcommunity/ui</code> نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.4.0 نەشر ئارخىپىنى قاچىلايدۇ.')}
 <h2 id="install-package">نەشر بوغچىسىنى قاچىلاش</h2>
 <h3>npm</h3>${code('sh', `npm install ${release}`)}
 <h3>pnpm</h3>${code('sh', `pnpm add ${release}`)}
@@ -67,7 +93,7 @@ ${code('html', `<link rel="stylesheet" href="./src/styles.css">
 <p>بۇ قىسقا مىسال ئۈچۈن بېتىڭىزدە <code dir="ltr">&lt;span id="mark"&gt;&lt;/span&gt;</code> بولۇشى كېرەك. تولۇق ھۆججەتنى <a href="quick-start.html">تېز باشلاش</a> بۆلىكىدىن كۆچۈرۈڭ. ES module ھۆججەتلىرىنى HTTP ئارقىلىق ئېچىڭ؛ <code dir="ltr">file://</code> ئارقىلىق ئېچىشقا تايانماڭ.</p>
 <h2 id="install-check">قاچىلاشنى تەكشۈرۈش</h2>
 ${code('sh', `node --input-type=module -e "import { iconNames } from '@uyghurcommunity/ui'; console.log(iconNames.length)"`)}
-<p>0.3.0 نەشرىدە نەتىجە <bdi dir="ltr">110</bdi> بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ.</p>`,
+<p>0.4.0 نەشرىدە نەتىجە <bdi dir="ltr">110</bdi> بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ.</p>`,
   },
   {
     slug: 'quick-start', title: 'تېز باشلاش', en: 'Quick start', group: 'getting-started',
@@ -257,7 +283,7 @@ ${table(['نام', 'نەتىجە'], [
     description: '110 SVG سىنبەلگە، 63 مەدەنىيەت بەلگىسىنىڭ رەڭلىك نۇسخىسى، بايراق ۋە مەنبەسى ئېنىق خەرىتە.',
     body: `
 <h2 id="icons-collections">ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە</h2>
-<p>0.3.0 نەشرىدە 110 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 63 ى مەدەنىيەت توپلىمىغا كىرىدۇ ۋە سىزىقلىق، رەڭلىك ئىككى نۇسخىنى تەمىنلەيدۇ. بۇ نەشر 36 يېڭى تېما قوشتى: دوپپا، ئەنئەنىۋى كىيىم، ساز، ساپال، بىناكارلىق، مەنزىرە ۋە گۈل نەقىشلىرىنى <a href="../index.html#icons">كۆرگەزمىدىن تاللاپ سىناڭ</a>.</p>
+<p>0.4.0 نەشرىدە 110 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 63 ى مەدەنىيەت توپلىمىغا كىرىدۇ ۋە سىزىقلىق، رەڭلىك ئىككى نۇسخىنى تەمىنلەيدۇ. 0.3.0 دە 36 يېڭى تېما قوشۇلغان: دوپپا، ئەنئەنىۋى كىيىم، ساز، ساپال، بىناكارلىق، مەنزىرە ۋە گۈل نەقىشلىرىنى <a href="../index.html#icons">كۆرگەزمىدىن تاللاپ سىناڭ</a>.</p>
 <p>بۇلار رەقەملىك كۆرۈنمە يۈز ئۈچۈن ئەسلىدىن سىزىلغان ئاددىي مەدەنىيەت پىكتوگراممىلىرى. رايونغا قاراپ شەكىل ۋە ئاتىلىش ئۆزگىرىدۇ. ئىشلەتكۈچى تەمىنلىگەن ئىككى مەدەنىيەت تاختىسى تېما تاللاشقا ئىلھام بولدى؛ ئۇلاردىكى سۈرەتلەر بوغچىغا كۆچۈرۈلمىدى. چەمبەر شەكىللىك ئۇرما ساز <b>داپ</b> دەپ ئاتالدى؛ <b>تەمبۈر</b> بولسا ئايرىم ئۇزۇن بويۇنلۇق چالغۇ سۈپىتىدە ساقلانغان. مەنبە ۋە ئاتىلىش خاتىرىلىرى <a href="../THIRD_PARTY_NOTICES.md">مەنبە خاتىرىسى</a>دە بار.</p>
 <h2 id="icons-render">JavaScript بىلەن SVG ھاسىل قىلىش</h2>
 ${code('js', `import { iconSVG, flagSVG } from '@uyghurcommunity/ui';
@@ -385,7 +411,7 @@ ${code('html', `<html lang="ug" dir="rtl">
 <h2 id="rtl-isolation">سان، ئادرېس ۋە بوغچا نامى</h2>
 <p>تېخنىكىلىق قىممەتلەرنى ئايرىۋېتىش تىنىش بەلگىلىرىنىڭ ئەتراپتىكى جۈملىگە ئارىلىشىپ كېتىشىنى ئازايتىدۇ. مەزمۇننى ئۆزگەرتىشنىڭ ئورنىغا <code dir="ltr">bdi</code> ۋە توغرا <code dir="ltr">dir</code> ئارقىلىق كۆرسىتىڭ.</p>
 ${code('html', `<p>بوغچا: <bdi dir="ltr" lang="en">@uyghurcommunity/ui</bdi></p>
-<p>نەشر: <bdi dir="ltr">0.3.0</bdi></p>
+<p>نەشر: <bdi dir="ltr">0.4.0</bdi></p>
 <p>ئۇلانما: <bdi dir="ltr">https://example.com/ug?q=123</bdi></p>
 <label for="email">ئېلخەت</label>
 <input id="email" type="email" dir="ltr">
@@ -452,7 +478,7 @@ ${code('html', `<button class="ug-button ug-button--icon" type="button" aria-lab
 <h2 id="faq-copy">كۆچۈرۈش كۇنۇپكىسى ئىشلىمىدى</h2>
 <p>توركۆرگۈچ clipboard ھوقۇقىنى چەكلىشى مۇمكىن. كۆرگەزمە ۋە قوللانمىدا ئاددىي تاللاپ كۆچۈرۈش ئۇسۇلىدىن پايدىلىنىڭ؛ SVG نى ھۆججەت قىلىپ چۈشۈرۈشمۇ بار. ئۆز تۈرىڭىزدە clipboard ئەمەلگە ئاشمىسا قولدا كۆچۈرگىلى بولىدىغان تېكىست تەمىنلەڭ.</p>
 <h2 id="faq-ssr">SSR ياكى React/Vue دا ئىشلىتەمدۇ؟</h2>
-<p>DOM غا كىرمەيدىغان import، <code dir="ltr">iconSVG</code>، <code dir="ltr">mapSVG</code> ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا <code dir="ltr">destroy()</code> قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ تەييار React/Vue wrapper بۇ نەشرگە قوشۇلمىغان.</p>
+<p>DOM غا كىرمەيدىغان import، <code dir="ltr">iconSVG</code>، <code dir="ltr">mapSVG</code> ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا <code dir="ltr">destroy()</code> قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ React wrapper لىرى ئايرىم <code dir="ltr">@uyghurcommunity/ui-react</code> بوغچىسىدا بار؛ باشقا رامكىلاردا DOM كونتروللىرىنى mount/unmount ھايات دەۋرىگە باغلاڭ.</p>
 <h2 id="faq-data">بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟</h2>
 <p>كۈتۈپخانا ئۆزى فورما مۇلازىمىتى، analytics ياكى ھېسابات API سىنى قوشمايدۇ. ئۇسلۇبنىڭ سىرتقى خەت تەلىپى بار؛ GitHub ئۇلانمىلىرىنى ئېچىش ياكى تۈرىڭىزگە ئۆزىڭىز قوشقان API ئايرىم ھەرىكەت. كۆرسىتىش مىساللىرىدا مەزمۇن يەرلىك بىر تەرەپ قىلىنىدۇ.</p>
 <h2 id="faq-support">مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟</h2>
@@ -472,9 +498,9 @@ ${code('html', `<button class="ug-button ug-button--icon" type="button" aria-lab
 <p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.2.0">0.2.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى</a>.</p>
 <h2 id="changes-010">0.1.0 · تۇنجى UI توپلىمى</h2>
 <p>CSS بۆلەكلىرى، يەرلىك كۆزنەك، RTL بەتكۈچ، فورما تەكشۈرۈش، disclosure ۋە ئاددىي تېكىست ئۇقتۇرۇشى ئېلان قىلىندى. تۇنجى توپلامدا 50 SVG سىنبەلگە، شەرقىي تۈركىستان بايرىقى، ALKATIP Basma خەت ئۇلانمىسى ۋە TypeScript ئېنىقلىمىلىرى بار ئىدى.</p>
-<p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.1.0">0.1.0 نەشر ئارخىپى</a> ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن <a href="installation.html">0.3.0 قاچىلاش ئۇسۇلى</a>نى تاللاڭ.</p>
+<p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.1.0">0.1.0 نەشر ئارخىپى</a> ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن <a href="installation.html">0.4.0 قاچىلاش ئۇسۇلى</a>نى تاللاڭ.</p>
 <h2 id="changes-site">قوللانما ۋە بوغچا نەشرى</h2>
-<p>بۇ قوللانما ھازىرقى 0.3.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ.</p>
+<p>بۇ قوللانما ھازىرقى 0.4.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ.</p>
 ${note('نەشرنى يېڭىلاش', 'نەشرى بەلگىلەنگەن GitHub ئارخىپ يولىنى ئىشلىتىڭ. يېڭى بوغچا قاچىلاشتىن بۇرۇن ئۆز تۈرىڭىزدىكى فورما، كۆزنەك، بەتكۈچ ۋە سىنبەلگە import لىرىنى تەكشۈرۈڭ.')}`,
   },
-].map((page) => Object.freeze(page)));
+].map((page) => Object.freeze({ ...page, body: page.slug === 'changelog' ? additions040.changelog + page.body : page.body + (additions040[page.slug] || '') })));

@@ -11,7 +11,7 @@ export function normalizeDocsQuery(value) {
 
 /** Search results can only navigate to an HTML page in this documentation site. */
 export function resolveSearchHref(href, indexURL) {
-  if (typeof href !== 'string' || !/^(?:guide\/[a-z0-9-]+\.html|index\.html|interactions\.html)(?:#[a-z0-9-]+)?$/.test(href)) return null;
+  if (typeof href !== 'string' || !/^(?:guide\/(?:en\/)?[a-z0-9-]+\.html|index\.html|interactions\.html|lab\.html|community\.html)(?:#[a-z0-9-]+)?$/.test(href)) return null;
   let index;
   try { index = new URL(indexURL); } catch { return null; }
   if (!['http:', 'https:'].includes(index.protocol) || !index.pathname.endsWith('/assets/docs-search.json')) return null;
@@ -63,6 +63,8 @@ export function initDocsShell(doc = document) {
   if (!doc?.getElementById || !doc.defaultView) throw new TypeError('A browser document is required');
   if (instances.has(doc)) return instances.get(doc);
   const win = doc.defaultView, $ = (id) => doc.getElementById(id), cleanup = [], controllers = [], timers = new Set();
+  const english = (doc.documentElement.lang || doc.documentElement.getAttribute?.('lang')) === 'en';
+  const copy = (ug, en) => english ? en : ug;
   let destroyed = false, requestAbort, tocObserver, frame;
   const on = (node, name, callback, options) => { if (!node?.addEventListener) return; node.addEventListener(name, callback, options); cleanup.push(() => node.removeEventListener(name, callback, options)); };
   const delay = (callback, ms) => { const handle = win.setTimeout(() => { timers.delete(handle); if (!destroyed) callback(); }, ms); timers.add(handle); return handle; };
@@ -91,15 +93,28 @@ export function initDocsShell(doc = document) {
     function renderSearch() {
       if (destroyed) return;
       results.replaceChildren(); links = [];
-      if (searchState === 'loading') { searchStatus.textContent = 'قوللانما ئىزدەش تەييارلىنىۋاتىدۇ…'; return; }
+      if (searchState === 'loading') { searchStatus.textContent = copy("قوللانما ئىزدەش تەييارلىنىۋاتىدۇ…","Preparing documentation search\u2026"); return; }
       if (searchState === 'error') {
-        searchStatus.textContent = 'ئىزدەش تىزىملىكىنى يۈكلىيەلمىدى. ياندىكى قوللانما ئۇلانمىلىرىنى ئىشلىتىڭ ياكى قايتا سىناڭ.';
-        const retry = doc.createElement('button'); retry.type = 'button'; retry.className = 'ug-button ug-button--secondary docs-search-retry'; retry.textContent = 'قايتا سىناش'; retry.addEventListener('click', () => loadIndex(true)); results.append(retry); return;
+        searchStatus.textContent = copy("ئىزدەش تىزىملىكىنى يۈكلىيەلمىدى. ياندىكى قوللانما ئۇلانمىلىرىنى ئىشلىتىڭ ياكى قايتا سىناڭ.","Search could not load. Use the navigation links or try again.");
+        const retry = doc.createElement('button'); retry.type = 'button'; retry.className = 'ug-button ug-button--secondary docs-search-retry'; retry.textContent = copy("قايتا سىناش","Try again"); retry.addEventListener('click', () => loadIndex(true)); results.append(retry); return;
       }
-      if (searchState !== 'ready') { searchStatus.textContent = 'قوللانمىدىن ئىزدەڭ.'; return; }
-      const matches = searchDocumentation(entries, input.value);
-      searchStatus.textContent = normalizeDocsQuery(input.value) ? `${matches.length} نەتىجە كۆرسىتىلدى.` : 'باشلاش ئۈچۈن تېزلەتمىلەر';
-      if (!matches.length) { const message = doc.createElement('p'); message.className = 'docs-search-empty'; message.textContent = 'ماس قوللانما تېپىلمىدى. باشقا سۆزنى سىناڭ.'; results.append(message); return; }
+      if (searchState !== 'ready') { searchStatus.textContent = copy("قوللانمىدىن ئىزدەڭ.","Search documentation."); return; }
+      const query = normalizeDocsQuery(input.value);
+      // Empty English search starts with its translated guides. Typed queries keep
+      // the complete bilingual inventory, including shared icons and examples.
+      let searchEntries = entries;
+      if (english && !query) {
+        const routes = DEFAULT_ROUTES.map(route => route.replace('guide/', 'guide/en/'));
+        const rank = entry => {
+          const url = new URL(entry.href);
+          const shortcut = !url.hash ? routes.findIndex(route => url.pathname.endsWith(`/${route}`)) : -1;
+          return shortcut >= 0 ? shortcut : url.pathname.includes('/guide/en/') ? routes.length : routes.length + 1;
+        };
+        searchEntries = entries.filter(entry => !/\/guide\/(?!en\/)[a-z0-9-]+\.html$/.test(new URL(entry.href).pathname)).sort((a, b) => rank(a) - rank(b));
+      }
+      const matches = searchDocumentation(searchEntries, input.value);
+      searchStatus.textContent = normalizeDocsQuery(input.value) ? copy(`${matches.length} نەتىجە كۆرسىتىلدى.`, `${matches.length} results shown.`) : copy("باشلاش ئۈچۈن تېزلەتمىلەر","Shortcuts to get started");
+      if (!matches.length) { const message = doc.createElement('p'); message.className = 'docs-search-empty'; message.textContent = copy("ماس قوللانما تېپىلمىدى. باشقا سۆزنى سىناڭ.","No matching documentation. Try another term."); results.append(message); return; }
       for (const entry of matches) {
         const anchor = doc.createElement('a'), title = doc.createElement('span'), meta = doc.createElement('span'), description = doc.createElement('span');
         anchor.className = 'docs-search-result'; anchor.href = entry.href;
@@ -171,16 +186,16 @@ export function initDocsShell(doc = document) {
   function manualCopy(wrapper, text, trigger) {
     for (const panel of fallbackPanels) panel.remove(); fallbackPanels.clear();
     const panel = doc.createElement('div'), label = doc.createElement('label'), textarea = doc.createElement('textarea'), close = doc.createElement('button');
-    panel.className = 'doc-copy-fallback'; label.textContent = 'قولدا كۆچۈرۈش · Ctrl+C / Command+C';
+    panel.className = 'doc-copy-fallback'; label.textContent = copy("قولدا كۆچۈرۈش · Ctrl+C / Command+C","Manual copy \u00b7 Ctrl+C / Command+C");
     textarea.className = 'ug-textarea'; textarea.dir = 'ltr'; textarea.readOnly = true; textarea.spellcheck = false; textarea.rows = Math.max(4, Math.min(12, text.split('\n').length)); textarea.value = text;
-    close.type = 'button'; close.className = 'ug-button ug-button--secondary ug-button--small'; close.textContent = 'تاقاش';
+    close.type = 'button'; close.className = 'ug-button ug-button--secondary ug-button--small'; close.textContent = copy("تاقاش","Close");
     close.addEventListener('click', () => { panel.remove(); fallbackPanels.delete(panel); if (trigger.isConnected) trigger.focus(); });
     label.append(textarea); panel.append(label, close); wrapper.append(panel); fallbackPanels.add(panel); textarea.focus(); textarea.select();
   }
   for (const pre of new Set(doc.querySelectorAll('main.doc-article pre, main .doc-article pre, pre[data-copy-code]'))) {
     const existing = pre.parentElement?.classList.contains('doc-code-shell'), wrapper = existing ? pre.parentElement : doc.createElement('div');
     if (!existing) { wrapper.className = 'doc-code-shell'; pre.parentNode.insertBefore(wrapper, pre); wrapper.append(pre); }
-    const button = doc.createElement('button'); button.className = 'doc-copy'; button.type = 'button'; button.textContent = 'كۆچۈرۈش'; button.setAttribute('aria-label', 'كودنى كۆچۈرۈش'); wrapper.append(button);
+    const button = doc.createElement('button'); button.className = 'doc-copy'; button.type = 'button'; button.textContent = copy("كۆچۈرۈش","Copy"); button.setAttribute('aria-label', copy("كودنى كۆچۈرۈش","Copy code")); wrapper.append(button);
     generated.push({ pre, wrapper, button, existing });
     on(button, 'click', async () => {
       if (button.disabled || destroyed) return;
@@ -189,9 +204,9 @@ export function initDocsShell(doc = document) {
       try {
         if (!win.navigator.clipboard?.writeText) throw new Error('Clipboard is unavailable');
         await win.navigator.clipboard.writeText(text);
-        if (!destroyed) { button.textContent = 'كۆچۈرۈلدى'; announce('كود كۆچۈرۈلدى.'); delay(() => { button.textContent = 'كۆچۈرۈش'; }, 2500); }
+        if (!destroyed) { button.textContent = copy("كۆچۈرۈلدى","Copied"); announce(copy("كود كۆچۈرۈلدى.","Code copied.")); delay(() => { button.textContent = copy("كۆچۈرۈش","Copy"); }, 2500); }
       } catch {
-        if (!destroyed) { manualCopy(wrapper, text, button); announce('ئاپتوماتىك كۆچۈرۈلمىدى؛ تاللانغان كودنى قولدا كۆچۈرۈڭ.'); }
+        if (!destroyed) { manualCopy(wrapper, text, button); announce(copy("ئاپتوماتىك كۆچۈرۈلمىدى؛ تاللانغان كودنى قولدا كۆچۈرۈڭ.","Automatic copying was unavailable; copy the selected code manually.")); }
       } finally { if (!destroyed) { button.disabled = false; button.removeAttribute('aria-busy'); } }
     });
   }

@@ -13,12 +13,20 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
+      - name: Install React adapter test dependencies
+        run: npm install --prefix packages/react --ignore-scripts --no-package-lock --no-audit --no-fund
+      - name: Verify React presets
+        run: npm run build:presets --prefix packages/react && git diff --exit-code -- packages/react/src/presets.js
+      - name: Verify offline registry build
+        run: npm run build:registry && git diff --exit-code -- registry
       - name: Verify offline map build
         run: |
           npm run build:map
           git diff --exit-code -- src/map-data.js assets/maps
+      - name: Verify portable React example
+        run: npm run build:react-example && git diff --exit-code -- downloads/uyghur-ui-react-example.zip
       - run: npm run check
       - run: npm test
       - run: npm run build:icons && git diff --exit-code -- assets downloads
-      - run: npm run build:docs && git diff --exit-code -- guide index.html interactions.html assets/docs-search.json
+      - run: npm run build:docs && git diff --exit-code -- guide index.html interactions.html lab.html community.html assets/docs-search.json
       - run: npm pack --dry-run --ignore-scripts

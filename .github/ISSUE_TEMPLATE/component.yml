@@ -1,0 +1,22 @@
+name: Component or icon / بۆلەك ياكى سىنبەلگە
+description: Propose a concrete component, cultural icon or improvement.
+title: "[Component] "
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case / ئىشلىتىش مەقسىتى
+      description: What task needs support? Include an example of the desired behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Proposed interaction and keyboard behavior
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Cultural sources, regional names and asset permissions
+      description: Link primary references. Do not attach material without permission to share it.

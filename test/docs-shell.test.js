@@ -79,11 +79,12 @@ test('search destinations stay inside the actual project base and reject travers
   assert.equal(resolveSearchHref('guide/installation.html', INDEX), 'https://example.test/uyghur-ui/guide/installation.html');
   assert.equal(resolveSearchHref('index.html#icons', INDEX), 'https://example.test/uyghur-ui/index.html#icons');
   assert.equal(resolveSearchHref('interactions.html', INDEX), 'https://example.test/uyghur-ui/interactions.html');
+  for (const href of ['guide/en/introduction.html','guide/en/installation.html#install-react','lab.html#lab-writing','lab.html#lab-themes','lab.html#lab-components','community.html']) assert.equal(resolveSearchHref(href,INDEX),new URL(href,'https://example.test/uyghur-ui/').href);
   for (const id of ['spotlight', 'tilt', 'selection', 'send', 'compare', 'ripple']) {
     assert.equal(resolveSearchHref(`interactions.html#interaction-${id}`, INDEX), `https://example.test/uyghur-ui/interactions.html#interaction-${id}`);
   }
   for (const href of ['https://evil.test/', '//evil.test/', 'javascript:alert(1)', '../index.html', 'guide/../index.html', 'guide/%2e%2e/index.html', 'guide/a.html?secret=x', 'assets/icons/dutar.svg', 'index.html#<img>',
-    '../interactions.html', 'guide/../interactions.html', '%2e%2e/interactions.html', 'interactions.html/../index.html', 'interactions.html?secret=x', 'interactions.html#../send', 'interactions.html#<img>', 'interactions.html#interaction-%2fcompare',
+    '../interactions.html', 'guide/../interactions.html', '%2e%2e/interactions.html', 'interactions.html/../index.html', 'interactions.html?secret=x', 'interactions.html#../send', 'interactions.html#<img>', 'interactions.html#interaction-%2fcompare', 'guide/en/../installation.html', 'guide/en/%2e%2e/installation.html', 'guide/en/en/faq.html', 'guide/en/installation.html?token=x', 'lab.html/../index.html', 'community.html?secret=x',
   ]) assert.equal(resolveSearchHref(href, INDEX), null);
   assert.equal(resolveSearchHref('index.html', 'file:///assets/docs-search.json'), null);
   assert.equal(resolveSearchHref('index.html', 'https://example.test/other.json'), null);
@@ -183,4 +184,36 @@ test('responsive TOC copies track fast section jumps together without moving foc
   assert.equal(doc.tocLinks[1].getAttribute('aria-current'), 'location'); assert.equal(doc.tocLinks[3].getAttribute('aria-current'), 'location'); assert.equal(doc.tocLinks[0].getAttribute('aria-current'), null); assert.equal(doc.activeElement, focused);
   callback([]); assert.equal(doc.tocLinks[3].getAttribute('aria-current'), 'location');
   shell.destroy(); assert.equal(disconnected, true); assert.ok(doc.tocLinks.every((anchor) => anchor.getAttribute('aria-current') === null));
+});
+
+ test('English pages keep shell search and copy feedback in English', async () => {
+  const {doc,win,get,add}=fixture();doc.documentElement.setAttribute('lang','en');
+  win.fetch=async()=>({ok:true,json:async()=>payload});
+  const article=add('main','english-article'),pre=add('pre','english-code',article),code=add('code','english-source',pre);
+  code.textContent='const message = "سالام";';doc.copyBlocks.push(pre);
+  const shell=initDocsShell(doc);assert.equal(get('docs-search-status').textContent,'Search documentation.');
+  await shell.openSearch();get('docs-search-input').value='no-result';get('docs-search-input').emit('input');
+  assert.match(get('docs-search-results').textContent,/No matching documentation/);
+  const button=pre.parentNode.children.find(node=>node.className==='doc-copy');assert.equal(button.textContent,'Copy');
+  win.navigator.clipboard.writeText=async()=>{};button.click();await button.settled();assert.equal(button.textContent,'Copied');
+  shell.destroy();
+});
+
+test('blank English search opens English guide shortcuts while typed search stays bilingual', async () => {
+  const {doc,win,get}=fixture();doc.documentElement.setAttribute('lang','en');
+  const routes=['installation','quick-start','components','icons'];
+  const bilingual={version:'0.4.0',entries:[...payload.entries,
+    ...routes.map(slug=>({title:`English ${slug}`,en:`English ${slug}`,description:'English guide.',href:`guide/en/${slug}.html`,keywords:['english']})),
+    {title:'React installation',en:'React',description:'English React installation.',href:'guide/en/installation.html#install-react',keywords:['react']},
+  ]};
+  win.fetch=async()=>({ok:true,json:async()=>bilingual});
+  const shell=initDocsShell(doc);await shell.openSearch();
+  const links=()=>get('docs-search-results').children.filter(node=>node.tagName==='A');
+  assert.deepEqual(links().slice(0,4).map(node=>node.href),routes.map(slug=>`https://example.test/uyghur-ui/guide/en/${slug}.html`));
+  assert.ok(links().some(node=>node.href==='https://example.test/uyghur-ui/index.html#icons'),'shared resources remain reachable');
+  get('docs-search-input').value='npm';get('docs-search-input').emit('input');
+  assert.equal(links()[0].href,'https://example.test/uyghur-ui/guide/installation.html','typed queries can still find a Uyghur guide');
+  get('docs-search-input').value='  ';get('docs-search-input').emit('input');
+  assert.equal(links()[0].href,'https://example.test/uyghur-ui/guide/en/installation.html');
+  shell.destroy();
 });

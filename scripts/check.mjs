@@ -6,7 +6,7 @@ import { iconSVG, iconNames, coloredIconNames, flagSVG, iconCatalog } from '../s
 import { components } from '../docs/components.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const documentIDs = new Map();
-for (const filename of ['index.html', 'interactions.html']) {
+for (const filename of ['index.html', 'interactions.html', 'lab.html', 'community.html']) {
   const html = await readFile(resolve(root, filename), 'utf8');
   const markup = html + (filename === 'index.html' ? '\n' + components.map((component) => component.html).join('\n') : '');
   const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]);
@@ -22,8 +22,7 @@ for (const filename of ['index.html', 'interactions.html']) {
   documentIDs.set(filename, ids);
 }
 const scriptFiles = [
-  'src/index.js', 'src/icons.js', 'src/icon-labels.js', 'src/traditional-drawings.js',
-  'src/reference-clothing.js', 'src/reference-places.js', 'src/heritage-color.js', 'src/maps.js', 'src/map-data.js',
+  ...(await readdir(resolve(root, 'src'))).filter((name) => name.endsWith('.js')).map((name) => `src/${name}`),
   'scripts/build-map.mjs', 'scripts/build-icons.mjs', 'scripts/build-docs.mjs', 'scripts/check.mjs', 'scripts/check-docs.mjs', 'scripts/zip.mjs',
   ...(await readdir(resolve(root, 'docs'))).filter((name) => name.endsWith('.js')).map((name) => `docs/${name}`),
 ];
@@ -31,7 +30,7 @@ for (const file of scriptFiles) {
   const filename = resolve(root, file);
   execFileSync(process.execPath, ['--check', filename]);
 }
-for (const [page, script] of [['index.html', 'docs/app.js'], ['interactions.html', 'docs/interactions.js']]) {
+for (const [page, script] of [['index.html', 'docs/app.js'], ['interactions.html', 'docs/interactions.js'], ['lab.html', 'docs/lab.js']]) {
   const ids = documentIDs.get(page), source = await readFile(resolve(root, script), 'utf8');
   const patterns = [
     /\$\(\s*['"]([a-zA-Z][\w:-]*)['"]\s*\)/g,
@@ -40,7 +39,7 @@ for (const [page, script] of [['index.html', 'docs/app.js'], ['interactions.html
   ];
   for (const pattern of patterns) for (const [, ref] of source.matchAll(pattern)) if (!ids.includes(ref)) throw new Error(`${script}: missing ${page} target ${ref}`);
 }
-for (const file of ['src/styles.css','src/font.css','docs/site.css','docs/documentation.css','docs/interactions.css','docs/interaction-demo.css']) {
+for (const file of (await Promise.all(['src','docs'].map(async folder => (await readdir(resolve(root,folder))).filter(name=>name.endsWith('.css')).map(name=>`${folder}/${name}`)))).flat()) {
   const css = await readFile(resolve(root, file), 'utf8');
   if ((css.match(/\{/g)||[]).length !== (css.match(/\}/g)||[]).length) throw new Error(`CSS blocks: ${file}`);
 }
@@ -55,4 +54,4 @@ const storedColor = (await readdir(resolve(root, 'assets/icons/color'))).sort();
 if (JSON.stringify(storedColor) !== JSON.stringify(coloredIconNames.map((name) => `${name}.svg`).sort())) throw new Error('Color SVG files do not match the public catalog');
 if (await readFile(resolve(root,'assets/flags/east-turkistan.svg'),'utf8') !== flagSVG({width:900})) throw new Error('Stale flag asset');
 const idCount = [...documentIDs.values()].reduce((count, ids) => count + ids.length, 0);
-console.log(`Checked documentation assets, gallery/interactions (${idCount} IDs), CSS, JavaScript, ${iconNames.length} outline SVG icons and ${coloredIconNames.length} color variants.`);
+console.log(`Checked documentation assets, gallery/interactions/Lab/community (${idCount} IDs), CSS, JavaScript, ${iconNames.length} outline SVG icons and ${coloredIconNames.length} color variants.`);

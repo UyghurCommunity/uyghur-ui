@@ -4,15 +4,17 @@ export { mapSVG, mapMetadata } from './maps.js';
 function restoreAttribute(node, key, value) { value === null ? node.removeAttribute(key) : node.setAttribute(key, value); }
 
 /** Native modal behavior provides focus containment and background inertness. */
-export function bindDialog(dialog, { trigger, initialFocus } = {}) {
+export function bindDialog(dialog, { trigger, initialFocus, dismissOutside = true } = {}) {
   if (!dialog || typeof dialog.showModal !== 'function' || typeof dialog.close !== 'function') throw new TypeError('A supported native <dialog> is required');
   const doc = dialog.ownerDocument;
   if (!dialog.getAttribute('aria-label') && !dialog.getAttribute('aria-labelledby')) throw new TypeError('Give the dialog an accessible label');
-  let previous, destroyed = false;
+  if (typeof dismissOutside !== 'boolean') throw new TypeError('dismissOutside must be a boolean');
+  let previous, destroyed = false, startedOutside = false;
   const expanded = trigger?.getAttribute('aria-expanded') ?? null;
   function afterClose() {
     // Native close events are queued. A previous close must not affect a reopened dialog.
     if (destroyed || dialog.open) return;
+    startedOutside = false;
     trigger?.setAttribute('aria-expanded', 'false');
     if (previous?.isConnected && typeof previous.focus === 'function') previous.focus();
     previous = null;
@@ -25,15 +27,26 @@ export function bindDialog(dialog, { trigger, initialFocus } = {}) {
     trigger?.setAttribute('aria-expanded', 'true');
     if (initialFocus && dialog.contains(initialFocus)) initialFocus.focus();
   }
-  function close(value = '') { if (!destroyed && dialog.open) dialog.close(value); }
+  function close(value = '') { startedOutside = false; if (!destroyed && dialog.open) dialog.close(value); }
   function onTrigger(event) { event.preventDefault(); open(); }
+  function outside(event) {
+    if (event.target !== dialog || !Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) return false;
+    const rect = dialog.getBoundingClientRect?.();
+    return !!rect && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom);
+  }
+  function pointerDown(event) { startedOutside = dismissOutside && dialog.open && event.isPrimary !== false && (event.button === 0 || event.button === undefined) && outside(event); }
+  function pointerCancel() { startedOutside = false; }
   function onClick(event) {
+    const dismiss = startedOutside && outside(event); startedOutside = false;
     const button = event.target.closest?.('[data-ug-close]');
     if (button && dialog.contains(button)) { event.preventDefault(); close(button.getAttribute('data-ug-close') || ''); }
+    else if (dismiss && !event.defaultPrevented) close();
   }
   trigger?.setAttribute('aria-expanded', String(dialog.open));
   trigger?.addEventListener('click', onTrigger);
   dialog.addEventListener('click', onClick);
+  dialog.addEventListener('pointerdown', pointerDown);
+  dialog.addEventListener('pointercancel', pointerCancel);
   dialog.addEventListener('close', afterClose);
   return {
     open, close,
@@ -44,6 +57,8 @@ export function bindDialog(dialog, { trigger, initialFocus } = {}) {
       previous = null;
       trigger?.removeEventListener('click', onTrigger);
       dialog.removeEventListener('click', onClick);
+      dialog.removeEventListener('pointerdown', pointerDown);
+      dialog.removeEventListener('pointercancel', pointerCancel);
       dialog.removeEventListener('close', afterClose);
       if (trigger) restoreAttribute(trigger, 'aria-expanded', expanded);
     },
@@ -179,3 +194,8 @@ export function showToast(region, message, { duration = 8000, dismissLabel = 'ئ
   if (duration) timer = setTimeout(dismiss, duration);
   return { element: toast, dismiss, destroy: dismiss };
 }
+
+export { bindUyghurInput } from './writing.js';
+export { bindCombobox, bindDropdown, bindDrawer, bindDataTable } from './application.js';
+export { interactionBindings, bindSpotlight, bindTilt, bindSelection, bindSend, bindCompare, bindRipple } from './interactions.js';
+export { createTheme, themePresets, exportThemeCSS, exportThemeJSON, contrastRatio } from './themes.js';

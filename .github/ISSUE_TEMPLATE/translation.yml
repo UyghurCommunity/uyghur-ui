@@ -1,0 +1,27 @@
+name: Translation / تىل تۈزىتىشى
+description: Correct Uyghur or English text, terminology or documentation parity.
+title: "[Translation] "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or source file / بەت ياكى ھۆججەت
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text / ھازىرقى تېكىست
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed wording and reason / تەكلىپ ۋە سەۋەب
+    validations:
+      required: true
+  - type: textarea
+    id: counterpart
+    attributes:
+      label: Corresponding Uyghur or English page
+      description: Mention any matching change needed in the other language.

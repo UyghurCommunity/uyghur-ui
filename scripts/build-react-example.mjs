@@ -1,0 +1,13 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {zipFiles} from './zip.mjs';
+const root=new URL('../',import.meta.url),base=new URL('packages/react/example/',root);
+const files=[];
+for(const name of['index.html','main.js','style.css','vite.config.js'])files.push([name,await readFile(new URL(name,base))]);
+const packageJSON=JSON.parse(await readFile(new URL('package.json',base),'utf8'));
+packageJSON.dependencies['@uyghurcommunity/ui']='https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz';
+packageJSON.dependencies['@uyghurcommunity/ui-react']='https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-react-0.4.0.tgz';
+files.push(['package.json',JSON.stringify(packageJSON,null,2)+'\n']);
+files.push(['README.md','# Uyghur UI React example\n\nRun npm install, then npm run dev. npm run build creates a static app. This portable copy installs both pinned v0.4.0 community GitHub release packages; npm registry publication of those packages is not required. React and Vite dependencies are fetched normally by npm.\n\nIncludes the writing field, explicit cleanup, controlled dialog/tabs, six cultural interactions and pause/reduced motion. All demo content stays in the browser. ALKATIP Basma fonts load from the supplied external URLs; font binaries are not bundled.\n\nSource: https://github.com/UyghurCommunity/uyghur-ui/tree/main/packages/react/example\n']);
+for(const name of['LICENSE','THIRD_PARTY_NOTICES.md'])files.push([name,await readFile(new URL(name,root))]);
+await writeFile(new URL('downloads/uyghur-ui-react-example.zip',root),zipFiles(files));
+console.log(`Built portable React example ZIP with ${files.length} source/notices files.`);

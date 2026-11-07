@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "entries": [
     {
       "title": "ئۇيغۇرچە قۇرۇشنى باشلاڭ",
@@ -8,15 +8,17 @@
       "href": "guide/introduction.html",
       "keywords": [
         "introduction",
+        "ug",
         "بىر بۆلەكتىن پۈتۈن بىر كۆرۈنمە يۈزگىچە",
         "توپلام ئىچىدە نېمىلەر بار؟",
         "قايسى يەردىن باشلايمەن؟",
         "جانلىق UI نى سىناڭ",
         "تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟",
+        "يېزىق، قوللىنىشچان بۆلەك ۋە ئىككى تىللىق قوللانما",
         "بىر بۆلەكتىن پۈتۈن بىر كۆرۈنمە يۈزگىچە ئۇيغۇرچە UI بولسا ئۇيغۇرچە تور بەت قۇرۇشقا ئىشلىتىدىغان CSS بۆلەكلىرى، كىچىك JavaScript كونتروللىرى ۋە SVG سىنبەلگىلەر توپلىمى. بەتنىڭ تىلى ۋە يۆنىلىشىنى ئۆزىڭىز بەلگىلەپ، لازىملىق بۆلەكنى تۈرىڭىزگە قوشىسىز. كۇنۇپكا، رامكا، كارتا ۋە يىغىلىدىغان مەزمۇن يەرلىك HTML ئۈستىگە قۇرۇلغان. كۆزنەك، بەتكۈچ، تىزىملىك ۋە ئۇقتۇرۇشقا ئايرىم كونترول بار. بۇ شەكىل ئاددىي تور بەتتىمۇ، رامكا ئىشلىتىدىغان تۈردىمۇ بىرلا بۆلەك ئۇسلۇبىنى ساقلايدۇ. توپلام ئىچىدە نېمىلەر بار؟ بۆلەك ئىشلىتىش ئورنى كۇنۇپكا ۋە فورما كونترول، ئېنىق بەلگە، ئۇيغۇرچە خاتالىق ئۇچۇرى ۋە ياردەم تېكىستى. كۆزنەك ۋە بەتكۈچ يەرلىك modal كۆزنەك، فوكۇس قايتۇرۇش ۋە RTL ئوق كۇنۇپكىلىرى. كارتا، بەلگە ۋە تىزىملىك مەزمۇننى گۇرۇپپىلاش، ھالەتنى كۆرسىتىش ۋە يولباشلاش. 110 SVG سىنبەلگە 63 مەدەنىيەت سىنبەلگىسىنىڭ سىزىقلىق ۋە رەڭلىك نۇسخىسى، ئىككى تىللىق نام ۋە ئىزدەش يىپ ئۇچلىرى. بايراق ۋە خەرىتە شەرقىي تۈركىستان",
-        "بايرىقى، سىزىقلىق ۋە تولدۇرۇلغان خەرىتە، ئېنىق سانلىق مەلۇمات مەنبەسى. 6 جانلىق مىسال كەشتە نۇرى، دوپپا چوڭقۇرلۇقى، ئەتلەس تاللاش، خەت جانلاندۇرۇش، خەرىتە سېلىشتۇرۇش ۋە نەقىش دولقۇنى. ALKATIP Basma سىرتقى ئادرېستىن يۈكلىنىدىغان خەت نۇسخىسى ۋە زاپاس خەتلەر. قايسى يەردىن باشلايمەن؟ قاچىلاش بۆلىكىدىن تۈرىڭىزگە ماس ئۇسۇلنى تاللاڭ. تېز باشلاش مىسالى بىلەن ھەقىقىي كۆزنەك ۋە فورما قۇرۇڭ. بۆلەكلەر ۋە سىنبەلگىلەر قوللانمىسىدىن لازىملىقىنى تېپىڭ. رەڭ ۋە خەتنى خاسلاشتۇرۇڭ ، ئاندىن كۇنۇپكا تاختىسى بىلەن سىناڭ . ھازىرقى نەشر · 0.3.0 قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ. جانلىق UI نى سىناڭ جانلىق تەسىرلەر كۆرگەزمىسى دىن 6 ئەسلى مىسالنى سىناڭ. ھەر مىسالدا HTML، CSS ۋە JavaScript نى تولۇق كۆچۈرۈش ياكى بىر HTML ھۆججىتى قىلىپ چۈشۈرۈش بار. كۆرگەزمىنىڭ ئۈستىدىكى كۇنۇپكا ھەرىكەتنى توختىتىدۇ؛ سىستېمىنىڭ",
-        "ھەرىكەتنى ئازايتىش تەڭشىكىگە ئەمەل قىلىنىدۇ. تاللاش، كۇنۇپكا ۋە سۈرگۈچلەر كۇنۇپكا تاختىسى بىلەنمۇ ئىشلەيدۇ. بۇلار تور كۆرگەزمىسىنىڭ مۇستەقىل مىساللىرى؛ 0.3.0 بوغچىسىغا يېڭى npm export قوشۇلمىغان. «كودىنى كۆرۈش ۋە ئىشلىتىش» نى ئېچىپ، تولۇق HTML نى كۆچۈرۈپ demo.html نامىدا ساقلاڭ ياكى بىۋاسىتە چۈشۈرۈڭ. خەت جانلاندۇرۇش مىسالى پەقەت يەرلىك سىناق، ئۇچۇر ئەۋەتمەيدۇ. خەرىتە مىسالى چۈشۈرۈلگەن HTML غا ھەر ئىككى SVG نى ئۆز ئىچىگە ئالىدۇ. تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟ كۈتۈپخانا تور مۇلازىمىتى، ئىشلەتكۈچى ھېسابى ياكى سانلىق مەلۇمات ساقلاشنى قوشمايدۇ. فورما نەتىجىسىنى قەيەرگە ئەۋەتىش، قايسى سانلىق مەلۇماتنى ساقلاش ۋە مەزمۇن ئىجازەتنامىسىنى قانداق كۆرسىتىشنى تۈرىڭىز بەلگىلەيدۇ. كۆرگەزمىدىكى فورما پەقەت يەرلىك سىناق. كود ۋە ئەسلى سىنبەلگە سىزىقلىرى MIT ئىجازەتنامىسىدە. Natural Earth خەرىتە سانلىق مەلۇماتى ئاممىۋى مۈلۈك. خەت، بايراق، خەرىتە ۋە كۆرۈنۈش پايدىلىنىش مەنبەلىرىنى مەنبە خاتىرىسى دىن",
-        "كۆرۈڭ."
+        "بايرىقى، سىزىقلىق ۋە تولدۇرۇلغان خەرىتە، ئېنىق سانلىق مەلۇمات مەنبەسى. 6 جانلىق مىسال كەشتە نۇرى، دوپپا چوڭقۇرلۇقى، ئەتلەس تاللاش، خەت جانلاندۇرۇش، خەرىتە سېلىشتۇرۇش ۋە نەقىش دولقۇنى. ALKATIP Basma سىرتقى ئادرېستىن يۈكلىنىدىغان خەت نۇسخىسى ۋە زاپاس خەتلەر. قايسى يەردىن باشلايمەن؟ قاچىلاش بۆلىكىدىن تۈرىڭىزگە ماس ئۇسۇلنى تاللاڭ. تېز باشلاش مىسالى بىلەن ھەقىقىي كۆزنەك ۋە فورما قۇرۇڭ. بۆلەكلەر ۋە سىنبەلگىلەر قوللانمىسىدىن لازىملىقىنى تېپىڭ. رەڭ ۋە خەتنى خاسلاشتۇرۇڭ ، ئاندىن كۇنۇپكا تاختىسى بىلەن سىناڭ . ھازىرقى نەشر · 0.4.0 قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ. جانلىق UI نى سىناڭ جانلىق تەسىرلەر كۆرگەزمىسى دىن 6 ئەسلى مىسالنى سىناڭ. ھەر مىسالدا HTML، CSS ۋە JavaScript نى تولۇق كۆچۈرۈش ياكى بىر HTML ھۆججىتى قىلىپ چۈشۈرۈش بار. كۆرگەزمىنىڭ ئۈستىدىكى كۇنۇپكا ھەرىكەتنى توختىتىدۇ؛ سىستېمىنىڭ",
+        "ھەرىكەتنى ئازايتىش تەڭشىكىگە ئەمەل قىلىنىدۇ. تاللاش، كۇنۇپكا ۋە سۈرگۈچلەر كۇنۇپكا تاختىسى بىلەنمۇ ئىشلەيدۇ. 0.4.0 نەشرىدە بۇ مىساللارنىڭ كونتروللىرى @uyghurcommunity/ui/interactions ۋە ئايرىم CSS يولىدا بار. «كودىنى كۆرۈش ۋە ئىشلىتىش» نى ئېچىپ، تولۇق HTML نى كۆچۈرۈپ demo.html نامىدا ساقلاڭ ياكى بىۋاسىتە چۈشۈرۈڭ. خەت جانلاندۇرۇش مىسالى پەقەت يەرلىك سىناق، ئۇچۇر ئەۋەتمەيدۇ. خەرىتە مىسالى چۈشۈرۈلگەن HTML غا ھەر ئىككى SVG نى ئۆز ئىچىگە ئالىدۇ. تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟ كۈتۈپخانا تور مۇلازىمىتى، ئىشلەتكۈچى ھېسابى ياكى سانلىق مەلۇمات ساقلاشنى قوشمايدۇ. فورما نەتىجىسىنى قەيەرگە ئەۋەتىش، قايسى سانلىق مەلۇماتنى ساقلاش ۋە مەزمۇن ئىجازەتنامىسىنى قانداق كۆرسىتىشنى تۈرىڭىز بەلگىلەيدۇ. كۆرگەزمىدىكى فورما پەقەت يەرلىك سىناق. كود ۋە ئەسلى سىنبەلگە سىزىقلىرى MIT ئىجازەتنامىسىدە. Natural Earth خەرىتە سانلىق مەلۇماتى ئاممىۋى مۈلۈك. خەت، بايراق، خەرىتە ۋە كۆرۈنۈش پايدىلىنىش مەنبەلىرىنى مەنبە",
+        "خاتىرىسى دىن كۆرۈڭ. يېزىق، قوللىنىشچان بۆلەك ۋە ئىككى تىللىق قوللانما 0.4.0 دە ئۇيغۇرچە يېزىق كونتروللىغۇچى، ئىزدەپ تاللاش، ئېچىلما تىزىملىك، يان كۆزنەك، سانلىق مەلۇمات جەدۋىلى، تۆت ئۇسلۇب ۋە React بوغچىسى قوشۇلدى. تەجرىبەخانا دا سىناڭ، English documentation نى ئوقۇڭ ياكى ھەمكارلىق قوللانمىسى دىن تۆھپە يولىنى تاللاڭ."
       ]
     },
     {
@@ -26,14 +28,18 @@
       "href": "guide/installation.html",
       "keywords": [
         "installation",
+        "ug",
         "ئالدىن تەييارلىق",
         "نەشر بوغچىسىنى قاچىلاش",
         "قۇرۇلۇش قورالى بار تۈر",
         "قۇرۇلۇش قورالى يوق ئاددىي HTML",
         "قاچىلاشنى تەكشۈرۈش",
-        "ئالدىن تەييارلىق بوغچا بىلەن ئىشلەش ئۈچۈن Node.js 20+ ۋە ئۆز تۈرىڭىزنىڭ بوغچا باشقۇرغۇچىسى لازىم. كۈتۈپخانىنىڭ ئىجرا ۋاقتىدا باشقا JavaScript بوغچىسىغا تايىنىشچانلىقى يوق. تۈرىڭىزدە بار قۇرۇلۇش قورالىنى داۋاملىق ئىشلىتەلەيسىز. توغرا قاچىلاش ئادرېسى ھازىرچە يالغۇز npm install @uyghurcommunity/ui نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.3.0 نەشر ئارخىپىنى قاچىلايدۇ. نەشر بوغچىسىنى قاچىلاش npm npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.3.0/uyghurcommunity-ui-0.3.0.tgz pnpm pnpm add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.3.0/uyghurcommunity-ui-0.3.0.tgz Yarn yarn add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.3.0/uyghurcommunity-ui-0.3.0.tgz بۇ ئۈچ ئۇسۇلدىن تۈرىڭىزدە ئىشلىتىۋاتقان بىرىنى تاللاڭ. تۈرىڭىزنىڭ قۇلۇپ ھۆججىتىنى ساقلاڭ؛ شۇنداقتا كوماندىدىكى باشقىلارمۇ ئوخشاش بوغچا مەزمۇنىنى قاچىلايدۇ. قۇرۇلۇش",
+        "React بوغچىسى",
+        "تورسىز بۆلەك قاچىلاش",
+        "ئالدىن تەييارلىق بوغچا بىلەن ئىشلەش ئۈچۈن Node.js 20+ ۋە ئۆز تۈرىڭىزنىڭ بوغچا باشقۇرغۇچىسى لازىم. كۈتۈپخانىنىڭ ئىجرا ۋاقتىدا باشقا JavaScript بوغچىسىغا تايىنىشچانلىقى يوق. تۈرىڭىزدە بار قۇرۇلۇش قورالىنى داۋاملىق ئىشلىتەلەيسىز. توغرا قاچىلاش ئادرېسى ھازىرچە يالغۇز npm install @uyghurcommunity/ui نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.4.0 نەشر ئارخىپىنى قاچىلايدۇ. نەشر بوغچىسىنى قاچىلاش npm npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz pnpm pnpm add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz Yarn yarn add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz بۇ ئۈچ ئۇسۇلدىن تۈرىڭىزدە ئىشلىتىۋاتقان بىرىنى تاللاڭ. تۈرىڭىزنىڭ قۇلۇپ ھۆججىتىنى ساقلاڭ؛ شۇنداقتا كوماندىدىكى باشقىلارمۇ ئوخشاش بوغچا مەزمۇنىنى قاچىلايدۇ. قۇرۇلۇش",
         "قورالى بار تۈر تۈرىڭىزنىڭ JavaScript كىرىش ھۆججىتىگە ئۇسلۇب ۋە لازىملىق كونترولنى كىرگۈزۈڭ. CSS نىڭ ئىچىدىكى خەت ھۆججىتىمۇ بىللە يۈكلىنىدۇ. import '@uyghurcommunity/ui/styles.css'; import { bindDialog, iconSVG } from '@uyghurcommunity/ui'; HTML ياكى رامكا تەركىبىدىكى سىرتقى قاچىغا ug-ui نى قوشۇڭ. ئۇيغۇرچە مەزمۇنغا lang=\"ug\" dir=\"rtl\" بەلگىلەڭ. <main class=\"ug-ui\" lang=\"ug\" dir=\"rtl\"> <button class=\"ug-button\" type=\"button\">باشلاڭ</button> </main> قۇرۇلۇش قورالى يوق ئاددىي HTML رېپونى چۈشۈرۈپ، مىسال بېتىڭىزنى ئۇنىڭ تۈپ مۇندەرىجىسىگە قويۇڭ. تۆۋەندىكى يوللار شۇ ئورۇنغا ماس كېلىدۇ؛ بېتىڭىزنى باشقا مۇندەرىجىگە يۆتكىسىڭىز، نىسپىي يوللارنىمۇ تەڭشەڭ. git clone https://github.com/UyghurCommunity/uyghur-ui.git cd uyghur-ui python3 -m http.server 4173 --bind 127.0.0.1 <link rel=\"stylesheet\" href=\"./src/styles.css\"> <script type=\"module\"> import { iconSVG } from './src/index.js';",
-        "document.getElementById('mark').innerHTML = iconSVG('dutar'); </script> بۇ قىسقا مىسال ئۈچۈن بېتىڭىزدە <span id=\"mark\"></span> بولۇشى كېرەك. تولۇق ھۆججەتنى تېز باشلاش بۆلىكىدىن كۆچۈرۈڭ. ES module ھۆججەتلىرىنى HTTP ئارقىلىق ئېچىڭ؛ file:// ئارقىلىق ئېچىشقا تايانماڭ. قاچىلاشنى تەكشۈرۈش node --input-type=module -e \"import { iconNames } from '@uyghurcommunity/ui'; console.log(iconNames.length)\" 0.3.0 نەشرىدە نەتىجە 110 بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ."
+        "document.getElementById('mark').innerHTML = iconSVG('dutar'); </script> بۇ قىسقا مىسال ئۈچۈن بېتىڭىزدە <span id=\"mark\"></span> بولۇشى كېرەك. تولۇق ھۆججەتنى تېز باشلاش بۆلىكىدىن كۆچۈرۈڭ. ES module ھۆججەتلىرىنى HTTP ئارقىلىق ئېچىڭ؛ file:// ئارقىلىق ئېچىشقا تايانماڭ. قاچىلاشنى تەكشۈرۈش node --input-type=module -e \"import { iconNames } from '@uyghurcommunity/ui'; console.log(iconNames.length)\" 0.4.0 نەشرىدە نەتىجە 110 بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ. React بوغچىسى npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-react-0.4.0.tgz import '@uyghurcommunity/ui/styles.css'; import { Button, Icon,",
+        "Dialog, Tabs, UyghurInput, Interaction } from '@uyghurcommunity/ui-react'; export function Hello() { return <main className=\"ug-ui\" lang=\"ug\" dir=\"rtl\"><Button>باشلاڭ</Button><Icon name=\"dutar\" /></main>; } React نى قوللىنىشچان تۈرىڭىز تەمىنلەيدۇ. تەركىبلەرنىڭ props ۋە ھايات دەۋرى ئۈچۈن React بوغچىسىنىڭ README سىنى كۆرۈڭ؛ بىر ئېلېمېنتقا ئىككى كونترولنى بىرگە باغلىماڭ. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن. تورسىز بۆلەك قاچىلاش npm install --save-dev https://github.com/UyghurCommunity/uyghur-starters/releases/download/v0.2.0/uyghurcommunity-create-0.2.0.tgz npx create-uyghur --ui-list npx create-uyghur --ui combobox --dir examples/new-combobox CLI 0.2.0 نىڭ تاللاشلىرى: writing-field، dialog، combobox، dropdown، drawer، data-table. --dir ئۈچۈن يېڭى نىسپىي مۇندەرىجە تاللاڭ؛ بۇ قورال يەرلىك قېلىپ ئىشلىتىدۇ، تورغا ئېلان قىلمايدۇ."
       ]
     },
     {
@@ -43,6 +49,7 @@
       "href": "guide/quick-start.html",
       "keywords": [
         "quick-start",
+        "ug",
         "تۇنجى بېتىڭىز",
         "مىسالنى قانداق سىنايمەن؟",
         "قاچىلانغان بوغچىغا ماسلاشتۇرۇش",
@@ -60,13 +67,16 @@
       "href": "guide/components.html",
       "keywords": [
         "components",
+        "ug",
         "لازىملىق بۆلەكنى تاللاڭ",
         "كۇنۇپكا ۋە ئۇلانما",
         "رامكا، تاللاش ۋە گۇرۇپپا",
         "بۆلەكلەرنى بىرلەشتۈرۈش",
+        "قوللىنىشچان بۆلەكلەر ۋە React",
         "لازىملىق بۆلەكنى تاللاڭ ئۇسلۇب ھۆججىتىنى بىر قېتىم يۈكلەپ، مەزمۇننى ug-ui قاچىسىغا قويۇڭ. كۆرگەزمىدىكى كود كۆچۈرۈش كۇنۇپكىسى HTML، لازىملىق كونترول ۋە تەييار SVG نى بىللە بېرىدۇ. بۆلەك ئاساسىي سىنىپ ياكى كونترول مىسال كۇنۇپكا ug-button سىناش فورما ug-field · ug-input · bindForm سىناش سۆزلىشىش كۆزنىكى ug-dialog · bindDialog سىناش بەتكۈچ ug-tabs · bindTabs سىناش يولباشلاش ug-nav · bindDisclosure سىناش كارتا ۋە بەلگە ug-card · ug-badge · ug-avatar سىناش يىغىلىدىغان مەزمۇن ug-accordion · details سىناش ئۇقتۇرۇش ۋە جەريان ug-alert · ug-progress · showToast سىناش كۇنۇپكا ۋە ئۇلانما بەت ئىچىدە ھەرىكەت ئىجرا قىلغاندا button ، باشقا ئادرېسقا بارغاندا a ئىشلىتىڭ. شەكىل سىنىپى ئېلېمېنتنىڭ ئەسلى مەنىسىنى ئالماشتۇرمايدۇ. <div class=\"ug-row\"> <button class=\"ug-button\" type=\"button\">ساقلاش</button> <button class=\"ug-button ug-button--secondary\" type=\"button\">بىكار قىلىش</button> <button class=\"ug-button",
         "ug-button--danger\" type=\"button\">ئۆچۈرۈش</button> <a class=\"ug-button ug-button--ghost\" href=\"./installation.html\">قاچىلاش</a> </div> ug-button--small كىچىك كۆرۈنۈش ئۈچۈن، ug-button--icon پەقەت سىنبەلگىلىك كۇنۇپكا ئۈچۈن. كېيىنكىسىگە چوقۇم aria-label ياكى كۆرۈنىدىغان نام بېرىڭ. رامكا، تاللاش ۋە گۇرۇپپا رامكىنىڭ بەلگىسىنى label for بىلەن باغلاڭ. رادىئو تاللاشلىرى ئۈچۈن fieldset ۋە legend نى ئىشلىتىڭ. خاتالىقنى رەڭدىن باشقا تېكىست بىلەنمۇ كۆرسىتىڭ. <div class=\"ug-field\"> <label class=\"ug-label\" for=\"email\">ئېلخەت</label> <input class=\"ug-input\" id=\"email\" name=\"email\" type=\"email\" required dir=\"ltr\" aria-describedby=\"email-error\" data-ug-error=\"email-error\"> <span class=\"ug-error\" id=\"email-error\"></span> </div> تاللاش ۋە ئۇزۇن تېكىست ئۈچۈن ug-select ، ug-textarea بار. تاللاش بەلگىسى ۋە ئالماشتۇرغۇچقا ug-check ، ug-switch ئىشلىتىڭ. ئۇلارنىڭ ئىچىدە ھەقىقىي input بولىدۇ. بۆلەكلەرنى بىرلەشتۈرۈش",
-        "<div class=\"ug-columns\"> <article class=\"ug-card\"> <span class=\"ug-badge\">ئوچۇق مەنبە</span> <h2>بىر ئىدىيە، كۆپ ئىمكانىيەت.</h2> <p>تۈرىڭىزنىڭ ھەقىقىي مەزمۇنىنى بۇ يەرگە قويۇڭ.</p> </article> <aside class=\"ug-alert\"><p>داۋاملاشتۇرۇشتىن بۇرۇن مەزمۇننى تەكشۈرۈڭ.</p></aside> </div> ug-row بۆلەكلەرنى بىر قۇرغا تىزىپ، تار ئېكراندا كېيىنكى قۇرغا يۆتكەيدۇ. ug-columns ئىككى ستوننى كىچىك ئېكراندا بىر ستونغا ئايلاندۇرىدۇ. كۆپرەك كونترول لازىم بولسا JavaScript API نى كۆرۈڭ."
+        "<div class=\"ug-columns\"> <article class=\"ug-card\"> <span class=\"ug-badge\">ئوچۇق مەنبە</span> <h2>بىر ئىدىيە، كۆپ ئىمكانىيەت.</h2> <p>تۈرىڭىزنىڭ ھەقىقىي مەزمۇنىنى بۇ يەرگە قويۇڭ.</p> </article> <aside class=\"ug-alert\"><p>داۋاملاشتۇرۇشتىن بۇرۇن مەزمۇننى تەكشۈرۈڭ.</p></aside> </div> ug-row بۆلەكلەرنى بىر قۇرغا تىزىپ، تار ئېكراندا كېيىنكى قۇرغا يۆتكەيدۇ. ug-columns ئىككى ستوننى كىچىك ئېكراندا بىر ستونغا ئايلاندۇرىدۇ. كۆپرەك كونترول لازىم بولسا JavaScript API نى كۆرۈڭ. قوللىنىشچان بۆلەكلەر ۋە React تەجرىبەخانىدا ئىزدەپ تاللاش، ئېچىلما تىزىملىك، يان كۆزنەك ۋە جەدۋەلنىڭ ھەقىقىي HTML مىساللىرى بار. كونتروللارنى بىرلەشتۈرگەن باشقۇرۇش تاختىسى (يان تىزىملىك ۋە جەدۋەل) ۋە ماقالە تەھرىرلىگۈچ (يېزىق، ئالدىن كۆرۈش ۋە يەرلىك چىقىرىش) نىمۇ كۆچۈرۈپ ئىشلەتكىلى بولىدۇ. ئۇسلۇب يولى @uyghurcommunity/ui/blocks.css ، ئاساسىي CSS ئىچىدىنمۇ يۈكلىنىدۇ. جەدۋەل يەرلىك قۇرلارنى سۈزۈپ، رەتلەپ ۋە بەتلەيدۇ؛ سانلىق",
+        "مەلۇماتنى ئېلىش ياكى ساقلاشنى تۈرىڭىز باشقۇرىدۇ. ھەر كونترولنىڭ destroy() نى ھەقىقىي unmount ۋاقتىدا چاقىرىڭ. @uyghurcommunity/ui-react بولسا ئايرىم بوغچا؛ Button، Icon، Dialog، Tabs، UyghurInput ۋە Interaction نى export قىلىدۇ. نەشر ئارخىپىدىن قاچىلاڭ ."
       ]
     },
     {
@@ -76,6 +86,7 @@
       "href": "guide/javascript.html",
       "keywords": [
         "javascript",
+        "ug",
         "كىرگۈزۈش ۋە ھايات دەۋرى",
         "bindDialog",
         "bindDisclosure ۋە bindTabs",
@@ -83,12 +94,17 @@
         "showToast",
         "SVG ۋە ئىزدەش API",
         "پارامېتىر ۋە خاتالىق",
+        "ئۇيغۇرچە يېزىق كونتروللىغۇچى",
+        "قوللىنىشچان كونترول API",
+        "جانلاندۇرۇشنى بوغچا سۈپىتىدە ئىشلىتىش",
         "كىرگۈزۈش ۋە ھايات دەۋرى import { bindDialog, bindDisclosure, bindTabs, bindForm, validateForm, showToast, iconSVG, flagSVG, mapSVG, mapMetadata, iconNames, coloredIconNames, directionalIcons, iconCatalog, iconCategories, findIcons, } from '@uyghurcommunity/ui'; يىلتىز import ھۆججىتى يۈكلەنگەندە DOM غا كىرمەيدۇ. كونترولنى باغلاشنى ئېلېمېنت قۇرۇلغاندىن كېيىن قىلىڭ. رامكا تەركىبى ياكى بەت پارچىسى ئۆچۈرۈلگەندە ئۇنىڭ destroy() نى چاقىرىڭ؛ يېڭى DOM غا يېڭى كونترول باغلاڭ. bindDialog const dialog = bindDialog(document.getElementById('settings'), { trigger: document.getElementById('open-settings'), initialFocus: document.getElementById('settings-title'), }); dialog.open(); dialog.close('saved'); // When the owning view is removed: dialog.destroy(); بىرىنچى پارامېتىر showModal() ۋە close() نى قوللايدىغان يەرلىك dialog بولۇشى كېرەك. ئۇنىڭغا aria-label ياكى aria-labelledby بېرىڭ. ئىچىدىكى",
         "data-ug-close كۇنۇپكىسى تاقايدۇ؛ قىممىتى native close نەتىجىسىگە ئۆتىدۇ. تاقىغاندا ئالدىنقى فوكۇس ئەگەر ھېلىمۇ بەتتە بولسا قايتۇرۇلىدۇ. بۇ كونترول يەرلىك dialog قوللىشىنىڭ ئورنىنى باسىدىغان polyfill ئەمەس. bindDisclosure ۋە bindTabs const menu = bindDisclosure(button, panel); menu.setOpen(true); menu.toggle(); menu.destroy(); const tabs = bindTabs(document.getElementById('tabs')); tabs.select(document.getElementById('tab-two'), true); tabs.destroy(); Disclosure غا button ۋە panel بېرىڭ، HTML دا aria-controls نى توغرا باغلاڭ. ئۇ expanded ۋە hidden ھالىتىنى باشقۇرىدۇ؛ ئىچكى مەزمۇندا Escape بېسىلسا يېپىلىدۇ. Tabs قاچىسى ئىچىدىكى بىرىنچى role=\"tablist\" غا باغلىنىدۇ. ھەر بىر tab نىڭ aria-controls قىممىتى شۇ قاچىدىكى ئۆزگىچە panel غا باغلانسۇن. aria-labelledby بىلەن panel نامىنى كۆرسىتىڭ. كەم دېگەندە بىر ئىشلەتكىلى بولىدىغان tab لازىم؛ تاللانغان tab بەلگىلەنمىگەن بولسا، بىرىنچى ئىشلەتكىلى",
         "بولىدىغان tab تاللىنىدۇ. select(tab, true) تاللىغاندىن كېيىن فوكۇسنىمۇ يۆتكەيدۇ؛ چەكلەنگەن ياكى باشقا گۇرۇپپىدىكى tab تاللانسا RangeError چىقىدۇ. validateForm ۋە bindForm const errors = validateForm(form, { messages: { email: 'ئېلخەت ئادرېسىنى قايتا تەكشۈرۈڭ.' }, }); // errors: [{ field, message }] const controller = bindForm(form, { messages: { name: 'ئىسمىڭىزنى تولدۇرۇڭ.' }, onValid(form, event) { // Your application handles this valid submission. }, }); controller.validate(); controller.destroy(); messages رامكىنىڭ name قىممىتىدىن خاتالىق تېكىستىگە بارىدىغان خەرىتە. ئۆز ئۇچۇرىڭىز بولمىسا ئادەتتىكى validity خاتالىقلىرىغا ماس ئۇيغۇرچە سۈكۈتتىكى ئۇچۇر ئىشلىتىلىدۇ. ئايرىم customError ياكى stepMismatch ھالىتىدە native خاتالىق تېكىستى توركۆرگۈچ تىلىدا قايتىشى مۇمكىن؛ تولۇق يەرلىكلەشتۈرۈش ئۈچۈن شۇ رامكىغا ئۆز ئۇچۇرىڭىزنى بېرىڭ. data-ug-error خاتالىق span نىڭ ID سىغا، aria-describedby ياردەم",
         "ۋە خاتالىق ID لىرىغا باغلانسۇن. validateForm نەتىجە تىزىملىكىنى قايتۇرىدۇ ۋە رامكىلارنىڭ خاتالىق ھالىتىنى يېڭىلايدۇ. bindForm باغلانغان ۋاقىتتا novalidate نى باشقۇرۇپ، خاتا فورمىنىڭ بىرىنچى رامكىسىغا فوكۇس يۆتكەيدۇ. onValid بولسا توغرا يوللاشنى يەرلىك callback تا بىر تەرەپ قىلىدۇ؛ بولمىسا توغرا native يوللاش داۋاملىشىدۇ. destroy() ئەسلى novalidate، باشقۇرۇلغان aria-invalid ۋە خاتالىق تېكىستىنى ئەسلىگە قايتۇرىدۇ. showToast <div id=\"notifications\" class=\"ug-toast-region\" role=\"status\" aria-live=\"polite\" aria-relevant=\"additions text\"></div> const toast = showToast( document.getElementById('notifications'), 'مەزمۇن ساقلىنىشقا تەييار.', { duration: 0, dismissLabel: 'ئۇقتۇرۇشنى تاقاش' }, ); // toast.element is the created element. // toast.dismiss() and toast.destroy() both remove it. ئۇقتۇرۇش مەزمۇنى HTML ئەمەس، ئاددىي تېكىست سۈپىتىدە قويۇلىدۇ. سۈكۈتتىكى ۋاقىت 8000 ms ؛ duration: 0 بولسا",
         "ئادەم تاقىغۇچە قالىدۇ. مۇھىم نەتىجە ياكى خاتالىق ئۈچۈن ۋاقىت چەكلىمىسىز ئۇچۇرنى تاللاڭ. SVG ۋە ئىزدەش API نام نەتىجە iconSVG(name, { size, strokeWidth, label, variant }) SVG تېكىستى. چوڭلۇق 24، strokeWidth بولسا 1.7؛ سۈكۈتتىكى variant بولسا outline. flagSVG({ width, label }) كەڭلىك/ئېگىزلىك نىسبىتى 3:2 بولغان بايراق SVG تېكىستى. mapSVG({ width, variant, label, color, strokeWidth }) شەرقىي تۈركىستان خەرىتىسى؛ outline ياكى filled. كەڭلىك 640، رەڭ currentColor، سىزىق قېلىنلىقى 4. mapMetadata مەنبە، ئىجازەتنامە، جۇغراپىيەلىك دائىرە ۋە projection ئۇچۇرى؛ چوڭقۇر توڭلىتىلغان. findIcons(query, { category }) سۆز ۋە تۈرگە ماس سىنبەلگە ناملىرىدىن يېڭى تىزىملىك. iconNames · coloredIconNames · directionalIcons 110 سىنبەلگە نامى، رەڭلىك نۇسخىسى بار 63 نام ۋە ئوق تاللاشقا ياردەمچى ناملار. iconCatalog · iconCategories ئىككى تىللىق metadata؛ ھەر سىنبەلگىنىڭ variants مەيدانى بار نۇسخىلارنى كۆرسىتىدۇ.",
-        "سىنبەلگە، بايراق ۋە ئىزدەش export لىرى يىلتىز import ۋە @uyghurcommunity/ui/icons دا بار. خەرىتە API سى يىلتىز import ۋە @uyghurcommunity/ui/maps دا بار. escapeMarkup(value) پەقەت icons تارماق import ىدا بار؛ ئۇ markup ئۈچۈن بەلگىلەرنى escape قىلىدۇ، URL ياكى CSS تەكشۈرگۈچ ئەمەس. تەپسىلاتنى سىنبەلگە ۋە خەرىتە قوللانمىسى دىن كۆرۈڭ. پارامېتىر ۋە خاتالىق يوق ياكى ماس كەلمەيدىغان DOM ئېلېمېنتى ئۈچۈن TypeError چىقىشى مۇمكىن. سىنبەلگە نامى، نۇسخا ۋە تۈر نامى allowlist بويىچە تەكشۈرۈلىدۇ. icon چوڭلۇقى پۈتۈن سان 12–256 ، strokeWidth بولسا 0.5–4 ؛ flag كەڭلىكى پۈتۈن سان 24–1800 بولسۇن. خەرىتە كەڭلىكى پۈتۈن سان 64–2048 ، strokeWidth بولسا 0.5–12 ؛ color پەقەت currentColor ، #RGB ياكى #RRGGBB بولسۇن. نام بەلگىسى 160 ھەرپتىن ئاشمىسۇن. ئۆچۈرۈلگەن binding نى قايتا open/select/validate/setOpen قىلىش ئورنىغا يېڭى binding قۇرۇڭ."
+        "سىنبەلگە، بايراق ۋە ئىزدەش export لىرى يىلتىز import ۋە @uyghurcommunity/ui/icons دا بار. خەرىتە API سى يىلتىز import ۋە @uyghurcommunity/ui/maps دا بار. escapeMarkup(value) پەقەت icons تارماق import ىدا بار؛ ئۇ markup ئۈچۈن بەلگىلەرنى escape قىلىدۇ، URL ياكى CSS تەكشۈرگۈچ ئەمەس. تەپسىلاتنى سىنبەلگە ۋە خەرىتە قوللانمىسى دىن كۆرۈڭ. پارامېتىر ۋە خاتالىق يوق ياكى ماس كەلمەيدىغان DOM ئېلېمېنتى ئۈچۈن TypeError چىقىشى مۇمكىن. سىنبەلگە نامى، نۇسخا ۋە تۈر نامى allowlist بويىچە تەكشۈرۈلىدۇ. icon چوڭلۇقى پۈتۈن سان 12–256 ، strokeWidth بولسا 0.5–4 ؛ flag كەڭلىكى پۈتۈن سان 24–1800 بولسۇن. خەرىتە كەڭلىكى پۈتۈن سان 64–2048 ، strokeWidth بولسا 0.5–12 ؛ color پەقەت currentColor ، #RGB ياكى #RRGGBB بولسۇن. نام بەلگىسى 160 ھەرپتىن ئاشمىسۇن. ئۆچۈرۈلگەن binding نى قايتا open/select/validate/setOpen قىلىش ئورنىغا يېڭى binding قۇرۇڭ. ئۇيغۇرچە يېزىق كونتروللىغۇچى import { bindUyghurInput } from",
+        "'@uyghurcommunity/ui/writing'; const writing = bindUyghurInput(root, { maxLength: 10000, onChange(value) { console.log(value); } }); const preview = writing.previewCleanup(); console.log(preview, writing.validate()); // writing.applyCleanup(); writing.undoCleanup(); writing.destroy(); كونترول getValue، setValue، previewCleanup(options?)، applyCleanup، undoCleanup، validate ۋە destroy نى تەمىنلەيدۇ. validate نەتىجىسى {valid,message,length,maxLength} ؛ setValue، applyCleanup ۋە undoCleanup boolean قايتۇرىدۇ. ئالدى بىلەن ئۆزگەرتىشنى كۆرۈپ، ئاندىن قوللىنىڭ؛ ئەسلى تېكىستنى قايتۇرۇش ئىمكانىيىتىنى ساقلاڭ. يېزىق مىسالى نى سىناڭ. قوللىنىشچان كونترول API نام تاللاش ۋە قايتىدىغان ئۇسۇل bindCombobox(root,{onChange?}) open، close، getValue، select(value)، destroy. bindDropdown(root) open، close، toggle، destroy. bindDrawer(root,{initialFocus?,dismissOutside?}) open، close، destroy.",
+        "bindDataTable(root,{pageSize:5}) getState، setPage(oneBasedPage)، refresh، destroy. كىرگۈزۈش يولى @uyghurcommunity/ui/application . لازىملىق markup نى تەجرىبەخانا دىن ئېلىڭ. bindDialog نىڭ يېڭى dismissOutside تاللىشى سۈكۈتتە true؛ سىرتنى باسقاندا تاقاشنى خالىمىسىڭىز false قىلىڭ. ناملىق تاقاش كۇنۇپكىسى يەنىلا بولسۇن. جانلاندۇرۇشنى بوغچا سۈپىتىدە ئىشلىتىش import '@uyghurcommunity/ui/interactions.css'; import { interactionBindings, bindSpotlight, bindTilt, bindSelection, bindSend, bindCompare, bindRipple } from '@uyghurcommunity/ui/interactions'; كونتروللار syncMotion، reset ۋە destroy قايتۇرىدۇ. motionAllowed تاللىشى بىلەن توختىتىش، كۆرۈنۈش ۋە ھەرىكەتنى ئازايتىش تەڭشىكىنى تۈرىڭىزگە باغلاڭ. send پەقەت يەرلىك جانلاندۇرۇش؛ خەت ئەۋەتمەيدۇ."
       ]
     },
     {
@@ -98,13 +114,14 @@
       "href": "guide/icons.html",
       "keywords": [
         "icons",
+        "ug",
         "ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە",
         "JavaScript بىلەن SVG ھاسىل قىلىش",
         "نام ۋە تۈر بويىچە ئىزدەش",
         "مۇستەقىل SVG ۋە JSON",
         "سىزىقلىق ۋە رەڭلىك نۇسخا",
         "شەرقىي تۈركىستان خەرىتىسى",
-        "ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە 0.3.0 نەشرىدە 110 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 63 ى مەدەنىيەت توپلىمىغا كىرىدۇ ۋە سىزىقلىق، رەڭلىك ئىككى نۇسخىنى تەمىنلەيدۇ. بۇ نەشر 36 يېڭى تېما قوشتى: دوپپا، ئەنئەنىۋى كىيىم، ساز، ساپال، بىناكارلىق، مەنزىرە ۋە گۈل نەقىشلىرىنى كۆرگەزمىدىن تاللاپ سىناڭ . بۇلار رەقەملىك كۆرۈنمە يۈز ئۈچۈن ئەسلىدىن سىزىلغان ئاددىي مەدەنىيەت پىكتوگراممىلىرى. رايونغا قاراپ شەكىل ۋە ئاتىلىش ئۆزگىرىدۇ. ئىشلەتكۈچى تەمىنلىگەن ئىككى مەدەنىيەت تاختىسى تېما تاللاشقا ئىلھام بولدى؛ ئۇلاردىكى سۈرەتلەر بوغچىغا كۆچۈرۈلمىدى. چەمبەر شەكىللىك ئۇرما ساز داپ دەپ ئاتالدى؛ تەمبۈر بولسا ئايرىم ئۇزۇن بويۇنلۇق چالغۇ سۈپىتىدە ساقلانغان. مەنبە ۋە ئاتىلىش خاتىرىلىرى مەنبە خاتىرىسى دە بار. JavaScript بىلەن SVG ھاسىل قىلىش import { iconSVG, flagSVG } from '@uyghurcommunity/ui'; const dutar = iconSVG('dutar', { size: 48, label: 'دۇتار' }); const colorfulDutar = iconSVG('dutar', { size: 64, variant:",
+        "ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە 0.4.0 نەشرىدە 110 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 63 ى مەدەنىيەت توپلىمىغا كىرىدۇ ۋە سىزىقلىق، رەڭلىك ئىككى نۇسخىنى تەمىنلەيدۇ. 0.3.0 دە 36 يېڭى تېما قوشۇلغان: دوپپا، ئەنئەنىۋى كىيىم، ساز، ساپال، بىناكارلىق، مەنزىرە ۋە گۈل نەقىشلىرىنى كۆرگەزمىدىن تاللاپ سىناڭ . بۇلار رەقەملىك كۆرۈنمە يۈز ئۈچۈن ئەسلىدىن سىزىلغان ئاددىي مەدەنىيەت پىكتوگراممىلىرى. رايونغا قاراپ شەكىل ۋە ئاتىلىش ئۆزگىرىدۇ. ئىشلەتكۈچى تەمىنلىگەن ئىككى مەدەنىيەت تاختىسى تېما تاللاشقا ئىلھام بولدى؛ ئۇلاردىكى سۈرەتلەر بوغچىغا كۆچۈرۈلمىدى. چەمبەر شەكىللىك ئۇرما ساز داپ دەپ ئاتالدى؛ تەمبۈر بولسا ئايرىم ئۇزۇن بويۇنلۇق چالغۇ سۈپىتىدە ساقلانغان. مەنبە ۋە ئاتىلىش خاتىرىلىرى مەنبە خاتىرىسى دە بار. JavaScript بىلەن SVG ھاسىل قىلىش import { iconSVG, flagSVG } from '@uyghurcommunity/ui'; const dutar = iconSVG('dutar', { size: 48, label: 'دۇتار' }); const colorfulDutar = iconSVG('dutar', { size: 64, variant:",
         "'color', label: 'دۇتار' }); const decorative = iconSVG('flower', { size: 24 }); const flag = flagSVG({ width: 180, label: 'شەرقىي تۈركىستان بايرىقى' }); document.getElementById('instrument').innerHTML = dutar; ئاخىرقى قۇردىكى قاچىڭىز <span id=\"instrument\"></span> بولسۇن. كۈتۈپخانا مەلۇم سىنبەلگە نامىنىلا قوبۇل قىلىپ، label نى escape قىلىدۇ. باشقا مەنبەدىن كەلگەن خالىغان HTML نى بۇ ئۇسۇلدا كىرگۈزمەڭ. مەنىسى بار يالغۇز سىنبەلگىگە ئۇيغۇرچە label بېرىڭ؛ ئۇنىڭغا role=\"img\" قوشۇلىدۇ. بەلگە بوش بولسا سىنبەلگە بېزەك سۈپىتىدە aria-hidden=\"true\" بولىدۇ. ئىچىدە سىنبەلگە بار كۇنۇپكىنىڭ ئۆزىگە نام بېرىشنىمۇ ئۇنتۇماڭ. نام ۋە تۈر بويىچە ئىزدەش import { findIcons, iconCatalog, iconCategories, coloredIconNames } from '@uyghurcommunity/ui'; findIcons('راۋاب'); // ['rawap'] findIcons('ikat'); // matching cultural names findIcons('', { category: 'music' }); // seven instrument names const details =",
         "iconCatalog.find((icon) => icon.name === 'dutar'); console.log(details.ug, details.en, details.category, details.variants); console.log(coloredIconNames.includes('dutar')); // true تۈر نامى مەزمۇن all 110 سىنبەلگىنىڭ ھەممىسى. traditional 63 مەدەنىيەت سىنبەلگىسى ۋە نەقىش. music · textiles · architecture سازلار، توقۇمىچىلىق/نەقىش ۋە بىناكارلىق. clothing · crafts · motifs ئەنئەنىۋى كىيىم، قول ھۈنەرۋەنچىلىك ۋە بېزەك نەقىشلىرى. table · garden · general داستىخان، تەبىئەت/مەنزىرە/جانلىقلار ۋە ئادەتتىكى كۆرۈنمە يۈز سىنبەلگىلىرى. ئىزدەش ئۇيغۇرچە نام، ئىنگلىزچە نام ۋە يىپ ئۇچلىرىنى ئۆز ئىچىگە ئالىدۇ. تۈر ۋە سوئال بىللە سۈزۈلىدۇ؛ مەسىلەن ساز نامىنى داستىخان تۈرىدە ئىزدىگەندە بوش نەتىجە چىقىشى نورمال. مۇستەقىل SVG ۋە JSON مەدەنىيەت SVG توپلىمى — 63 سىزىقلىق ۋە 63 رەڭلىك سىنبەلگە. تولۇق SVG توپلىمى — 110 سىزىقلىق ۋە 63 رەڭلىك سىنبەلگە. ئىككى تىللىق JSON — نام، تۈر، نۇسخا ۋە ئىزدەش يىپ ئۇچلىرى. ئىككى",
         "SVG ئارخىپىغا بايراق، ئىككى خەرىتە، خەرىتە مەنبەسى ۋە metadata، ئىجازەتنامە ۋە مەنبە خاتىرىسىمۇ قوشۇلغان. قاچىلانغان بوغچىدىكى ھۆججەت تارماق يوللىرى: @uyghurcommunity/ui/icons/dutar @uyghurcommunity/ui/icons/color/dutar @uyghurcommunity/ui/flags/east-turkistan.svg @uyghurcommunity/ui/catalog.json سىنبەلگە تارماق يولىغا .svg قوشۇلمايدۇ. رېپودىكى ھەقىقىي ھۆججەت يولى بولسا assets/icons/dutar.svg . بوغچا يولىنى static asset URL غا ئايلاندۇرۇش ئۇسۇلى تۈرىڭىزنىڭ قۇرۇلۇش قورالىغا باغلىق؛ ھۆججەتنى ئۆز public مۇندەرىجىڭىزگە كۆچۈرۈپ، ئادەتتىكى img بىلەنمۇ كۆرسىتەلەيسىز. سىزىقلىق ۋە رەڭلىك نۇسخا import { iconSVG, coloredIconNames } from '@uyghurcommunity/ui/icons'; iconSVG('ceramic-vase', { variant: 'outline', size: 64 }); iconSVG('ceramic-vase', { variant: 'color', size: 64 }); iconSVG('search', { variant: 'color' }); // outline fallback console.log(coloredIconNames.length); // 63 سۈكۈتتىكى نۇسخا",
@@ -120,13 +137,16 @@
       "href": "guide/theming.html",
       "keywords": [
         "theming",
+        "ug",
         "ئاساسىي CSS ئۆزگەرگۈچىلىرى",
         "قاراڭغۇ كۆرۈنۈش",
         "ALKATIP Basma ۋە زاپاس خەت",
         "بوشلۇق ۋە چوڭلۇق",
+        "تۆت ئۇسلۇب ۋە CSS/JSON چىقىرىش",
         "ئاساسىي CSS ئۆزگەرگۈچىلىرى توپلام CSS ئۆزگەرگۈچىلىرىنى ئىشلىتىدۇ. ئۆز CSS ھۆججىتىڭىزنى كۈتۈپخانا ئۇسلۇبىدىن كېيىن يۈكلەپ، ئۆزگەرتىشنى بىر قاچىنىڭ دائىرىسىگە بەلگىلەڭ. ئۆزگەرگۈچى مەنىسى سۈكۈتتىكى قىممەت --ug-blue ئاساسىي ھەرىكەت رەڭگى #086aa7 --ug-blue-hover ئاساسىي كۇنۇپكا hover رەڭگى #075687 --ug-accent تەكىتلەش رەڭگى #559ee2 --ug-surface · --ug-bg كارتا ۋە بەت تەگلىكى #fff · #f4f7f9 --ug-text · --ug-muted ئاساسىي ۋە ياردەم تېكىست رەڭگى #152d3d · #566b78 --ug-line · --ug-soft سىزىق ۋە يېنىك تەگلىك #c9d7df · #e8f3fc --ug-radius كونترول يۇمىلاق بۇلۇڭى 10px --ug-focus · --ug-danger فوكۇس ۋە خاتالىق رەڭگى #126ca4 · #b43137 .my-product { --ug-blue: #146650; --ug-blue-hover: #0c503e; --ug-accent: #2b8a6b; --ug-focus: #146650; --ug-radius: 14px; } قاراڭغۇ كۆرۈنۈش كۆرۈنمە يۈز قاچىسى ياكى html ئېلېمېنتىغا data-ug-theme=\"dark\" قوشۇڭ. بۇ attribute نى ئېلىۋەتسىڭىز سۈكۈتتىكى رەڭلەرگە قايتىدۇ.",
         "تاللاشنى ساقلاشنى تۈرىڭىز باشقۇرىدۇ. <main class=\"ug-ui\" data-ug-theme=\"dark\" lang=\"ug\" dir=\"rtl\"> <button class=\"ug-button\" type=\"button\">داۋاملاشتۇرۇش</button> </main> document.documentElement.dataset.ugTheme = 'dark'; // Return to the default light palette: delete document.documentElement.dataset.ugTheme; ALKATIP Basma ۋە زاپاس خەت styles.css نىڭ ئىچىدىن font.css يۈكلىنىدۇ. ئۇ ALKATIP Basma نى خوجايىن تەمىنلىگەن OnlineWebFonts ئادرېسلىرىدىن WOFF2، WOFF، TTF تەرتىپىدە سورايدۇ. font-display: swap ئارقىلىق خەت كېلىشتىن بۇرۇن زاپاس خەتتە مەزمۇن كۆرۈنىدۇ؛ خەت binary ھۆججىتى بوغچىغا قوشۇلمىغان. .my-product { --ug-font: \"ALKATIP Basma\", Tahoma, serif; } .my-product .technical-value { font-family: ui-monospace, \"ALKATIP Basma\", monospace; } باشقا خەتنى ئىشلىتىش ئۈچۈن ئۇنىڭ توردا ئىشلىتىش ھوقۇقى ۋە يۈكلەش ئۇسۇلىنى تەكشۈرۈپ، ئۆز خەت ئۇسلۇبىڭىزنى تەمىنلەڭ. قاتتىق CSP ياكى سىرتقى تەلەپسىز",
-        "ئورۇنلاشتۇرۇش ئۈچۈن خەت import تەلىپىنىمۇ ئۆزىڭىزگە ماسلاشتۇرۇشىڭىز كېرەك؛ يالغۇز token نى ئالماشتۇرۇش بار بولغان font import نى ئېلىۋەتمەيدۇ. بوشلۇق ۋە چوڭلۇق بارلىق نەرسىگە بىر line-height بەرمەڭ. ئۇيغۇرچە ئوقۇش مەزمۇنىغا يېتەرلىك قۇر ئارىلىقى قالدۇرۇپ، كود ۋە قىسقا تېخنىكىلىق قىممەتنى ئايرىم LTR قاچىدا ساقلاڭ. ئۆزگەرتكەن رەڭلىرىڭىزنى ئادەتتىكى، hover، چەكلەنگەن، خاتا ۋە فوكۇسلانغان ھالەتلەردە قايتا تەكشۈرۈڭ."
+        "ئورۇنلاشتۇرۇش ئۈچۈن خەت import تەلىپىنىمۇ ئۆزىڭىزگە ماسلاشتۇرۇشىڭىز كېرەك؛ يالغۇز token نى ئالماشتۇرۇش بار بولغان font import نى ئېلىۋەتمەيدۇ. بوشلۇق ۋە چوڭلۇق بارلىق نەرسىگە بىر line-height بەرمەڭ. ئۇيغۇرچە ئوقۇش مەزمۇنىغا يېتەرلىك قۇر ئارىلىقى قالدۇرۇپ، كود ۋە قىسقا تېخنىكىلىق قىممەتنى ئايرىم LTR قاچىدا ساقلاڭ. ئۆزگەرتكەن رەڭلىرىڭىزنى ئادەتتىكى، hover، چەكلەنگەن، خاتا ۋە فوكۇسلانغان ھالەتلەردە قايتا تەكشۈرۈڭ. تۆت ئۇسلۇب ۋە CSS/JSON چىقىرىش import { createTheme, exportThemeCSS, exportThemeJSON } from '@uyghurcommunity/ui/themes'; const theme = createTheme('doppa'); const css = exportThemeCSS(theme, { selector: '.my-product' }); const json = exportThemeJSON(theme); ئۇسلۇب ناملىرى doppa، atlas، desert، ceramic. createTheme نىڭ ئىككىنچى پارامېتىرى accent، radius، fontSize، lineHeight ۋە mode نى خاسلاشتۇرىدۇ؛ نەتىجە چوڭقۇر توڭلىتىلغان {id,name,tokens} . CSS نىڭ سۈكۈتتىكى selector ى .ug-ui.",
+        "ئۇسلۇب خىزمەت ئۈستىلى دە ئالدىن كۆرۈپ، چىقىرىش ھۆججىتىنى ئاساسىي ئۇسلۇبتىن كېيىن يۈكلەڭ. JSON ئۆزى ئۇسلۇب قوللانمايدۇ."
       ]
     },
     {
@@ -136,12 +156,13 @@
       "href": "guide/rtl.html",
       "keywords": [
         "rtl",
+        "ug",
         "بەت تىلى ۋە ئاساسىي يۆنىلىش",
         "سان، ئادرېس ۋە بوغچا نامى",
         "يۆنىلىشكە ئەگىشىدىغان CSS",
         "بەتكۈچ ۋە ئوق مەنىسى",
         "تېكىستنى ساقلاشتا ئېھتىياتچان بولۇڭ",
-        "بەت تىلى ۋە ئاساسىي يۆنىلىش <html lang=\"ug\" dir=\"rtl\"> <body class=\"ug-ui\">...</body> </html> lang تىلنى، dir يېزىق يۆنىلىشىنى بەلگىلەيدۇ. مەزمۇن تىلى ئۆزگەرگەن پارچىدا شۇ پارچىنىڭ تىلى ۋە يۆنىلىشىنى ئايرىم بەلگىلەڭ. خەتنى راستقا توغرىلاش يالغۇز ئۆزى RTL مەنىسىنى بەلگىلىمەيدۇ. سان، ئادرېس ۋە بوغچا نامى تېخنىكىلىق قىممەتلەرنى ئايرىۋېتىش تىنىش بەلگىلىرىنىڭ ئەتراپتىكى جۈملىگە ئارىلىشىپ كېتىشىنى ئازايتىدۇ. مەزمۇننى ئۆزگەرتىشنىڭ ئورنىغا bdi ۋە توغرا dir ئارقىلىق كۆرسىتىڭ. <p>بوغچا: <bdi dir=\"ltr\" lang=\"en\">@uyghurcommunity/ui</bdi></p> <p>نەشر: <bdi dir=\"ltr\">0.3.0</bdi></p> <p>ئۇلانما: <bdi dir=\"ltr\">https://example.com/ug?q=123</bdi></p> <label for=\"email\">ئېلخەت</label> <input id=\"email\" type=\"email\" dir=\"ltr\"> <textarea aria-label=\"مەزمۇن\" dir=\"auto\"></textarea> dir=\"auto\" يۆنىلىشى ئالدىن بەلگىلىك بولمىغان ئىشلەتكۈچى تېكىستىگە قولاي. بوغچا نامى، كود ۋە ئېلخەت دېگەندەك يۆنىلىشى ئېنىق",
+        "بەت تىلى ۋە ئاساسىي يۆنىلىش <html lang=\"ug\" dir=\"rtl\"> <body class=\"ug-ui\">...</body> </html> lang تىلنى، dir يېزىق يۆنىلىشىنى بەلگىلەيدۇ. مەزمۇن تىلى ئۆزگەرگەن پارچىدا شۇ پارچىنىڭ تىلى ۋە يۆنىلىشىنى ئايرىم بەلگىلەڭ. خەتنى راستقا توغرىلاش يالغۇز ئۆزى RTL مەنىسىنى بەلگىلىمەيدۇ. سان، ئادرېس ۋە بوغچا نامى تېخنىكىلىق قىممەتلەرنى ئايرىۋېتىش تىنىش بەلگىلىرىنىڭ ئەتراپتىكى جۈملىگە ئارىلىشىپ كېتىشىنى ئازايتىدۇ. مەزمۇننى ئۆزگەرتىشنىڭ ئورنىغا bdi ۋە توغرا dir ئارقىلىق كۆرسىتىڭ. <p>بوغچا: <bdi dir=\"ltr\" lang=\"en\">@uyghurcommunity/ui</bdi></p> <p>نەشر: <bdi dir=\"ltr\">0.4.0</bdi></p> <p>ئۇلانما: <bdi dir=\"ltr\">https://example.com/ug?q=123</bdi></p> <label for=\"email\">ئېلخەت</label> <input id=\"email\" type=\"email\" dir=\"ltr\"> <textarea aria-label=\"مەزمۇن\" dir=\"auto\"></textarea> dir=\"auto\" يۆنىلىشى ئالدىن بەلگىلىك بولمىغان ئىشلەتكۈچى تېكىستىگە قولاي. بوغچا نامى، كود ۋە ئېلخەت دېگەندەك يۆنىلىشى ئېنىق",
         "قىممەتلەرگە ltr ئىشلىتىڭ. يۆنىلىشكە ئەگىشىدىغان CSS .panel { padding-inline: 1.25rem; margin-inline: auto; border-inline-start: 3px solid var(--ug-blue); text-align: start; max-inline-size: 48rem; } بوشلۇق ۋە ئورۇن ئۈچۈن logical property ئىشلىتىش بىر بۆلەكنى RTL ۋە LTR قاچىلاردا قايتا ئىشلىتىشكە ياردەم بېرىدۇ. فورما رامكىسىغا ماۋزۇ نامى ۋە label باغلاش بولسا ئىككى يۆنىلىشتە ئوخشاشلا لازىم. بەتكۈچ ۋە ئوق مەنىسى bindTabs tablist نىڭ كۆرۈنۈش يۆنىلىشىگە قاراپ سول/ئوڭ كۇنۇپكا ھەرىكىتىنى ماسلاشتۇرىدۇ. تىك tablist ئۈچۈن aria-orientation=\"vertical\" بەلگىلەڭ؛ ئۇنىڭدا يۇقىرى/تۆۋەن كۇنۇپكىلىرى ئىشلىتىلىدۇ. SVG ئوقلار ئاپتوماتىك ئەينەككە ئايلاندۇرۇلمايدۇ، شۇڭا «كېيىنكى» ھەرىكەتنىڭ مەنىسىگە ماس بەلگىنى تاللاڭ. تېكىستنى ساقلاشتا ئېھتىياتچان بولۇڭ كۆرۈنۈشتىكى بىر مەسىلىنى ھەل قىلىش ئۈچۈن بارلىق يۆنىلىش ياكى ئۇلاش بەلگىلىرىنى ئومۇميۈزلۈك ئۆچۈرمەڭ. ئۇلار مەزمۇننىڭ شەكلى ۋە مەنىسىگە تەسىر قىلىشى مۇمكىن.",
         "ئالدى بىلەن HTML قاچا يۆنىلىشىنى تەكشۈرۈڭ؛ Unicode تەكشۈرۈشى لازىم بولسا Uyghur Text تا ئەسلى تېكىستنى ساقلاپ، ئۆزگىرىشنى ئالدىن كۆرۈڭ."
       ]
@@ -153,6 +174,7 @@
       "href": "guide/accessibility.html",
       "keywords": [
         "accessibility",
+        "ug",
         "يەرلىك ئېلېمېنتتىن باشلاڭ",
         "كۇنۇپكا تاختىسى بىلەن سىناش",
         "كونترولنىڭ ئېنىق نامى",
@@ -171,6 +193,7 @@
       "href": "guide/faq.html",
       "keywords": [
         "faq",
+        "ug",
         "npm بوغچىنى تاپالمىدى، نېمە قىلىمەن؟",
         "كۇنۇپكا ئاددىي HTML غا ئوخشايدۇ",
         "خەت ALKATIP Basma دا كۆرۈنمىدى",
@@ -180,8 +203,8 @@
         "بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟",
         "مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟",
         "npm بوغچىنى تاپالمىدى، نېمە قىلىمەن؟ npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن. GitHub ئارخىپىنىڭ تولۇق ئادرېسى بار بۇيرۇق نى ئىشلىتىڭ. Node نىڭ 20 ياكى ئۇنىڭدىن يۇقىرى نەشرىنى تاللاپ، بۇيرۇقنى تۈرىڭىزنىڭ ئىچىدە ئىجرا قىلىڭ. كۇنۇپكا ئاددىي HTML غا ئوخشايدۇ styles.css نىڭ يۈكلەنگەنلىكىنى ۋە توغرا نىسپىي يولنى تەكشۈرۈڭ. قىسمىڭىزنى ug-ui قاچىسىغا قويۇڭ. قۇرۇلۇش قورالى يوق بەتتە bare package import ئىشلىتىش ئۈچۈن import map ياكى باشقا ھەل قىلىش لازىم؛ ئاددىي مىسالدا ./src/index.js نى ئىشلىتىڭ. خەت ALKATIP Basma دا كۆرۈنمىدى خەت سىرتقى OnlineWebFonts ساھىبىدىن يۈكلىنىدۇ. تور ئۇلىنىشى، CSP ۋە خەت تەلىپىنىڭ نەتىجىسىنى تەكشۈرۈڭ. ئۇ يەتمىسە زاپاس خەتتە مەزمۇن يەنىلا كۆرۈنىدۇ. بوغچا خەت binary سىنى ساقلىمايدۇ؛ خەت تاللىشىڭىزنى خەت قوللانمىسى دىكىدەك باشقۇرۇڭ. كۆزنەك ياكى بەتكۈچ ئىشلىمىدى DOM ياسالغاندىن كېيىن binding قۇرغانلىقىڭىزنى، dialog نىڭ accessible نامى بارلىقىنى، tab/panel ID",
-        "باغلىنىشىنىڭ توغرىلىقىنى تەكشۈرۈڭ. ھەر بىر panel قاچا ئىچىدە بولسۇن. Native dialog، ES module ۋە زامانىۋى CSS نى قوللايدىغان توركۆرگۈچ ئىشلىتىڭ؛ كونا توركۆرگۈچكە polyfill بۇ توپلامدا قوشۇلمىغان. كۆچۈرۈش كۇنۇپكىسى ئىشلىمىدى توركۆرگۈچ clipboard ھوقۇقىنى چەكلىشى مۇمكىن. كۆرگەزمە ۋە قوللانمىدا ئاددىي تاللاپ كۆچۈرۈش ئۇسۇلىدىن پايدىلىنىڭ؛ SVG نى ھۆججەت قىلىپ چۈشۈرۈشمۇ بار. ئۆز تۈرىڭىزدە clipboard ئەمەلگە ئاشمىسا قولدا كۆچۈرگىلى بولىدىغان تېكىست تەمىنلەڭ. SSR ياكى React/Vue دا ئىشلىتەمدۇ؟ DOM غا كىرمەيدىغان import، iconSVG ، mapSVG ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا destroy() قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ تەييار React/Vue wrapper بۇ نەشرگە قوشۇلمىغان. بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟ كۈتۈپخانا ئۆزى فورما مۇلازىمىتى، analytics ياكى",
-        "ھېسابات API سىنى قوشمايدۇ. ئۇسلۇبنىڭ سىرتقى خەت تەلىپى بار؛ GitHub ئۇلانمىلىرىنى ئېچىش ياكى تۈرىڭىزگە ئۆزىڭىز قوشقان API ئايرىم ھەرىكەت. كۆرسىتىش مىساللىرىدا مەزمۇن يەرلىك بىر تەرەپ قىلىنىدۇ. مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟ GitHub Issues دا قايتا سىناش قەدەملىرى، كۈتكەن ۋە كۆرۈلگەن نەتىجە، نەشر ۋە توركۆرگۈچ ئۇچۇرىنى يېزىڭ. مەدەنىيەت سىنبەلگىسىگە تۈزىتىش تەكلىپ قىلغاندا ئېنىق مەنبە ياكى رايونلۇق ئاتىلىشنى قوشۇڭ. پارول، token ياكى شەخسىي سانلىق مەلۇماتنى مىسالغا قوشماڭ."
+        "باغلىنىشىنىڭ توغرىلىقىنى تەكشۈرۈڭ. ھەر بىر panel قاچا ئىچىدە بولسۇن. Native dialog، ES module ۋە زامانىۋى CSS نى قوللايدىغان توركۆرگۈچ ئىشلىتىڭ؛ كونا توركۆرگۈچكە polyfill بۇ توپلامدا قوشۇلمىغان. كۆچۈرۈش كۇنۇپكىسى ئىشلىمىدى توركۆرگۈچ clipboard ھوقۇقىنى چەكلىشى مۇمكىن. كۆرگەزمە ۋە قوللانمىدا ئاددىي تاللاپ كۆچۈرۈش ئۇسۇلىدىن پايدىلىنىڭ؛ SVG نى ھۆججەت قىلىپ چۈشۈرۈشمۇ بار. ئۆز تۈرىڭىزدە clipboard ئەمەلگە ئاشمىسا قولدا كۆچۈرگىلى بولىدىغان تېكىست تەمىنلەڭ. SSR ياكى React/Vue دا ئىشلىتەمدۇ؟ DOM غا كىرمەيدىغان import، iconSVG ، mapSVG ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا destroy() قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ React wrapper لىرى ئايرىم @uyghurcommunity/ui-react بوغچىسىدا بار؛ باشقا رامكىلاردا DOM كونتروللىرىنى mount/unmount ھايات دەۋرىگە",
+        "باغلاڭ. بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟ كۈتۈپخانا ئۆزى فورما مۇلازىمىتى، analytics ياكى ھېسابات API سىنى قوشمايدۇ. ئۇسلۇبنىڭ سىرتقى خەت تەلىپى بار؛ GitHub ئۇلانمىلىرىنى ئېچىش ياكى تۈرىڭىزگە ئۆزىڭىز قوشقان API ئايرىم ھەرىكەت. كۆرسىتىش مىساللىرىدا مەزمۇن يەرلىك بىر تەرەپ قىلىنىدۇ. مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟ GitHub Issues دا قايتا سىناش قەدەملىرى، كۈتكەن ۋە كۆرۈلگەن نەتىجە، نەشر ۋە توركۆرگۈچ ئۇچۇرىنى يېزىڭ. مەدەنىيەت سىنبەلگىسىگە تۈزىتىش تەكلىپ قىلغاندا ئېنىق مەنبە ياكى رايونلۇق ئاتىلىشنى قوشۇڭ. پارول، token ياكى شەخسىي سانلىق مەلۇماتنى مىسالغا قوشماڭ."
       ]
     },
     {
@@ -191,13 +214,219 @@
       "href": "guide/changelog.html",
       "keywords": [
         "changelog",
+        "ug",
+        "0.4.0 · يېزىق ۋە قوللىنىشچان UI",
         "0.3.0 · ئىككى نۇسخىلىق مىراس توپلىمى ۋە خەرىتە",
         "0.2.0 · مەدەنىيەت سىنبەلگىلىرى",
         "0.1.0 · تۇنجى UI توپلىمى",
         "قوللانما ۋە بوغچا نەشرى",
-        "0.3.0 · ئىككى نۇسخىلىق مىراس توپلىمى ۋە خەرىتە 36 يېڭى مەدەنىيەت تېمىسى قوشۇلۇپ، توپلام 110 سىنبەلگىگە يەتتى. 63 مەدەنىيەت سىنبەلگىسىنىڭ ھەممىسىگە رەڭلىك نۇسخا قوشۇلدى؛ بۇرۇنقى سىزىقلىق سۈكۈتتىكى كۆرۈنۈش ۋە import يوللىرى ساقلانغان. ئەنئەنىۋى كىيىم، ساپال، زىبۇزىننەت، سۇرناي، بىناكارلىق، مەنزىرە، چاي سايمانلىرى، ھايۋان ۋە بېزەك نەقىشلىرى. iconSVG(name, { variant }) تاللىشى، coloredIconNames ۋە ھەر سىنبەلگىنىڭ variants metadata سى. مۇستەقىل رەڭلىك SVG ھۆججەتلىرى ۋە ئىككى نۇسخىنى ئۆز ئىچىگە ئالغان ZIP ئارخىپلىرى. شەرقىي تۈركىستاننىڭ سىزىقلىق ۋە تولدۇرۇلغان SVG خەرىتىسى، mapSVG ، mapMetadata ، ئەسلى GeoJSON ۋە مەنبە خاتىرىسى. Natural Earth نىڭ نەشرى بەلگىلەنگەن شىنجاڭ admin-1 پولىگونى، ئاممىۋى مۈلۈك ئىجازەتنامىسى ۋە projection ئۇچۇرى. 0.3.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى . 0.2.0 · مەدەنىيەت سىنبەلگىلىرى 24 يېڭى SVG سىنبەلگە قوشۇلدى. بۇ نەشر 74 سىنبەلگىنى ئۆز ئىچىگە ئالاتتى؛ مەدەنىيەت توپلىمىدا",
-        "بۇرۇنقى دوپپا، بادام ۋە گۈل نەقىشلىرىنى قوشقاندا 27 سىنبەلگە بار ئىدى. دۇتار، تەمبۈر، راۋاپ، غېجەك، ساتار ۋە داپ. ئەتلەس، گىلەم، كەشتە، توقۇش دەستگاھى ۋە ئۇرچۇق. ئايۋان، راۋاق، ئويما ئىشىك ۋە تورلۇق دېرىزە. نان، سامسا، پولۇ، لەغمەن، چەينەك، پىيالە، ئانار، ئۈزۈم ۋە ئۆرۈك. ئىككى تىللىق نام، تۈرلەر ۋە يىپ ئۇچلىرى؛ iconCatalog ، iconCategories ، findIcons export لىرى. تولۇق ۋە مەدەنىيەت توپلىمى ئۈچۈن ئايرىم ZIP، JSON metadata ۋە قايتا ھاسىل قىلغىلى بولىدىغان asset قۇرۇلۇشى. 0.2.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى . 0.1.0 · تۇنجى UI توپلىمى CSS بۆلەكلىرى، يەرلىك كۆزنەك، RTL بەتكۈچ، فورما تەكشۈرۈش، disclosure ۋە ئاددىي تېكىست ئۇقتۇرۇشى ئېلان قىلىندى. تۇنجى توپلامدا 50 SVG سىنبەلگە، شەرقىي تۈركىستان بايرىقى، ALKATIP Basma خەت ئۇلانمىسى ۋە TypeScript ئېنىقلىمىلىرى بار ئىدى. 0.1.0 نەشر ئارخىپى ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن 0.3.0 قاچىلاش ئۇسۇلى نى تاللاڭ. قوللانما ۋە بوغچا نەشرى بۇ قوللانما ھازىرقى",
-        "0.3.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ. نەشرنى يېڭىلاش نەشرى بەلگىلەنگەن GitHub ئارخىپ يولىنى ئىشلىتىڭ. يېڭى بوغچا قاچىلاشتىن بۇرۇن ئۆز تۈرىڭىزدىكى فورما، كۆزنەك، بەتكۈچ ۋە سىنبەلگە import لىرىنى تەكشۈرۈڭ."
+        "0.4.0 · يېزىق ۋە قوللىنىشچان UI ئۇيغۇرچە يېزىق، combobox، dropdown، drawer ۋە data table كونتروللىرى قوشۇلدى. جانلاندۇرۇش كونتروللىرى core بوغچىغا كىرگۈزۈلۈپ، interactions.css ئايرىم export قىلىندى؛ تۆت theme، CSS/JSON چىقىرىش، React 0.4.0، CLI 0.2.0، تەجرىبەخانا، ئىككى تىللىق 22 قوللانما ۋە ھەمكارلىق قېلىپلىرى قوشۇلدى. يېڭى تارماق يوللار writing، application، interactions ۋە themes. bindDialog نىڭ dismissOutside تاللىشى سۈكۈتتە true. سىنبەلگە سانى 110 سىزىقلىق ۋە 63 رەڭلىك بولۇپ ساقلاندى؛ خەرىتە مەنبەسى ئۆز پېتىدە. 0.4.0 نەشرى . 0.3.0 · ئىككى نۇسخىلىق مىراس توپلىمى ۋە خەرىتە 36 يېڭى مەدەنىيەت تېمىسى قوشۇلۇپ، توپلام 110 سىنبەلگىگە يەتتى. 63 مەدەنىيەت سىنبەلگىسىنىڭ ھەممىسىگە رەڭلىك نۇسخا قوشۇلدى؛ بۇرۇنقى سىزىقلىق سۈكۈتتىكى كۆرۈنۈش ۋە import يوللىرى ساقلانغان. ئەنئەنىۋى كىيىم، ساپال، زىبۇزىننەت، سۇرناي، بىناكارلىق، مەنزىرە، چاي سايمانلىرى، ھايۋان ۋە بېزەك نەقىشلىرى. iconSVG(name, { variant",
+        "}) تاللىشى، coloredIconNames ۋە ھەر سىنبەلگىنىڭ variants metadata سى. مۇستەقىل رەڭلىك SVG ھۆججەتلىرى ۋە ئىككى نۇسخىنى ئۆز ئىچىگە ئالغان ZIP ئارخىپلىرى. شەرقىي تۈركىستاننىڭ سىزىقلىق ۋە تولدۇرۇلغان SVG خەرىتىسى، mapSVG ، mapMetadata ، ئەسلى GeoJSON ۋە مەنبە خاتىرىسى. Natural Earth نىڭ نەشرى بەلگىلەنگەن شىنجاڭ admin-1 پولىگونى، ئاممىۋى مۈلۈك ئىجازەتنامىسى ۋە projection ئۇچۇرى. 0.3.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى . 0.2.0 · مەدەنىيەت سىنبەلگىلىرى 24 يېڭى SVG سىنبەلگە قوشۇلدى. بۇ نەشر 74 سىنبەلگىنى ئۆز ئىچىگە ئالاتتى؛ مەدەنىيەت توپلىمىدا بۇرۇنقى دوپپا، بادام ۋە گۈل نەقىشلىرىنى قوشقاندا 27 سىنبەلگە بار ئىدى. دۇتار، تەمبۈر، راۋاپ، غېجەك، ساتار ۋە داپ. ئەتلەس، گىلەم، كەشتە، توقۇش دەستگاھى ۋە ئۇرچۇق. ئايۋان، راۋاق، ئويما ئىشىك ۋە تورلۇق دېرىزە. نان، سامسا، پولۇ، لەغمەن، چەينەك، پىيالە، ئانار، ئۈزۈم ۋە ئۆرۈك. ئىككى تىللىق نام، تۈرلەر ۋە يىپ ئۇچلىرى؛ iconCatalog ، iconCategories ، findIcons export لىرى.",
+        "تولۇق ۋە مەدەنىيەت توپلىمى ئۈچۈن ئايرىم ZIP، JSON metadata ۋە قايتا ھاسىل قىلغىلى بولىدىغان asset قۇرۇلۇشى. 0.2.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى . 0.1.0 · تۇنجى UI توپلىمى CSS بۆلەكلىرى، يەرلىك كۆزنەك، RTL بەتكۈچ، فورما تەكشۈرۈش، disclosure ۋە ئاددىي تېكىست ئۇقتۇرۇشى ئېلان قىلىندى. تۇنجى توپلامدا 50 SVG سىنبەلگە، شەرقىي تۈركىستان بايرىقى، ALKATIP Basma خەت ئۇلانمىسى ۋە TypeScript ئېنىقلىمىلىرى بار ئىدى. 0.1.0 نەشر ئارخىپى ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن 0.4.0 قاچىلاش ئۇسۇلى نى تاللاڭ. قوللانما ۋە بوغچا نەشرى بۇ قوللانما ھازىرقى 0.4.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ. نەشرنى يېڭىلاش نەشرى بەلگىلەنگەن GitHub ئارخىپ يولىنى ئىشلىتىڭ. يېڭى بوغچا قاچىلاشتىن بۇرۇن ئۆز تۈرىڭىزدىكى فورما، كۆزنەك، بەتكۈچ ۋە سىنبەلگە import لىرىنى",
+        "تەكشۈرۈڭ."
+      ]
+    },
+    {
+      "title": "Introduction",
+      "en": "Introduction",
+      "description": "Build Uyghur interfaces with native controls, cultural SVGs and explicit RTL behavior.",
+      "href": "guide/en/introduction.html",
+      "keywords": [
+        "introduction",
+        "en",
+        "A foundation for Uyghur interfaces",
+        "What is included",
+        "Choose a starting point",
+        "A foundation for Uyghur interfaces Uyghur UI combines framework-independent CSS with small JavaScript controllers. Start with real HTML buttons, labels, inputs, dialogs and tables. Add only the behavior your page needs, then keep that controller for teardown. Core modules can be imported during server rendering; bind DOM controllers after their elements exist. The default Uyghur typeface is ALKATIP Basma. Declare lang=\"ug\" dir=\"rtl\" for Uyghur content and isolate English technical values with bdi or an explicit LTR container. This English guide is LTR; its Uyghur examples retain their own language and direction. What is included Area Included Core components Buttons, forms, cards, navigation, dialogs, tabs, disclosures and plain-text notifications. Application controls Combobox, dropdown, drawer and a paginated data table; explicit controller cleanup. Writing Uyghur input support with",
+        "validation, a cleanup preview and undo. Cultural assets 110 outline icons, 63 cultural color variants, a flag and sourced map geometry. Interaction tools Six motion controllers and their CSS, with reduced-motion support. Themes and React Four theme presets and a separate React package. Choose a starting point Use Installation for release archives, then copy the complete quick start . Explore the Lab for writing, themes and application controls; the Interactions gallery contains six working cultural motion demos. Community explains how to contribute fixes, components and translations. Version 0.4.0 is distributed through GitHub Releases. npm registry publishing remains deferred. Form delivery, application accounts and storage belong to your application. Demonstrations run locally in the browser and do not send messages."
+      ]
+    },
+    {
+      "title": "Installation",
+      "en": "Installation",
+      "description": "Install pinned core and React GitHub release archives, or use the source directly over HTTP.",
+      "href": "guide/en/installation.html",
+      "keywords": [
+        "installation",
+        "en",
+        "Requirements",
+        "Install a pinned release",
+        "React package",
+        "Plain HTML without a bundler",
+        "Offline component installer",
+        "Verify installation",
+        "Requirements Use Node.js 20 or newer for package and command-line work, plus the package manager already used by your application. The vanilla core has no runtime JavaScript dependencies. CSS requires a bundler that supports CSS imports, or a normal stylesheet link. Native dialog, ES modules and modern CSS require a compatible browser. Install a pinned release npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz # Alternatives: pnpm add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz yarn add https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz Choose one command, run it inside your project, and commit the resulting lockfile. The bare registry command npm install @uyghurcommunity/ui is not the current distribution method. import",
+        "'@uyghurcommunity/ui/styles.css'; import { bindDialog, iconSVG } from '@uyghurcommunity/ui'; React package npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-react-0.4.0.tgz import '@uyghurcommunity/ui/styles.css'; import { Button, Icon, Dialog, Tabs, UyghurInput, Interaction } from '@uyghurcommunity/ui-react'; export function Welcome() { return <main className=\"ug-ui\" lang=\"ug\" dir=\"rtl\"><Button>باشلاڭ</Button><Icon name=\"dutar\" /></main>; } React is supplied by your application. The wrapper package is separate from the vanilla controllers; use the React package's README for its component props and lifecycle. Do not bind a vanilla controller to an element whose same state is already managed by a wrapper. Plain HTML without a bundler git",
+        "clone https://github.com/UyghurCommunity/uyghur-ui.git cd uyghur-ui python3 -m http.server 4173 --bind 127.0.0.1 Put your example in the repository root, link ./src/styles.css , and import ./src/index.js in a module script. Serve ES modules through HTTP. Relative source paths in the quick start assume this directory; adjust them if you move the file. Offline component installer npm install --save-dev https://github.com/UyghurCommunity/uyghur-starters/releases/download/v0.2.0/uyghurcommunity-create-0.2.0.tgz npx create-uyghur --ui-list npx create-uyghur --ui combobox --dir examples/new-combobox The create CLI 0.2 supports --ui-list to list available examples, and --ui <id> --dir <relative/new-directory> to create one. IDs are writing-field , dialog , combobox , dropdown , drawer and data-table . It uses local templates; choose a new relative directory and retain the generated notices. It",
+        "does not publish or deploy your project. Verify installation node --input-type=module -e \"import { iconNames } from '@uyghurcommunity/ui'; console.log(iconNames.length)\" The result for 0.4.0 is 110. Run this inside the consuming project. A CSS import error in plain Node does not mean the package failed: import styles in the browser application or use a stylesheet link."
+      ]
+    },
+    {
+      "title": "Quick start",
+      "en": "Quick start",
+      "description": "Create a complete Uyghur form and accessible native dialog with explicit cleanup.",
+      "href": "guide/en/quick-start.html",
+      "keywords": [
+        "quick-start",
+        "en",
+        "Your first complete page",
+        "Exercise the behavior",
+        "Switch to package imports",
+        "Grow the example",
+        "Your first complete page Save this as starter.html in a served checkout. Open it through your local HTTP server. The input has a real label, an associated error message and a local result region. The dialog has a name, visible close action and a trigger to restore focus. <!doctype html> <html lang=\"ug\" dir=\"rtl\"> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>سالام</title><link rel=\"stylesheet\" href=\"./src/styles.css\"></head> <body class=\"ug-ui\"><main> <h1>بىرلىكتە قۇرايلى.</h1> <form id=\"hello\"><label for=\"name\">ئىسمىڭىز</label><input class=\"ug-input\" id=\"name\" name=\"name\" required minlength=\"2\" dir=\"auto\" aria-describedby=\"name-error\" data-ug-error=\"name-error\"><span id=\"name-error\" class=\"ug-error\"></span><button class=\"ug-button\" type=\"submit\">تەكشۈرۈش</button><p id=\"result\" role=\"status\"></p></form> <button id=\"open\"",
+        "type=\"button\" class=\"ug-button\">تەڭشەك</button> <dialog id=\"settings\" class=\"ug-dialog\" aria-labelledby=\"title\"><h2 id=\"title\" tabindex=\"-1\">تەڭشەك</h2><button type=\"button\" data-ug-close>تاقاش</button></dialog> <script type=\"module\"> import {bindForm,bindDialog} from './src/index.js'; const form=bindForm(document.getElementById('hello'),{onValid(){document.getElementById('result').textContent='فورما توغرا؛ بۇ يەرلىك سىناق.';}}); const dialog=bindDialog(document.getElementById('settings'),{trigger:document.getElementById('open'),initialFocus:document.getElementById('title')}); window.addEventListener('pagehide',event=>{if(!event.persisted){form.destroy();dialog.destroy();}}); </script></main></body></html> Exercise the behavior Submit an empty form. The inline error should appear and focus should reach the invalid input. Enter two or more characters and submit again. The result remains",
+        "local. Open the dialog, navigate with Tab, then press Escape. Focus should return to the trigger. Repeat using only the keyboard and on a narrow screen. Switch to package imports import '@uyghurcommunity/ui/styles.css'; import { bindForm, bindDialog } from '@uyghurcommunity/ui'; Use these imports in your bundler entry and retain the HTML. Replace the sample onValid only when you have a real submission path. Native field validation is useful feedback; validate again on the server before storing or acting on submitted data. Grow the example Add application controls , connect Uyghur writing support , or select a theme . Binding methods are lifecycle objects, so keep and destroy them when a client-side view is removed. A BFcache pagehide is not an unmount."
+      ]
+    },
+    {
+      "title": "Components",
+      "en": "Components",
+      "description": "Choose semantic HTML, application controllers and the separate React wrappers.",
+      "href": "guide/en/components.html",
+      "keywords": [
+        "components",
+        "en",
+        "Choose the correct HTML first",
+        "Labels and native validation",
+        "Application controls",
+        "React wrappers",
+        "Compose without fixed widths",
+        "Choose the correct HTML first Use a button for an action and an anchor for navigation. A visual class does not change an element's semantics. Keep every interactive control reachable with the keyboard and supply a visible label or accessible name. Scope component styles under ug-ui , with an explicit language and direction for mixed-script applications. Component Styles or binding Buttons ug-button; secondary, danger, ghost, small and icon modifiers. Forms ug-field, ug-label, ug-input, ug-select, ug-textarea; bindForm and validateForm. Dialog and drawer Native dialog with bindDialog or the application bindDrawer controller. Tabs and navigation bindTabs; bindDisclosure for a button and panel. Cards and feedback ug-card, ug-badge, ug-avatar, ug-alert, ug-progress and showToast. Application controls bindCombobox, bindDropdown and bindDataTable. Labels and native validation <div",
+        "class=\"ug-field\"> <label class=\"ug-label\" for=\"email\">ئېلخەت</label> <input class=\"ug-input\" id=\"email\" name=\"email\" type=\"email\" required dir=\"ltr\" aria-describedby=\"email-error\" data-ug-error=\"email-error\"> <span class=\"ug-error\" id=\"email-error\"></span> </div> Group related radio options with fieldset and legend. Keep hints and errors connected using aria-describedby . A placeholder is not a label. Use native disabled controls when the action is unavailable; explain why when the surrounding task needs that information. Application controls The component Lab provides the required markup and working examples for a combobox, dropdown, drawer and data table. These controllers progressively enhance existing markup. The data table operates on local rows and supplies sorting, filtering and pagination; it does not silently fetch or persist records. Keep stable row values and label each filter.",
+        "A dropdown is a collection of actions, while a combobox is an input with selectable options. Do not substitute one simply because they look similar. Give a drawer a heading and a close action. See the application API for initialization and teardown. The Lab also composes these primitives into a dashboard sidebar with a table and an article editor with writing assistance, preview and local export. These are optional copyable layouts, not hosted application services. Block styles are exported as @uyghurcommunity/ui/blocks.css and included by the core stylesheet. React wrappers The separate @uyghurcommunity/ui-react package exports Button, Icon, Dialog, Tabs, UyghurInput and Interaction. Install its pinned archive alongside core and use the wrapper's documented props. A wrapper owns its associated DOM lifecycle; avoid attaching a second vanilla binding to the same controls. Compose without",
+        "fixed widths ug-row wraps related controls onto another line. ug-columns collapses two columns at narrow widths. Use logical spacing properties, allow long Uyghur text to wrap and test the real labels at mobile sizes. Explore the component gallery for copyable examples."
+      ]
+    },
+    {
+      "title": "JavaScript API",
+      "en": "JavaScript API",
+      "description": "Initialize and destroy controllers; render safe SVGs, support writing and export themes.",
+      "href": "guide/en/javascript.html",
+      "keywords": [
+        "javascript",
+        "en",
+        "Imports and lifecycle",
+        "Native interface controllers",
+        "Uyghur input",
+        "Application controllers",
+        "Motion controllers",
+        "SVG and metadata",
+        "Imports and lifecycle import { bindDialog, bindTabs, bindDisclosure, bindForm, validateForm, showToast, iconSVG, mapSVG } from '@uyghurcommunity/ui'; import { bindUyghurInput } from '@uyghurcommunity/ui/writing'; import { bindCombobox, bindDropdown, bindDrawer, bindDataTable } from '@uyghurcommunity/ui/application'; import { interactionBindings, bindSpotlight, bindTilt, bindSelection, bindSend, bindCompare, bindRipple } from '@uyghurcommunity/ui/interactions'; import { createTheme, exportThemeCSS, exportThemeJSON } from '@uyghurcommunity/ui/themes'; Core imports do not access the document. Bind controllers after elements exist. Keep each returned controller and call destroy() before removing its view; avoid rebinding an already managed element. React wrappers perform this lifecycle in their own package. Native interface controllers Binding Options and return value bindDialog(dialog,",
+        "options) trigger, initialFocus and dismissOutside (default true). Returns open(), close(value?) and destroy(). Set dismissOutside:false when outside pointer clicks must not dismiss. bindDisclosure(button, panel) Returns toggle(), setOpen(boolean), destroy(). Connect aria-controls in the markup. bindTabs(container) Returns select(tab, focus?) and destroy(). Uses roving focus, Home/End, RTL arrows and vertical orientation. bindForm(form, options) onValid and messages; validates actual native validity, focuses an invalid field and returns destroy(). validateForm(form, options) Returns field/message errors, with Uyghur defaults. showToast(region, text, options) duration defaults to 8000 ms; 0 keeps it until dismissed. Returns dismiss()/destroy(). Text is rendered as text. Uyghur input bindUyghurInput(root, {onChange(value), maxLength:10000}) adds writing support to the authored field. Its",
+        "controller exposes getValue() , setValue(value) , previewCleanup(options?) , applyCleanup() , undoCleanup() , validate() and destroy() . validate returns {valid,message,length,maxLength}; setValue, applyCleanup and undoCleanup return booleans. Preview a cleanup before applying it, and retain the original so a person can undo the change. Treat validation feedback separately from text changes. The writing Lab includes the required markup and a live cleanup preview. Application controllers bindCombobox(root, {onChange?}) , bindDropdown(root) , bindDrawer(root, {initialFocus?, dismissOutside?}) and bindDataTable(root, {pageSize:5}) enhance local markup and return controller objects with destroy() . Combobox exposes open, close, getValue and select(value); dropdown exposes open, close and toggle; drawer exposes open and close; data table exposes getState, setPage(oneBasedPage) and refresh. Use",
+        "the Lab markup and the shipped application TypeScript definitions for each controller's state methods. Keep data loading, persistence and authorization in your application. Motion controllers Import @uyghurcommunity/ui/interactions.css along with the needed binding. Named exports correspond to interactionBindings.spotlight , tilt , selection , send , compare and ripple . Pass a motionAllowed predicate when your application owns pause, visibility or reduced-motion state. Controllers return syncMotion() , reset() and destroy() . The send example is a local animation, not message delivery. SVG and metadata iconSVG(name, {size:24,strokeWidth:1.7,label:'',variant:'outline'}) accepts known names. Color is supported for 63 cultural icons; other icons fall back to outline. iconCatalog , coloredIconNames and findIcons(query,{category:'all'}) support selection and search. Labels are escaped.",
+        "flagSVG keeps a 3:2 ratio; mapSVG uses documented geographic geometry. Read the asset guide for sizes, limits and licenses."
+      ]
+    },
+    {
+      "title": "Icons and cultural collection",
+      "en": "Icons and cultural collection",
+      "description": "Use 110 original outlines, 63 cultural color variants, a flag and sourced map geometry.",
+      "href": "guide/en/icons.html",
+      "keywords": [
+        "icons",
+        "en",
+        "Cultural objects and motifs",
+        "Render and label an icon",
+        "Files, categories and downloads",
+        "East Turkistan map",
+        "Flag and source notices",
+        "Cultural objects and motifs The collection contains 110 outline icons and 63 cultural color variants. Subjects include clothing, crafts, architecture, instruments, food, plants, animals and ornament. Search accepts Uyghur and English names and aliases. These are simplified original interface pictograms, not technical reconstructions of museum objects. The frame drum is Dap; Tambur remains a separate long-necked instrument. Render and label an icon import { iconSVG, coloredIconNames, findIcons } from '@uyghurcommunity/ui/icons'; const dutar = iconSVG('dutar', {size:48,label:'دۇتار',variant:'color'}); findIcons('راۋاب'); // ['rawap'] console.log(coloredIconNames.length); // 63 An empty label makes an icon decorative. Give a meaningful standalone icon a label, and give an icon-only button its own action name. Size is an integer from 12–256 and strokeWidth is 0.5–4. Labels are limited to 160",
+        "characters. Keep outline icons inline when they must inherit currentColor; an external image does not inherit the surrounding page's color. Files, categories and downloads Use @uyghurcommunity/ui/icons/dutar or @uyghurcommunity/ui/icons/color/dutar , without an extension. The catalog is exported as @uyghurcommunity/ui/catalog.json . Filters include all, traditional, music, textiles, architecture, table, garden (Nature), clothing, crafts, motifs and general. All icons includes 110 outlines and 63 color variants. The cultural collection includes 63 of each. Both archives include the flag, map styles, original map source, metadata, license and notices. East Turkistan map The collection names this asset East Turkistan. Its geometry is Natural Earth's Xinjiang admin-1 polygon, CHN-1756 / CN-XJ , layer 5.1.1 from pinned repository release v5.1.2. This is that dataset's modern administrative",
+        "outline, not a reconstruction of historical boundaries. Dataset description . import { mapSVG, mapMetadata } from '@uyghurcommunity/ui/maps'; const outline = mapSVG({width:640,label:'شەرقىي تۈركىستان خەرىتىسى'}); const filled = mapSVG({variant:'filled',color:'#559EE2'}); console.log(mapMetadata.source.layerVersion); // '5.1.1' Both maps preserve all 1,835 vertices, use viewBox 0 0 1024 906 and an equirectangular projection with standard parallel 42°N. North stays up and east stays right; never mirror geography for RTL. Map width is an integer from 64–2048, strokeWidth 0.5–12, and color is currentColor, #RGB or #RRGGBB. Map generation has no font or network dependency. Download outline SVG , filled SVG , the map ZIP , source GeoJSON or metadata . Made with Natural Earth; the geographic data is public domain. Flag and source notices flagSVG({width:180,label:'شەرقىي تۈركىستان بايرىقى'})",
+        "renders the East Turkistan flag without mirroring. Width is an integer from 24–1800. The simple geometric flag is public domain; original icon code is MIT. Reference images are not redistributed. See third-party notices for attribution and the separately hosted font."
+      ]
+    },
+    {
+      "title": "Theming",
+      "en": "Theming",
+      "description": "Create a validated theme, export CSS or JSON, and retain legible Uyghur typography.",
+      "href": "guide/en/theming.html",
+      "keywords": [
+        "theming",
+        "en",
+        "Scope CSS tokens",
+        "Four reusable presets",
+        "Dark mode",
+        "ALKATIP Basma and fallbacks",
+        "Typography and spacing",
+        "Scope CSS tokens Component colors, radii and typography are controlled through CSS variables. Override tokens on a containing element rather than changing every component rule. Logical spacing keeps the same layout usable in RTL and LTR. Test normal, hover, disabled, error and keyboard-focus states after changing colors. .my-product { --ug-blue:#146650; --ug-blue-hover:#0c503e; --ug-focus:#146650; --ug-radius:14px; --ug-font:\"ALKATIP Basma\",Tahoma,serif; } Four reusable presets The theme workbench offers doppa , atlas , desert and ceramic . Create a theme from a preset, optionally customize accent, radius, fontSize, lineHeight and mode, then export the result. Returned theme objects and their tokens are deeply frozen. import {createTheme,exportThemeCSS,exportThemeJSON} from '@uyghurcommunity/ui/themes'; const theme=createTheme('doppa'); const",
+        "css=exportThemeCSS(theme,{selector:'.my-product'}); const json=exportThemeJSON(theme); The CSS export uses .ug-ui unless you provide a selector. Save it to a stylesheet loaded after the base styles, and apply the same class to your container. The JSON export is a portable record of the preset and tokens; it does not itself apply styles or persist a setting. Dark mode Set data-ug-theme=\"dark\" on an ancestor for the built-in dark palette. Remove the attribute to return to default colors. Your application decides how to store a preference. The documentation shell stores only its own theme choice in local storage and tolerates blocked storage. ALKATIP Basma and fallbacks The base stylesheet imports font.css, which requests the owner's supplied OnlineWebFonts WOFF2, WOFF and TTF URLs, using font-display:swap. Font binaries are not bundled or covered by the MIT code license. Text remains",
+        "readable with Tahoma and serif fallbacks when the host is unavailable. For a restrictive content-security policy or an offline deployment, replace the font import with a stylesheet you are entitled to host; changing the font token alone does not remove an existing import. Typography and spacing Keep Uyghur words joined rather than splitting letters into animated spans. Give paragraphs sufficient line height, allow wrapping and isolate code in LTR blocks. English documentation retains the same font stack so embedded Uyghur examples can still use Basma. Avoid applying decorative letter spacing to joined Arabic-script text."
+      ]
+    },
+    {
+      "title": "RTL and mixed text",
+      "en": "RTL and mixed text",
+      "description": "Keep Uyghur text, English technical values, keyboard behavior and map orientation clear.",
+      "href": "guide/en/rtl.html",
+      "keywords": [
+        "rtl",
+        "en",
+        "Declare language and direction",
+        "Isolate addresses and versions",
+        "Use logical CSS",
+        "Keyboard and geographic direction",
+        "Preview text cleanup",
+        "Declare language and direction <html lang=\"ug\" dir=\"rtl\"> <body class=\"ug-ui\">...</body> </html> Language and direction are separate properties. Right alignment alone does not define RTL semantics. An English page can contain Uyghur sections with their own lang and dir. Use dir=auto when a user's input direction is unknown; use an explicit direction for known technical values. Isolate addresses and versions <p>بوغچا: <bdi dir=\"ltr\" lang=\"en\">@uyghurcommunity/ui</bdi></p> <p>نەشر: <bdi dir=\"ltr\">0.4.0</bdi></p> <input type=\"email\" aria-label=\"ئېلخەت\" dir=\"ltr\"> <textarea aria-label=\"مەزمۇن\" dir=\"auto\"></textarea> Bidi isolation prevents punctuation in a URL, version or package name from affecting the surrounding sentence. Preserve the original data; solve display direction with HTML containers before altering the stored text. Use logical CSS .panel",
+        "{padding-inline:1.25rem;margin-inline:auto;border-inline-start:3px solid var(--ug-blue);text-align:start;max-inline-size:48rem;} Logical properties follow the writing direction and avoid a second set of left/right layout rules. Test real content in both directions, especially labels, dropdown placement and data-table headers. Keep native range controls explicitly LTR when their displayed minimum-to-maximum comparison needs a stable direction. Keyboard and geographic direction Tabs derive horizontal arrow behavior from the tablist direction; vertical tabs use Up/Down. Choose directional icons for the intended action because SVGs do not mirror automatically. A flag and geographic map retain their authored orientation, independent of the page's reading direction. Preview text cleanup Do not remove every format or joining character to repair a visual issue. Some affect shaping or meaning. The",
+        "writing controller's preview, apply and undo steps make changes inspectable. Review a cleanup against the original, and validate separately. A transformation applied to a field is not a substitute for correct labels, direction or server-side validation."
+      ]
+    },
+    {
+      "title": "Accessibility",
+      "en": "Accessibility",
+      "description": "Verify keyboard access, names, focus, errors and reduced-motion behavior.",
+      "href": "guide/en/accessibility.html",
+      "keywords": [
+        "accessibility",
+        "en",
+        "Start with native elements",
+        "Follow a complete keyboard path",
+        "Names and error feedback",
+        "Respect motion preferences",
+        "Status regions and honest demonstrations",
+        "Start with native elements Use button, a, input, label, dialog, table and details/summary where their semantics fit the task. Keep headings in a meaningful order and label major regions. Native elements provide useful keyboard and assistive-technology behavior; adding a role to a generic element does not supply all that behavior. Follow a complete keyboard path Use Tab and Shift+Tab to reach every action and verify a visible focus indicator. Open and close each dialog or drawer, including Escape and the visible close button. Focus should return appropriately. Try RTL, LTR and vertical tabs, Home/End and disabled tabs. Type into a combobox, navigate suggestions, dismiss and select an option. Sort and page a data table while preserving its header and status context. Outside-pointer dismissal is configurable on bindDialog; it must not replace a named close button. Test actual controls at",
+        "narrow widths and with longer translated strings. Names and error feedback Every field needs a visible associated label. Connect hints and error IDs with aria-describedby. A placeholder is not a label. For an icon-only button, name the action, not merely the picture. Use text alongside color to explain validation errors and let the person recover without losing their input. Respect motion preferences The interaction controllers expose motionAllowed and syncMotion so a consuming app can pause animation for reduced-motion preferences, hidden pages and user choice. Controls must continue to work when motion is disabled. Do not encode essential meaning only in movement, and keep Uyghur words joined while animating surrounding objects. Status regions and honest demonstrations Use a polite status region for a result that does not require moving focus. Important messages should remain until they",
+        "can be read or dismissed. showToast accepts duration:0 for an untimed message. The envelope demo is a local animation and explicitly states that it sends no message. Tables and writing validation should similarly describe the operation actually performed. Automated tests catch some regressions, but browser, screen-reader and human keyboard checks remain valuable. Report the browser, assistive technology, steps and observed behavior in a reproducible issue ; the library does not claim independent certification."
+      ]
+    },
+    {
+      "title": "FAQ and troubleshooting",
+      "en": "FAQ and troubleshooting",
+      "description": "Resolve archive installation, fonts, copy failures, SSR and contribution questions.",
+      "href": "guide/en/faq.html",
+      "keywords": [
+        "faq",
+        "en",
+        "The registry cannot find the package",
+        "Components look like plain HTML",
+        "ALKATIP Basma did not load",
+        "Copy or download is unavailable",
+        "Can I use SSR, React or another framework?",
+        "Where does the data go?",
+        "Report a problem or contribute",
+        "The registry cannot find the package npm registry publishing is deferred. Use the complete pinned GitHub archive URL in Installation , inside your own project. Core and React are separate archives; install both when using the React wrappers. Commit your lockfile and verify which release it resolves. Components look like plain HTML Confirm that styles.css loaded and the controls are inside ug-ui. A plain browser page needs relative imports or an import map; bare package imports normally belong in a bundler. The quick start assumes its HTML is stored in the checkout root and served over HTTP. ALKATIP Basma did not load The font is hosted externally. Check connectivity, your CSP and the font request in browser tools. Tahoma/serif fallbacks keep text visible. Font binaries are not redistributed. An offline deployment needs an approved locally supplied font stylesheet and removal of the",
+        "original external import. Copy or download is unavailable A browser may deny clipboard access. The documentation offers selectable code as a fallback. Interaction examples can also be downloaded as complete HTML containing the controller, CSS and inline cultural artwork; comparison maps are embedded as data SVGs. Fonts still use the separately documented external URLs. Can I use SSR, React or another framework? Pure imports, SVG renderers and metadata can be used during server rendering. Bind DOM controllers only after mount and destroy them on real unmount. The separate React package provides lifecycle wrappers. Do not make two systems manage the same event handlers or attributes. Where does the data go? Core does not add analytics, authentication, a form service or application storage. Demonstrations use local values. The font stylesheet makes external font requests, links navigate when",
+        "opened, and any service you add has its own behavior. A send animation is not a delivery API. Report a problem or contribute Use the community guide and issue forms . Include reproduction steps, package version, browser and expected/actual results. Cultural naming corrections benefit from a specific source or regional explanation. Never include credentials, private records or a real token in an example."
+      ]
+    },
+    {
+      "title": "Changelog",
+      "en": "Changelog",
+      "description": "Track real package changes and preserve earlier release details.",
+      "href": "guide/en/changelog.html",
+      "keywords": [
+        "changelog",
+        "en",
+        "0.4.0 · Application and writing toolkit",
+        "0.3.0 · Color variants and maps",
+        "0.2.0 · Cultural icon collection",
+        "0.1.0 · Initial toolkit",
+        "Site changes and pinned packages",
+        "0.4.0 · Application and writing toolkit This release expands core with Uyghur input support, application controllers, reusable interaction bindings and validated theme exports. It adds a separate React package, an offline component installer workflow, a writing/theme/component Lab, bilingual documentation and contributor resources. Icons remain at 110 outlines and 63 cultural color variants; the sourced maps and their provenance are retained. New core subpaths are writing, application, interactions and themes. Interaction CSS is exported separately. bindDialog now supports dismissOutside, enabled by default. The React archive is versioned alongside core under the UI release; registry publication remains deferred. The create CLI 0.2 adds local UI templates and safe new-directory creation. 0.3.0 · Color variants and maps Added 36 cultural themes, reaching 110 outline icons and 63 cultural",
+        "icons with color variants. Added coloredIconNames, per-icon variants metadata, standalone color SVGs and expanded ZIP archives. Introduced mapSVG, mapMetadata, two map styles and the original Natural Earth source feature. The documented map uses the modern Xinjiang admin-1 polygon, not historical boundary reconstruction. 0.2.0 · Cultural icon collection Added 24 icons, reaching 74 total and 27 cultural icons when the original doppa, almond and flower motifs are included. Introduced bilingual labels, categories, aliases, iconCatalog, iconCategories and findIcons, along with reproducible full/cultural ZIP downloads. 0.1.0 · Initial toolkit Introduced CSS components, native dialogs, RTL tabs, form validation, disclosures and plain-text toasts. The first release contained 50 SVG icons, the East Turkistan flag, the ALKATIP Basma font link and TypeScript declarations. Site changes and pinned",
+        "packages The original six motion demonstrations were initially website-only additions after 0.3.0. Version 0.4.0 makes their reusable controllers available through a core interaction subpath. A site update does not automatically change a package already installed in your application. Compare your lockfile and installed package metadata, then update with a pinned archive and retest the flows you use. Release history: 0.4.0 , 0.3.0 , 0.2.0 and 0.1.0 ."
       ]
     },
     {
@@ -1976,6 +2205,91 @@
         "geography",
         "شىنجاڭ",
         "Xinjiang"
+      ]
+    },
+    {
+      "title": "ئۇيغۇرچە يېزىق سىنىقى",
+      "en": "Uyghur writing Lab",
+      "description": "كىرگۈزۈش، تازىلاشنى ئالدىن كۆرۈش، قايتۇرۇش ۋە تەكشۈرۈش.",
+      "href": "lab.html#lab-writing",
+      "keywords": [
+        "writing",
+        "bindUyghurInput",
+        "cleanup",
+        "undo",
+        "يېزىق"
+      ]
+    },
+    {
+      "title": "ئۇسلۇب خىزمەت ئۈستىلى",
+      "en": "Theme workbench",
+      "description": "دوپپا، ئەتلەس، قۇملۇق ۋە ساپال ئۇسلۇبلىرى؛ CSS ۋە JSON چىقىرىش.",
+      "href": "lab.html#lab-themes",
+      "keywords": [
+        "theme",
+        "themes",
+        "createTheme",
+        "exportThemeCSS",
+        "CSS",
+        "JSON",
+        "ئۇسلۇب"
+      ]
+    },
+    {
+      "title": "قوللىنىشچان بۆلەكلەر",
+      "en": "Application components",
+      "description": "Combobox، dropdown، drawer ۋە data table نى سىناڭ.",
+      "href": "lab.html#lab-components",
+      "keywords": [
+        "combobox",
+        "dropdown",
+        "drawer",
+        "table",
+        "application",
+        "بۆلەك"
+      ]
+    },
+    {
+      "title": "ھەمكارلىق ۋە مىساللار",
+      "en": "Contribute and community",
+      "description": "تۆھپە قوللانمىسى، ھەقىقىي issue قېلىپى ۋە ئىچكى مىساللار.",
+      "href": "community.html",
+      "keywords": [
+        "community",
+        "contributing",
+        "translation",
+        "bug",
+        "ھەمكارلىق",
+        "تەرجىمە"
+      ]
+    },
+    {
+      "title": "React installation",
+      "en": "React package",
+      "description": "Install the separate pinned Uyghur UI React archive.",
+      "href": "guide/en/installation.html#install-react",
+      "keywords": [
+        "react",
+        "ui-react",
+        "Button",
+        "Dialog",
+        "Tabs",
+        "UyghurInput",
+        "Interaction"
+      ]
+    },
+    {
+      "title": "Offline component installer",
+      "en": "Create CLI 0.2",
+      "description": "List and create local UI examples in a new relative directory.",
+      "href": "guide/en/installation.html#install-installer",
+      "keywords": [
+        "installer",
+        "CLI",
+        "create-uyghur",
+        "ui-list",
+        "offline",
+        "starters"
       ]
     }
   ]

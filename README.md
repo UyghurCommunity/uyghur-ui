@@ -1,6 +1,6 @@
 # ئۇيغۇرچە UI · Uyghur UI
 
-[Documentation](https://uyghurcommunity.github.io/uyghur-ui/guide/introduction.html) · [Installation](https://uyghurcommunity.github.io/uyghur-ui/guide/installation.html) · [Live component gallery](https://uyghurcommunity.github.io/uyghur-ui/) · [UyghurCommunity](https://github.com/UyghurCommunity)
+[ئۇيغۇرچە Documentation](https://uyghurcommunity.github.io/uyghur-ui/guide/introduction.html) · [English documentation](https://uyghurcommunity.github.io/uyghur-ui/guide/en/introduction.html) · [Lab](https://uyghurcommunity.github.io/uyghur-ui/lab.html) · [Community](https://uyghurcommunity.github.io/uyghur-ui/community.html) · [Installation](https://uyghurcommunity.github.io/uyghur-ui/guide/installation.html) · [Live component gallery](https://uyghurcommunity.github.io/uyghur-ui/) · [UyghurCommunity](https://github.com/UyghurCommunity)
 
 ئۇيغۇرچە تور بەتلەر ئۈچۈن كۇنۇپكا، فورما، سۆزلىشىش كۆزنىكى، بەتكۈچ، تىزىملىك، ئۇقتۇرۇش، 110 SVG سىنبەلگە ۋە شەرقىي تۈركىستان خەرىتىسى. 63 مەدەنىيەت سىنبەلگىسىنىڭ سىزىقلىق ۋە رەڭلىك نۇسخىسى بار. ALKATIP Basma خەت نۇسخىسى، ئوڭدىن سولغا لايىھە ۋە كۇنۇپكا تاختىسى بىلەن ئىشلىتىشنى قوللايدۇ.
 
@@ -11,7 +11,7 @@ Framework-independent CSS components and small native JavaScript controllers for
 npm registry publishing is deferred. Install the versioned GitHub release archive:
 
 ```sh
-npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.3.0/uyghurcommunity-ui-0.3.0.tgz
+npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz
 ```
 
 In a bundler-based application:
@@ -48,7 +48,7 @@ The native `<dialog>` supplies focus containment, Escape cancellation and backgr
 
 ## API
 
-- `bindDialog(dialog, { trigger?, initialFocus? })`: `open()`, `close(value?)`, `destroy()`.
+- `bindDialog(dialog, { trigger?, initialFocus?, dismissOutside=true })`: `open()`, `close(value?)`, `destroy()`. Set `dismissOutside:false` to opt out of outside-pointer dismissal.
 - `bindDisclosure(button, panel)`: `toggle()`, `setOpen(boolean)`, `destroy()`. Connect `aria-controls` in your markup.
 - `bindTabs(container)`: roving tab focus, Home/End, RTL horizontal arrows, vertical arrows and current disabled-tab skipping. The first tablist owns its tabs; nested groups stay independent. Each tab needs a distinct panel inside the container. Direction and orientation come from the tablist. `select(tab, focus?)`, `destroy()`.
 - `validateForm(form, { messages? })`: actual native validity errors with Uyghur defaults; errors contain `field` and `message`. Associate labels, hint/error IDs and `aria-describedby` in markup. Set `data-ug-error="error-id"` to populate the inline error text.
@@ -75,7 +75,7 @@ Installed-package asset subpaths include `@uyghurcommunity/ui/icons/flower`, `@u
 
 ## Uyghur cultural collection · مىراس سىنبەلگىلىرى
 
-Version **0.3.0** adds 36 cultural themes and color variants for the full cultural collection. There are now **110 outline icons**, including **63 cultural pictograms and motifs with matching color variants**. The gallery supports Uyghur labels, English names, spelling aliases, category filters and variant selection.
+The cultural collection introduced 36 new themes and full color variants in **0.3.0**, retained in **0.4.0**. There are now **110 outline icons**, including **63 cultural pictograms and motifs with matching color variants**. The gallery supports Uyghur labels, English names, spelling aliases, category filters and variant selection.
 
 | Collection | Icons |
 | --- | --- |
@@ -135,7 +135,73 @@ The [metadata](assets/maps/east-turkistan.metadata.json), [original extracted Ge
 
 Each demo has touch and keyboard controls, a shared pause control, reduced-motion support and a complete HTML/CSS/JavaScript example to copy or download. The comparison download embeds both map SVGs, and every standalone example registers the supplied ALKATIP Basma font URLs. Font binaries are not bundled. The envelope is a local visual demonstration and sends no message.
 
-These are website examples, separate from the unchanged v0.3.0 package exports. Source: `docs/interactions-data.js`, `docs/interaction-controls.js`, `docs/interaction-demo.css` and `docs/interaction-document.js`. `build:docs` renders `interactions.html` from the same examples and shared documentation shell.
+Version 0.4.0 exports these reusable controllers through `@uyghurcommunity/ui/interactions`, with a separate `@uyghurcommunity/ui/interactions.css` stylesheet. Source: `docs/interactions-data.js`, `docs/interaction-controls.js`, `docs/interaction-demo.css` and `docs/interaction-document.js`. `build:docs` renders `interactions.html` from the same examples and shared documentation shell.
+
+
+## Writing and application controls · يېزىق ۋە قوللىنىشچان UI
+
+Core **0.4.0** adds these subpaths; the [Lab](https://uyghurcommunity.github.io/uyghur-ui/lab.html) supplies complete labeled markup and working local examples.
+
+```js
+import { bindUyghurInput } from '@uyghurcommunity/ui/writing';
+import { bindCombobox, bindDropdown, bindDrawer, bindDataTable } from '@uyghurcommunity/ui/application';
+```
+
+| Controller | Options | Methods |
+| --- | --- | --- |
+| `bindUyghurInput(root, options)` | `onChange(value)`, `maxLength=10000` | `getValue`, `setValue`, `previewCleanup(options?)`, `applyCleanup`, `undoCleanup`, `validate`, `destroy` |
+| `bindCombobox(root, options)` | `onChange?` | `open`, `close`, `getValue`, `select(value)`, `destroy` |
+| `bindDropdown(root)` | — | `open`, `close`, `toggle`, `destroy` |
+| `bindDrawer(root, options)` | `initialFocus?`, `dismissOutside?` | `open`, `close`, `destroy` |
+| `bindDataTable(root, options)` | `pageSize=5` | `getState`, `setPage(oneBasedPage)`, `refresh`, `destroy` |
+
+Writing validation returns `{valid,message,length,maxLength}`. `setValue`, `applyCleanup` and `undoCleanup` return booleans. Preview cleanup before applying it, and retain an undo path. The table operates on local rows; server requests, storage and authorization belong to the consuming app. Destroy bindings on real unmount.
+
+The Lab also provides two composed, copyable layouts: a dashboard sidebar with a data table, and an article editor with writing assistance, preview and local export. Their styles are exported as `@uyghurcommunity/ui/blocks.css` and included by the core stylesheet. These are local examples, not hosted application services.
+
+## React and offline installation
+
+React wrappers are a separate **0.4.0** package; registry publication remains deferred:
+
+```sh
+npm install https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-0.4.0.tgz https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.4.0/uyghurcommunity-ui-react-0.4.0.tgz
+```
+
+```jsx
+import '@uyghurcommunity/ui/styles.css';
+import { Button, Icon, Dialog, Tabs, UyghurInput, Interaction } from '@uyghurcommunity/ui-react';
+
+export function Welcome() {
+  return <main className="ug-ui" lang="ug" dir="rtl"><Button>باشلاڭ</Button><Icon name="dutar" /></main>;
+}
+```
+
+Your application supplies React. See the React package README for props and lifecycle. Avoid attaching a second vanilla binding to a wrapper-managed element.
+
+The separate [Uyghur Starters](https://github.com/UyghurCommunity/uyghur-starters) create CLI **0.2.0** can generate local UI templates without a network template fetch:
+
+```sh
+npm install --save-dev https://github.com/UyghurCommunity/uyghur-starters/releases/download/v0.2.0/uyghurcommunity-create-0.2.0.tgz
+npx create-uyghur --ui-list
+npx create-uyghur --ui combobox --dir examples/new-combobox
+```
+
+Available IDs: `writing-field`, `dialog`, `combobox`, `dropdown`, `drawer`, `data-table`. Choose a new relative directory. The command does not deploy or publish anything.
+
+## Themes
+
+```js
+import { createTheme, exportThemeCSS, exportThemeJSON } from '@uyghurcommunity/ui/themes';
+const theme = createTheme('doppa');
+const css = exportThemeCSS(theme, { selector: '.my-product' });
+const json = exportThemeJSON(theme);
+```
+
+Presets: `doppa`, `atlas`, `desert`, `ceramic`. Optional overrides are `accent`, `radius`, `fontSize`, `lineHeight` and `mode`. Theme objects `{id,name,tokens}` are deeply frozen. CSS defaults to selector `.ug-ui`; load exported CSS after the base stylesheet. JSON records the theme without applying it. [Try the workbench](https://uyghurcommunity.github.io/uyghur-ui/lab.html#lab-themes).
+
+## Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). [Community](https://uyghurcommunity.github.io/uyghur-ui/community.html) links real bug, component and translation issue forms, plus community-maintained examples. Both language guides retain the same page when switched. Update their source and regenerate rather than editing only emitted HTML.
 
 ## Run and verify
 
@@ -153,6 +219,6 @@ The gallery has working previews and copyable HTML/JavaScript. Demo form values 
 
 `build:map` regenerates the map SVGs, metadata and JavaScript geometry module offline from the committed source GeoJSON. `build:icons` regenerates the outline/color icon files, catalog and deterministic ZIP downloads using Node only. CI checks that generated files match the committed assets.
 
-`build:docs` produces eleven static Uyghur guide pages and the local full-text search index from `docs/guide-content.js`. The guides cover installation, a complete quick start, components, JavaScript APIs, icons, theming, RTL, accessibility, troubleshooting and release history. All guide prose is readable without JavaScript. Search, code-copy helpers, mobile navigation and theme preferences enhance the static pages in the browser. Keep generated `guide/`, `interactions.html`, `index.html` navigation and `assets/docs-search.json` committed for GitHub Pages.
+`build:docs` produces 22 static guide pages (11 Uyghur and 11 English) from `docs/guide-content.js` and `docs/guide-content-en.js`, the Lab/community/interaction pages, shared navigation and the local search index. The guides cover installation, a complete quick start, components, JavaScript APIs, icons, theming, RTL, accessibility, troubleshooting and release history. All guide prose is readable without JavaScript. Search, code-copy helpers, mobile navigation and theme preferences enhance the static pages in the browser. Keep generated `guide/` (including `guide/en/`), `lab.html`, `community.html`, `interactions.html`, `index.html` navigation and `assets/docs-search.json` committed for GitHub Pages.
 
 Code and original icons: [MIT](LICENSE). Natural Earth map data: public domain. Flag, cultural references and external-font details: [third-party notices](THIRD_PARTY_NOTICES.md).
