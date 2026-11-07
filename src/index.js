@@ -1,4 +1,5 @@
-export { iconSVG, flagSVG, iconNames, directionalIcons, iconCatalog, iconCategories, findIcons } from './icons.js';
+export { iconSVG, flagSVG, iconNames, coloredIconNames, directionalIcons, iconCatalog, iconCategories, findIcons } from './icons.js';
+export { mapSVG, mapMetadata } from './maps.js';
 
 function restoreAttribute(node, key, value) { value === null ? node.removeAttribute(key) : node.setAttribute(key, value); }
 

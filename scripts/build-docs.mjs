@@ -39,6 +39,7 @@ const entries = [
   ...components.map((component) => ({ title: component.title, en: component.id, description: component.description, href: `index.html#component-${component.id}`, keywords: ['component', 'بۆلەك', component.category] })),
   ...iconCatalog.map((entry) => ({ title: entry.ug, en: entry.en, description: `${entry.ug} · ${entry.name} · SVG`, href: `index.html#icon-${entry.name}`, keywords: [entry.name, entry.category, ...entry.keywords, 'icon', 'سىنبەلگە'] })),
   { title: 'شەرقىي تۈركىستان بايرىقى', en: 'East Turkistan flag', description: 'بايراق SVG ھۆججىتى ۋە ئىشلىتىش ئۇسۇلى.', href: 'index.html#flag', keywords: ['flag', 'SVG', 'بايراق'] },
+  { title: 'شەرقىي تۈركىستان خەرىتىسى', en: 'East Turkistan map', description: 'سىزىقلىق ۋە تولدۇرۇلغان SVG خەرىتىسى، ئەسلى GeoJSON ۋە مەنبە ئۇچۇرى.', href: 'index.html#map', keywords: ['map', 'SVG', 'خەرىتە', 'East Turkistan', 'شەرقىي تۈركىستان', 'outline', 'filled', 'GeoJSON', 'Natural Earth', 'geography', 'شىنجاڭ', 'Xinjiang'] },
 ];
 await writeFile(resolve(root, 'assets/docs-search.json'), JSON.stringify({ version: siteVersion, entries }, null, 2) + '\n');
 await writeFile(resolve(root, 'guide/index.html'), '<!doctype html><html lang="ug" dir="rtl"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=introduction.html"><title>ئۇيغۇرچە UI قوللانمىسى</title></head><body><a href="introduction.html">قوللانمىنى ئېچىش</a></body></html>\n');

@@ -1,4 +1,4 @@
-export const siteVersion = '0.2.0';
+export const siteVersion = '0.3.0';
 export const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const groups = [
   ['getting-started', 'باشلاش'], ['components', 'كۈتۈپخانا'],
@@ -8,7 +8,7 @@ export function navigation(pages, { prefix = '', active = '' } = {}) {
   return `<nav class="docs-navigation" data-docs-nav aria-label="قوللانما يولباشلاش">${groups.map(([id, title]) => {
     const links = pages.filter((page) => page.group === id).map((page) => `<a href="${prefix}guide/${page.slug}.html"${active === page.slug ? ' aria-current="page"' : ''}><span>${escapeHTML(page.title)}</span><bdi lang="en">${escapeHTML(page.en)}</bdi></a>`).join('');
     return `<div class="docs-nav-group"><p>${title}</p>${links}</div>`;
-  }).join('')}<div class="docs-nav-group"><p>بىۋاسىتە سىناش</p><a href="${prefix}index.html#components"${active === 'gallery' ? ' aria-current="page"' : ''}><span>بۆلەكلەر كۆرگەزمىسى</span><bdi lang="en">Playground</bdi></a><a href="${prefix}index.html#icons"><span>مەدەنىيەت سىنبەلگىلىرى</span><bdi lang="en">74 SVG icons</bdi></a><a href="${prefix}index.html#flag"><span>كۆك بايراق</span><bdi lang="en">Flag asset</bdi></a></div></nav>`;
+  }).join('')}<div class="docs-nav-group"><p>بىۋاسىتە سىناش</p><a href="${prefix}index.html#components"${active === 'gallery' ? ' aria-current="page"' : ''}><span>بۆلەكلەر كۆرگەزمىسى</span><bdi lang="en">Playground</bdi></a><a href="${prefix}index.html#icons"><span>مەدەنىيەت سىنبەلگىلىرى</span><bdi lang="en">110 SVG icons</bdi></a><a href="${prefix}index.html#flag"><span>كۆك بايراق</span><bdi lang="en">Flag asset</bdi></a><a href="${prefix}index.html#map"><span>شەرقىي تۈركىستان خەرىتىسى</span><bdi lang="en">Map assets</bdi></a></div></nav>`;
 }
 export function sidebar(pages, options = {}) {
   return `<aside class="docs-sidebar"><div class="docs-sidebar-heading"><span class="docs-book-mark" aria-hidden="true">✳</span><div>ئۇيغۇرچە UI<small lang="en" dir="ltr">DOCUMENTATION / ${siteVersion}</small></div></div>${navigation(pages, options)}<div class="docs-sidebar-footer"><span class="docs-version-dot"></span><span lang="en" dir="ltr">v${siteVersion} · MIT</span><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v${siteVersion}" aria-label="نەشر ئۇچۇرى">↗</a></div></aside>`;

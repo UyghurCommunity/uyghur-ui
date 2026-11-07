@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { iconCatalog, iconCategories, iconNames, findIcons, iconSVG } from '../src/index.js';
 
 test('bilingual catalog covers every public icon and cannot be mutated by consumers', () => {
-  assert.equal(iconNames.length, 74);
+  assert.equal(iconNames.length, 110);
   assert.deepEqual(iconCatalog.map((entry) => entry.name).sort(), [...iconNames]);
   for (const entry of iconCatalog) {
     assert.match(entry.ug, /\p{Script=Arabic}/u); assert.ok(entry.en.length);
@@ -15,14 +15,17 @@ test('bilingual catalog covers every public icon and cannot be mutated by consum
 });
 test('traditional collection keeps all interface icons available through disjoint categories', () => {
   const traditional = findIcons('', { category: 'traditional' }), general = findIcons('', { category: 'general' });
-  assert.equal(traditional.length, 27); assert.equal(general.length, 47);
+  assert.equal(traditional.length, 63); assert.equal(general.length, 47);
   assert.deepEqual([...traditional, ...general].sort(), [...iconNames]);
   assert.ok(traditional.includes('doppa')); assert.ok(general.includes('search'));
-  assert.equal(findIcons('', { category: 'music' }).length, 6);
-  assert.equal(findIcons('', { category: 'textiles' }).length, 8);
-  assert.equal(findIcons('', { category: 'architecture' }).length, 4);
-  assert.equal(findIcons('', { category: 'table' }).length, 7);
-  assert.equal(findIcons('', { category: 'garden' }).length, 2);
+  assert.equal(findIcons('', { category: 'music' }).length, 7);
+  assert.equal(findIcons('', { category: 'textiles' }).length, 9);
+  assert.equal(findIcons('', { category: 'architecture' }).length, 12);
+  assert.equal(findIcons('', { category: 'table' }).length, 10);
+  assert.equal(findIcons('', { category: 'garden' }).length, 6);
+  assert.equal(findIcons('', { category: 'clothing' }).length, 8);
+  assert.equal(findIcons('', { category: 'crafts' }).length, 3);
+  assert.equal(findIcons('', { category: 'motifs' }).length, 8);
 });
 test('Uyghur labels, variant spellings and English aliases find the same real icon', () => {
   for (const query of ['راۋاپ', 'راۋاب', 'RAWAB', '  rawap  ']) assert.deepEqual(findIcons(query), ['rawap']);
@@ -37,7 +40,7 @@ test('category and token search combine without changing names, labels or caller
   assert.deepEqual(findIcons('tea bowl', { category: 'table' }), ['tea-bowl']);
   assert.deepEqual(findIcons('search', { category: 'traditional' }), []);
   assert.deepEqual(findIcons('no such motif'), []);
-  const results = findIcons(); results.pop(); assert.equal(findIcons().length, 74);
+  const results = findIcons(); results.pop(); assert.equal(findIcons().length, 110);
   assert.equal(JSON.stringify(iconCatalog), snapshot);
 });
 test('search rejects invalid categories and types and treats markup as plain query text', () => {
@@ -47,7 +50,7 @@ test('search rejects invalid categories and types and treats markup as plain que
 });
 test('new cultural icons render original distinct safe geometry and escaped accessible names', () => {
   const names = findIcons('', { category: 'traditional' }).filter((name) => !['almond', 'flower', 'doppa'].includes(name));
-  const drawings = names.map((name) => iconSVG(name)); assert.equal(names.length, 24);
+  const drawings = names.map((name) => iconSVG(name)); assert.equal(names.length, 60);
   assert.equal(new Set(drawings).size, names.length);
   for (const name of names) {
     const svg = iconSVG(name, { size: 48, label: '<مەدەنىيەت>' });

@@ -1,6 +1,6 @@
 import { escapeMarkup } from '../src/icons.js';
 
-const release = 'https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.2.0/uyghurcommunity-ui-0.2.0.tgz';
+const release = 'https://github.com/UyghurCommunity/uyghur-ui/releases/download/v0.3.0/uyghurcommunity-ui-0.3.0.tgz';
 const code = (language, source) => `<pre data-language="${language}"><code>${escapeMarkup(source.trim())}</code></pre>`;
 const note = (title, text) => `<aside class="doc-callout"><strong>${title}</strong><p>${text}</p></aside>`;
 const table = (headings, rows) => `<div class="doc-table"><table><thead><tr>${headings.map((x) => `<th scope="col">${x}</th>`).join('')}</tr></thead><tbody>${rows.map((row) => `<tr>${row.map((x) => `<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
@@ -19,15 +19,16 @@ ${table(['بۆلەك', 'ئىشلىتىش ئورنى'], [
   ['كۇنۇپكا ۋە فورما', 'كونترول، ئېنىق بەلگە، ئۇيغۇرچە خاتالىق ئۇچۇرى ۋە ياردەم تېكىستى.'],
   ['كۆزنەك ۋە بەتكۈچ', 'يەرلىك modal كۆزنەك، فوكۇس قايتۇرۇش ۋە RTL ئوق كۇنۇپكىلىرى.'],
   ['كارتا، بەلگە ۋە تىزىملىك', 'مەزمۇننى گۇرۇپپىلاش، ھالەتنى كۆرسىتىش ۋە يولباشلاش.'],
-  ['74 SVG سىنبەلگە', '27 مەدەنىيەت سىنبەلگىسى، ئىككى تىللىق نام ۋە ئىزدەش يىپ ئۇچلىرى.'],
+  ['110 SVG سىنبەلگە', '63 مەدەنىيەت سىنبەلگىسىنىڭ سىزىقلىق ۋە رەڭلىك نۇسخىسى، ئىككى تىللىق نام ۋە ئىزدەش يىپ ئۇچلىرى.'],
+  ['بايراق ۋە خەرىتە', 'شەرقىي تۈركىستان بايرىقى، سىزىقلىق ۋە تولدۇرۇلغان خەرىتە، ئېنىق سانلىق مەلۇمات مەنبەسى.'],
   ['ALKATIP Basma', 'سىرتقى ئادرېستىن يۈكلىنىدىغان خەت نۇسخىسى ۋە زاپاس خەتلەر.'],
 ])}
 <h2 id="intro-path">قايسى يەردىن باشلايمەن؟</h2>
 <ol><li><a href="installation.html">قاچىلاش</a> بۆلىكىدىن تۈرىڭىزگە ماس ئۇسۇلنى تاللاڭ.</li><li><a href="quick-start.html">تېز باشلاش</a> مىسالى بىلەن ھەقىقىي كۆزنەك ۋە فورما قۇرۇڭ.</li><li><a href="components.html">بۆلەكلەر</a> ۋە <a href="icons.html">سىنبەلگىلەر</a> قوللانمىسىدىن لازىملىقىنى تېپىڭ.</li><li><a href="theming.html">رەڭ ۋە خەتنى خاسلاشتۇرۇڭ</a>، ئاندىن <a href="accessibility.html">كۇنۇپكا تاختىسى بىلەن سىناڭ</a>.</li></ol>
-${note('ھازىرقى نەشر · 0.2.0', 'قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ.')}
+${note('ھازىرقى نەشر · 0.3.0', 'قاچىلاش بوغچىسى GitHub Releases دا بار. npm تىزىملىكىگە ئېلان قىلىش ھازىرچە كېچىكتۈرۈلگەن؛ قوللانمىدىكى نەشرى بەلگىلەنگەن ئادرېسنى ئىشلىتىڭ.')}
 <h2 id="intro-principles">تۈرىڭىزدە نېمىنى ئۆزىڭىز بېكىتىسىز؟</h2>
 <p>كۈتۈپخانا تور مۇلازىمىتى، ئىشلەتكۈچى ھېسابى ياكى سانلىق مەلۇمات ساقلاشنى قوشمايدۇ. فورما نەتىجىسىنى قەيەرگە ئەۋەتىش، قايسى سانلىق مەلۇماتنى ساقلاش ۋە مەزمۇن ئىجازەتنامىسىنى قانداق كۆرسىتىشنى تۈرىڭىز بەلگىلەيدۇ. كۆرگەزمىدىكى فورما پەقەت يەرلىك سىناق.</p>
-<p>كود ۋە ئەسلى SVG سىزىقلىرى MIT ئىجازەتنامىسىدە. خەت نۇسخىسى ۋە بايراقنىڭ مەنبە ئۇچۇرىنى <a href="../THIRD_PARTY_NOTICES.md">مەنبە خاتىرىسى</a>دىن كۆرۈڭ.</p>`,
+<p>كود ۋە ئەسلى سىنبەلگە سىزىقلىرى MIT ئىجازەتنامىسىدە. Natural Earth خەرىتە سانلىق مەلۇماتى ئاممىۋى مۈلۈك. خەت، بايراق، خەرىتە ۋە كۆرۈنۈش پايدىلىنىش مەنبەلىرىنى <a href="../THIRD_PARTY_NOTICES.md">مەنبە خاتىرىسى</a>دىن كۆرۈڭ.</p>`,
   },
   {
     slug: 'installation', title: 'قاچىلاش', en: 'Installation', group: 'getting-started',
@@ -35,7 +36,7 @@ ${note('ھازىرقى نەشر · 0.2.0', 'قاچىلاش بوغچىسى GitHub
     body: `
 <h2 id="install-requirements">ئالدىن تەييارلىق</h2>
 <p>بوغچا بىلەن ئىشلەش ئۈچۈن <bdi dir="ltr" lang="en">Node.js 20+</bdi> ۋە ئۆز تۈرىڭىزنىڭ بوغچا باشقۇرغۇچىسى لازىم. كۈتۈپخانىنىڭ ئىجرا ۋاقتىدا باشقا JavaScript بوغچىسىغا تايىنىشچانلىقى يوق. تۈرىڭىزدە بار قۇرۇلۇش قورالىنى داۋاملىق ئىشلىتەلەيسىز.</p>
-${note('توغرا قاچىلاش ئادرېسى', 'ھازىرچە يالغۇز <code dir="ltr">npm install @uyghurcommunity/ui</code> نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.2.0 نەشر ئارخىپىنى قاچىلايدۇ.')}
+${note('توغرا قاچىلاش ئادرېسى', 'ھازىرچە يالغۇز <code dir="ltr">npm install @uyghurcommunity/ui</code> نى ئىشلەتمەڭ. تۆۋەندىكى بۇيرۇقلار GitHub دىكى 0.3.0 نەشر ئارخىپىنى قاچىلايدۇ.')}
 <h2 id="install-package">نەشر بوغچىسىنى قاچىلاش</h2>
 <h3>npm</h3>${code('sh', `npm install ${release}`)}
 <h3>pnpm</h3>${code('sh', `pnpm add ${release}`)}
@@ -62,7 +63,7 @@ ${code('html', `<link rel="stylesheet" href="./src/styles.css">
 <p>بۇ قىسقا مىسال ئۈچۈن بېتىڭىزدە <code dir="ltr">&lt;span id="mark"&gt;&lt;/span&gt;</code> بولۇشى كېرەك. تولۇق ھۆججەتنى <a href="quick-start.html">تېز باشلاش</a> بۆلىكىدىن كۆچۈرۈڭ. ES module ھۆججەتلىرىنى HTTP ئارقىلىق ئېچىڭ؛ <code dir="ltr">file://</code> ئارقىلىق ئېچىشقا تايانماڭ.</p>
 <h2 id="install-check">قاچىلاشنى تەكشۈرۈش</h2>
 ${code('sh', `node --input-type=module -e "import { iconNames } from '@uyghurcommunity/ui'; console.log(iconNames.length)"`)}
-<p>0.2.0 نەشرىدە نەتىجە <bdi dir="ltr">74</bdi> بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ.</p>`,
+<p>0.3.0 نەشرىدە نەتىجە <bdi dir="ltr">110</bdi> بولىدۇ. بۇيرۇق بوغچا تۈرىڭىزنىڭ ئىچىدىن ئىجرا قىلىنسۇن. CSS import خاتالىقى چىقسا، ئۇنى ئاددىي Node ئىچىدە ئەمەس، CSS نى بىر تەرەپ قىلالايدىغان تور تۈرىڭىزنىڭ كىرىش ھۆججىتىدە ئىشلىتىڭ.</p>`,
   },
   {
     slug: 'quick-start', title: 'تېز باشلاش', en: 'Quick start', group: 'getting-started',
@@ -181,7 +182,7 @@ ${code('html', `<div class="ug-columns">
 <h2 id="api-imports">كىرگۈزۈش ۋە ھايات دەۋرى</h2>
 ${code('js', `import {
   bindDialog, bindDisclosure, bindTabs, bindForm, validateForm, showToast,
-  iconSVG, flagSVG, iconNames, directionalIcons,
+  iconSVG, flagSVG, mapSVG, mapMetadata, iconNames, coloredIconNames, directionalIcons,
   iconCatalog, iconCategories, findIcons,
 } from '@uyghurcommunity/ui';`)}
 <p>يىلتىز import ھۆججىتى يۈكلەنگەندە DOM غا كىرمەيدۇ. كونترولنى باغلاشنى ئېلېمېنت قۇرۇلغاندىن كېيىن قىلىڭ. رامكا تەركىبى ياكى بەت پارچىسى ئۆچۈرۈلگەندە ئۇنىڭ <code dir="ltr">destroy()</code> نى چاقىرىڭ؛ يېڭى DOM غا يېڭى كونترول باغلاڭ.</p>
@@ -235,27 +236,30 @@ ${code('js', `const toast = showToast(
 <p>ئۇقتۇرۇش مەزمۇنى HTML ئەمەس، ئاددىي تېكىست سۈپىتىدە قويۇلىدۇ. سۈكۈتتىكى ۋاقىت <bdi dir="ltr">8000 ms</bdi>؛ <code dir="ltr">duration: 0</code> بولسا ئادەم تاقىغۇچە قالىدۇ. مۇھىم نەتىجە ياكى خاتالىق ئۈچۈن ۋاقىت چەكلىمىسىز ئۇچۇرنى تاللاڭ.</p>
 <h2 id="api-icons">SVG ۋە ئىزدەش API</h2>
 ${table(['نام', 'نەتىجە'], [
-  ['<code dir="ltr">iconSVG(name, { size, strokeWidth, label })</code>', 'SVG تېكىستى. سۈكۈتتىكى چوڭلۇق 24، strokeWidth بولسا 1.7.'],
+  ['<code dir="ltr">iconSVG(name, { size, strokeWidth, label, variant })</code>', 'SVG تېكىستى. چوڭلۇق 24، strokeWidth بولسا 1.7؛ سۈكۈتتىكى variant بولسا outline.'],
   ['<code dir="ltr">flagSVG({ width, label })</code>', 'كەڭلىك/ئېگىزلىك نىسبىتى 3:2 بولغان بايراق SVG تېكىستى.'],
+  ['<code dir="ltr">mapSVG({ width, variant, label, color, strokeWidth })</code>', 'شەرقىي تۈركىستان خەرىتىسى؛ outline ياكى filled. كەڭلىك 640، رەڭ currentColor، سىزىق قېلىنلىقى 4.'],
+  ['<code dir="ltr">mapMetadata</code>', 'مەنبە، ئىجازەتنامە، جۇغراپىيەلىك دائىرە ۋە projection ئۇچۇرى؛ چوڭقۇر توڭلىتىلغان.'],
   ['<code dir="ltr">findIcons(query, { category })</code>', 'سۆز ۋە تۈرگە ماس سىنبەلگە ناملىرىدىن يېڭى تىزىملىك.'],
-  ['<code dir="ltr">iconNames · directionalIcons</code>', 'سىنبەلگە ناملىرى ۋە قوش يۆنىلىشلىك ئوق تاللاشقا ياردەمچى ناملار.'],
-  ['<code dir="ltr">iconCatalog · iconCategories</code>', 'ئۆزگەرتكىلى بولمايدىغان ئىككى تىللىق metadata.'],
+  ['<code dir="ltr">iconNames · coloredIconNames · directionalIcons</code>', '110 سىنبەلگە نامى، رەڭلىك نۇسخىسى بار 63 نام ۋە ئوق تاللاشقا ياردەمچى ناملار.'],
+  ['<code dir="ltr">iconCatalog · iconCategories</code>', 'ئىككى تىللىق metadata؛ ھەر سىنبەلگىنىڭ variants مەيدانى بار نۇسخىلارنى كۆرسىتىدۇ.'],
 ])}
-<p>بۇ SVG/ئىزدەش export لىرى يىلتىز import ۋە <code dir="ltr">@uyghurcommunity/ui/icons</code> دا بار. <code dir="ltr">escapeMarkup(value)</code> پەقەت icons تارماق import ىدا بار؛ ئۇ markup ئۈچۈن بەلگىلەرنى escape قىلىدۇ، URL ياكى CSS تەكشۈرگۈچ ئەمەس. تەپسىلاتنى <a href="icons.html">سىنبەلگە قوللانمىسى</a>دىن كۆرۈڭ.</p>
+<p>سىنبەلگە، بايراق ۋە ئىزدەش export لىرى يىلتىز import ۋە <code dir="ltr">@uyghurcommunity/ui/icons</code> دا بار. خەرىتە API سى يىلتىز import ۋە <code dir="ltr">@uyghurcommunity/ui/maps</code> دا بار. <code dir="ltr">escapeMarkup(value)</code> پەقەت icons تارماق import ىدا بار؛ ئۇ markup ئۈچۈن بەلگىلەرنى escape قىلىدۇ، URL ياكى CSS تەكشۈرگۈچ ئەمەس. تەپسىلاتنى <a href="icons.html">سىنبەلگە ۋە خەرىتە قوللانمىسى</a>دىن كۆرۈڭ.</p>
 <h2 id="api-errors">پارامېتىر ۋە خاتالىق</h2>
-<p>يوق ياكى ماس كەلمەيدىغان DOM ئېلېمېنتى ئۈچۈن <code dir="ltr">TypeError</code> چىقىشى مۇمكىن. سىنبەلگە نامى ۋە تۈر نامى allowlist بويىچە تەكشۈرۈلىدۇ. icon چوڭلۇقى پۈتۈن سان <bdi dir="ltr">12–256</bdi>، strokeWidth بولسا <bdi dir="ltr">0.5–4</bdi>؛ flag كەڭلىكى پۈتۈن سان <bdi dir="ltr">24–1800</bdi> بولسۇن. نام بەلگىسى 160 ھەرپتىن ئاشمىسۇن. ئۆچۈرۈلگەن binding نى قايتا open/select/validate/setOpen قىلىش ئورنىغا يېڭى binding قۇرۇڭ.</p>`,
+<p>يوق ياكى ماس كەلمەيدىغان DOM ئېلېمېنتى ئۈچۈن <code dir="ltr">TypeError</code> چىقىشى مۇمكىن. سىنبەلگە نامى، نۇسخا ۋە تۈر نامى allowlist بويىچە تەكشۈرۈلىدۇ. icon چوڭلۇقى پۈتۈن سان <bdi dir="ltr">12–256</bdi>، strokeWidth بولسا <bdi dir="ltr">0.5–4</bdi>؛ flag كەڭلىكى پۈتۈن سان <bdi dir="ltr">24–1800</bdi> بولسۇن. خەرىتە كەڭلىكى پۈتۈن سان <bdi dir="ltr">64–2048</bdi>، strokeWidth بولسا <bdi dir="ltr">0.5–12</bdi>؛ color پەقەت <code dir="ltr">currentColor</code>، <code dir="ltr">#RGB</code> ياكى <code dir="ltr">#RRGGBB</code> بولسۇن. نام بەلگىسى 160 ھەرپتىن ئاشمىسۇن. ئۆچۈرۈلگەن binding نى قايتا open/select/validate/setOpen قىلىش ئورنىغا يېڭى binding قۇرۇڭ.</p>`,
   },
   {
     slug: 'icons', title: 'سىنبەلگىلەر ۋە مەدەنىيەت توپلىمى', en: 'Icons and cultural collection', group: 'components',
-    description: '74 SVG سىنبەلگە، 27 مەدەنىيەت بەلگىسى، ئۇيغۇرچە ئىزدەش ۋە مۇستەقىل ھۆججەتلەر.',
+    description: '110 SVG سىنبەلگە، 63 مەدەنىيەت بەلگىسىنىڭ رەڭلىك نۇسخىسى، بايراق ۋە مەنبەسى ئېنىق خەرىتە.',
     body: `
 <h2 id="icons-collections">ئۆز لايىھەڭىزگە بىر مەنىلىك بەلگە</h2>
-<p>0.2.0 نەشرىدە 74 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 27 سى مەدەنىيەت توپلىمىغا كىرىدۇ. بۇ نەشر 24 يېڭى سىزىق قوشتى. دۇتار، راۋاپ، ساتار، ئەتلەس، توقۇش دەستگاھى، ئايۋان، نان ۋە چاي سايمانلىرىنى <a href="../index.html#icons">كۆرگەزمىدىن تاللاپ سىناڭ</a>.</p>
-<p>بۇلار رەقەملىك كۆرۈنمە يۈز ئۈچۈن ئەسلىدىن سىزىلغان ئاددىي مەدەنىيەت پىكتوگراممىلىرى. رايونغا قاراپ شەكىل ۋە ئاتىلىش ئۆزگىرىدۇ؛ بىر تارىخىي بۇيۇمنىڭ قۇرۇلۇش سىزىقى دەپ ئىشلەتمەڭ. سۈرەت ۋە مەزمۇننىڭ پايدىلىنىش مەنبەلىرى <a href="../THIRD_PARTY_NOTICES.md">مەنبە خاتىرىسى</a>دە بار.</p>
+<p>0.3.0 نەشرىدە 110 ئەسلى SVG سىنبەلگە بار؛ بۇنىڭ 63 ى مەدەنىيەت توپلىمىغا كىرىدۇ ۋە سىزىقلىق، رەڭلىك ئىككى نۇسخىنى تەمىنلەيدۇ. بۇ نەشر 36 يېڭى تېما قوشتى: دوپپا، ئەنئەنىۋى كىيىم، ساز، ساپال، بىناكارلىق، مەنزىرە ۋە گۈل نەقىشلىرىنى <a href="../index.html#icons">كۆرگەزمىدىن تاللاپ سىناڭ</a>.</p>
+<p>بۇلار رەقەملىك كۆرۈنمە يۈز ئۈچۈن ئەسلىدىن سىزىلغان ئاددىي مەدەنىيەت پىكتوگراممىلىرى. رايونغا قاراپ شەكىل ۋە ئاتىلىش ئۆزگىرىدۇ. ئىشلەتكۈچى تەمىنلىگەن ئىككى مەدەنىيەت تاختىسى تېما تاللاشقا ئىلھام بولدى؛ ئۇلاردىكى سۈرەتلەر بوغچىغا كۆچۈرۈلمىدى. چەمبەر شەكىللىك ئۇرما ساز <b>داپ</b> دەپ ئاتالدى؛ <b>تەمبۈر</b> بولسا ئايرىم ئۇزۇن بويۇنلۇق چالغۇ سۈپىتىدە ساقلانغان. مەنبە ۋە ئاتىلىش خاتىرىلىرى <a href="../THIRD_PARTY_NOTICES.md">مەنبە خاتىرىسى</a>دە بار.</p>
 <h2 id="icons-render">JavaScript بىلەن SVG ھاسىل قىلىش</h2>
 ${code('js', `import { iconSVG, flagSVG } from '@uyghurcommunity/ui';
 
 const dutar = iconSVG('dutar', { size: 48, label: 'دۇتار' });
+const colorfulDutar = iconSVG('dutar', { size: 64, variant: 'color', label: 'دۇتار' });
 const decorative = iconSVG('flower', { size: 24 });
 const flag = flagSVG({ width: 180, label: 'شەرقىي تۈركىستان بايرىقى' });
 
@@ -263,34 +267,64 @@ document.getElementById('instrument').innerHTML = dutar;`)}
 <p>ئاخىرقى قۇردىكى قاچىڭىز <code dir="ltr">&lt;span id="instrument"&gt;&lt;/span&gt;</code> بولسۇن. كۈتۈپخانا مەلۇم سىنبەلگە نامىنىلا قوبۇل قىلىپ، label نى escape قىلىدۇ. باشقا مەنبەدىن كەلگەن خالىغان HTML نى بۇ ئۇسۇلدا كىرگۈزمەڭ.</p>
 <p>مەنىسى بار يالغۇز سىنبەلگىگە ئۇيغۇرچە <code dir="ltr">label</code> بېرىڭ؛ ئۇنىڭغا <code dir="ltr">role="img"</code> قوشۇلىدۇ. بەلگە بوش بولسا سىنبەلگە بېزەك سۈپىتىدە <code dir="ltr">aria-hidden="true"</code> بولىدۇ. ئىچىدە سىنبەلگە بار كۇنۇپكىنىڭ ئۆزىگە نام بېرىشنىمۇ ئۇنتۇماڭ.</p>
 <h2 id="icons-search">نام ۋە تۈر بويىچە ئىزدەش</h2>
-${code('js', `import { findIcons, iconCatalog, iconCategories } from '@uyghurcommunity/ui';
+${code('js', `import { findIcons, iconCatalog, iconCategories, coloredIconNames } from '@uyghurcommunity/ui';
 
 findIcons('راۋاب'); // ['rawap']
-findIcons('ikat'); // ['atlas']
-findIcons('', { category: 'music' }); // six instrument names
+findIcons('ikat'); // matching cultural names
+findIcons('', { category: 'music' }); // seven instrument names
 
 const details = iconCatalog.find((icon) => icon.name === 'dutar');
-console.log(details.ug, details.en, details.category);`)}
+console.log(details.ug, details.en, details.category, details.variants);
+console.log(coloredIconNames.includes('dutar')); // true`)}
 ${table(['تۈر نامى', 'مەزمۇن'], [
-  ['<code dir="ltr">all</code>', '74 سىنبەلگىنىڭ ھەممىسى.'],
-  ['<code dir="ltr">traditional</code>', '27 مەدەنىيەت سىنبەلگىسى ۋە نەقىش.'],
+  ['<code dir="ltr">all</code>', '110 سىنبەلگىنىڭ ھەممىسى.'],
+  ['<code dir="ltr">traditional</code>', '63 مەدەنىيەت سىنبەلگىسى ۋە نەقىش.'],
   ['<code dir="ltr">music · textiles · architecture</code>', 'سازلار، توقۇمىچىلىق/نەقىش ۋە بىناكارلىق.'],
-  ['<code dir="ltr">table · garden · general</code>', 'داستىخان، باغ ۋە ئادەتتىكى كۆرۈنمە يۈز سىنبەلگىلىرى.'],
+  ['<code dir="ltr">clothing · crafts · motifs</code>', 'ئەنئەنىۋى كىيىم، قول ھۈنەرۋەنچىلىك ۋە بېزەك نەقىشلىرى.'],
+  ['<code dir="ltr">table · garden · general</code>', 'داستىخان، تەبىئەت/مەنزىرە/جانلىقلار ۋە ئادەتتىكى كۆرۈنمە يۈز سىنبەلگىلىرى.'],
 ])}
 <p>ئىزدەش ئۇيغۇرچە نام، ئىنگلىزچە نام ۋە يىپ ئۇچلىرىنى ئۆز ئىچىگە ئالىدۇ. تۈر ۋە سوئال بىللە سۈزۈلىدۇ؛ مەسىلەن ساز نامىنى داستىخان تۈرىدە ئىزدىگەندە بوش نەتىجە چىقىشى نورمال.</p>
 <h2 id="icons-files">مۇستەقىل SVG ۋە JSON</h2>
-<ul><li><a href="../downloads/uyghur-traditional-icons.zip">مەدەنىيەت SVG توپلىمى</a> — 27 سىنبەلگە ۋە بايراق.</li><li><a href="../downloads/uyghur-ui-icons.zip">تولۇق SVG توپلىمى</a> — 74 سىنبەلگە ۋە بايراق.</li><li><a href="../assets/icon-catalog.json">ئىككى تىللىق JSON</a> — نام، تۈر ۋە ئىزدەش يىپ ئۇچلىرى.</li></ul>
+<ul><li><a href="../downloads/uyghur-traditional-icons.zip">مەدەنىيەت SVG توپلىمى</a> — 63 سىزىقلىق ۋە 63 رەڭلىك سىنبەلگە.</li><li><a href="../downloads/uyghur-ui-icons.zip">تولۇق SVG توپلىمى</a> — 110 سىزىقلىق ۋە 63 رەڭلىك سىنبەلگە.</li><li><a href="../assets/icon-catalog.json">ئىككى تىللىق JSON</a> — نام، تۈر، نۇسخا ۋە ئىزدەش يىپ ئۇچلىرى.</li></ul>
+<p>ئىككى SVG ئارخىپىغا بايراق، ئىككى خەرىتە، خەرىتە مەنبەسى ۋە metadata، ئىجازەتنامە ۋە مەنبە خاتىرىسىمۇ قوشۇلغان.</p>
 <p>قاچىلانغان بوغچىدىكى ھۆججەت تارماق يوللىرى:</p>
 ${code('text', `@uyghurcommunity/ui/icons/dutar
+@uyghurcommunity/ui/icons/color/dutar
 @uyghurcommunity/ui/flags/east-turkistan.svg
 @uyghurcommunity/ui/catalog.json`)}
 <p>سىنبەلگە تارماق يولىغا <code dir="ltr">.svg</code> قوشۇلمايدۇ. رېپودىكى ھەقىقىي ھۆججەت يولى بولسا <code dir="ltr">assets/icons/dutar.svg</code>. بوغچا يولىنى static asset URL غا ئايلاندۇرۇش ئۇسۇلى تۈرىڭىزنىڭ قۇرۇلۇش قورالىغا باغلىق؛ ھۆججەتنى ئۆز public مۇندەرىجىڭىزگە كۆچۈرۈپ، ئادەتتىكى img بىلەنمۇ كۆرسىتەلەيسىز.</p>
-<h2 id="icons-color">رەڭ ۋە يۆنىلىش</h2>
+<h2 id="icons-color">سىزىقلىق ۋە رەڭلىك نۇسخا</h2>
+${code('js', `import { iconSVG, coloredIconNames } from '@uyghurcommunity/ui/icons';
+
+iconSVG('ceramic-vase', { variant: 'outline', size: 64 });
+iconSVG('ceramic-vase', { variant: 'color', size: 64 });
+iconSVG('search', { variant: 'color' }); // outline fallback
+console.log(coloredIconNames.length); // 63`)}
+<p>سۈكۈتتىكى نۇسخا <code dir="ltr">outline</code>. 63 مەدەنىيەت سىنبەلگىسىدە <code dir="ltr">color</code> نۇسخىسى بار؛ قالغان 47 ئادەتتىكى UI سىنبەلگىسىدە رەڭلىك نۇسخا سورالسا سىزىقلىق نۇسخىسى قايتىدۇ. <code dir="ltr">iconCatalog</code> نىڭ <code dir="ltr">variants</code> مەيدانى ياكى <code dir="ltr">coloredIconNames</code> بىلەن قوللاشنى تەكشۈرەلەيسىز.</p>
 ${code('html', `<span class="instrument" id="instrument"></span>
 <style>
   .instrument { color: #086aa7; }
 </style>`)}
-<p>سىنبەلگە سىزىقى <code dir="ltr">currentColor</code> غا ئەگىشىدۇ؛ سىرتقى img ھۆججىتى ئىچىدىكى رەڭ بولسا بەتنىڭ color قىممىتىگە ئۆزلۈكىدىن ۋارىسلىق قىلمايدۇ. رەڭنى خاسلاشتۇرۇشقا inline SVG قولاي. SVG لار RTL دا ئۆزلۈكىدىن ئەينەككە ئايلاندۇرۇلمايدۇ؛ ھەرىكەت مەنىسىگە ماس ئوقنى تاللاڭ. بايراقنىڭ ئاي ۋە يۇلتۇز شەكلىمۇ ئەينەككە ئايلاندۇرۇلمايدۇ.</p>`,
+<p>سىزىقلىق سىنبەلگە <code dir="ltr">currentColor</code> غا ئەگىشىدۇ؛ رەڭلىك نۇسخا ئۆزىنىڭ بېكىتىلگەن رەڭ تاختىسىنى ئىشلىتىدۇ. سىرتقى img ھۆججىتى ئىچىدىكى رەڭ بەتنىڭ color قىممىتىگە ئۆزلۈكىدىن ۋارىسلىق قىلمايدۇ. SVG لار RTL دا ئۆزلۈكىدىن ئەينەككە ئايلاندۇرۇلمايدۇ؛ ھەرىكەت مەنىسىگە ماس ئوقنى تاللاڭ. بايراقنىڭ ئاي ۋە يۇلتۇز شەكلىمۇ ئەينەككە ئايلاندۇرۇلمايدۇ.</p>
+<h2 id="icons-map">شەرقىي تۈركىستان خەرىتىسى</h2>
+<p><a href="../index.html#map">خەرىتە كۆرگەزمىسى</a>دە سىزىقلىق ۋە تولدۇرۇلغان ئىككى نۇسخا بار. بۇ توپلامدىكى «شەرقىي تۈركىستان» خەرىتىسى <bdi dir="ltr" lang="en">Natural Earth 1:10,000,000 Admin 1</bdi> سانلىق مەلۇماتىدىكى شىنجاڭ مەمۇرىي رايون پولىگونىنى ئىشلىتىدۇ: <code dir="ltr">CHN-1756 / CN-XJ</code>، layer <code dir="ltr">5.1.1</code>، repository release <code dir="ltr">v5.1.2</code>. بۇ مەنبەدىكى زامانىۋى مەمۇرىي سىزىق؛ تارىخىي چېگرالارنى قايتا قۇرغان خەرىتە ئەمەس.</p>
+${code('js', `import { mapSVG, mapMetadata } from '@uyghurcommunity/ui/maps';
+
+const outline = mapSVG({ width: 640, variant: 'outline',
+  label: 'شەرقىي تۈركىستان خەرىتىسى' });
+const filled = mapSVG({ width: 640, variant: 'filled', color: '#559EE2',
+  strokeWidth: 4, label: 'شەرقىي تۈركىستان خەرىتىسى' });
+console.log(mapMetadata.source.layerVersion); // '5.1.1'
+console.log(mapMetadata.projection.viewBox); // '0 0 1024 906'`)}
+<p><code dir="ltr">mapSVG()</code> نىڭ سۈكۈتتىكى كەڭلىكى 640، نۇسخىسى outline، رەڭگى currentColor، سىزىق قېلىنلىقى 4؛ ئۇيغۇرچە خەرىتە نامى بار. كەڭلىك پۈتۈن سان <bdi dir="ltr">64–2048</bdi>، سىزىق قېلىنلىقى <bdi dir="ltr">0.5–12</bdi> بولسۇن. رەڭ قىممىتى <code dir="ltr">currentColor</code>، <code dir="ltr">#RGB</code> ياكى <code dir="ltr">#RRGGBB</code>؛ label ئەڭ كۆپ 160 ھەرپ. خەرىتە ھاسىل قىلىش DOM، خەت ھۆججىتى ياكى تور تەلىپىگە تايانمايدۇ.</p>
+<p>ھەر ئىككى نۇسخا <code dir="ltr">0 0 1024 906</code> viewBox ۋە <bdi dir="ltr">42°N</bdi> ئۆلچەملىك پاراللېللىق equirectangular projection نى ئىشلىتىدۇ. ئەسلىدىكى 1,835 نۇقتىنىڭ ھەممىسى ساقلانغان؛ ئاددىيلاشتۇرۇش قوللىنىلمىغان. شىمال يۇقىرىدا، شەرق ئوڭدا تۇرىدۇ؛ RTL ئۈچۈن خەرىتىنى ئەينەككە ئايلاندۇرماڭ.</p>
+<ul><li><a href="../assets/maps/east-turkistan-outline.svg" download>سىزىقلىق SVG</a> ۋە <a href="../assets/maps/east-turkistan-filled.svg" download>تولدۇرۇلغان SVG</a>.</li><li><a href="../downloads/east-turkistan-map.zip">خەرىتە ZIP توپلىمى</a>.</li><li><a href="../assets/maps/east-turkistan.source.geojson">ئەسلى GeoJSON</a>، <a href="../assets/maps/east-turkistan.metadata.json">metadata ۋە مەنبە</a>.</li></ul>
+${code('text', `@uyghurcommunity/ui/maps
+@uyghurcommunity/ui/maps/east-turkistan-outline.svg
+@uyghurcommunity/ui/maps/east-turkistan-filled.svg
+@uyghurcommunity/ui/maps/metadata.json
+@uyghurcommunity/ui/maps/source.geojson`)}
+<p>خەرىتە سانلىق مەلۇماتى <a href="https://www.naturalearthdata.com/about/terms-of-use/">ئاممىۋى مۈلۈك</a>. <bdi dir="ltr" lang="en">Made with Natural Earth.</bdi> <a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/">سانلىق مەلۇمات چۈشەندۈرۈشى</a> ۋە <a href="../assets/maps/README.md">قايتا ھاسىل قىلىش خاتىرىسى</a> سانلىق مەلۇمات نەشرى، projection ۋە دائىرىنى ئېنىق كۆرسىتىدۇ.</p>`,
   },
   {
     slug: 'theming', title: 'رەڭ، خەت ۋە خاسلاشتۇرۇش', en: 'Theming', group: 'guides',
@@ -347,7 +381,7 @@ ${code('html', `<html lang="ug" dir="rtl">
 <h2 id="rtl-isolation">سان، ئادرېس ۋە بوغچا نامى</h2>
 <p>تېخنىكىلىق قىممەتلەرنى ئايرىۋېتىش تىنىش بەلگىلىرىنىڭ ئەتراپتىكى جۈملىگە ئارىلىشىپ كېتىشىنى ئازايتىدۇ. مەزمۇننى ئۆزگەرتىشنىڭ ئورنىغا <code dir="ltr">bdi</code> ۋە توغرا <code dir="ltr">dir</code> ئارقىلىق كۆرسىتىڭ.</p>
 ${code('html', `<p>بوغچا: <bdi dir="ltr" lang="en">@uyghurcommunity/ui</bdi></p>
-<p>نەشر: <bdi dir="ltr">0.2.0</bdi></p>
+<p>نەشر: <bdi dir="ltr">0.3.0</bdi></p>
 <p>ئۇلانما: <bdi dir="ltr">https://example.com/ug?q=123</bdi></p>
 <label for="email">ئېلخەت</label>
 <input id="email" type="email" dir="ltr">
@@ -414,7 +448,7 @@ ${code('html', `<button class="ug-button ug-button--icon" type="button" aria-lab
 <h2 id="faq-copy">كۆچۈرۈش كۇنۇپكىسى ئىشلىمىدى</h2>
 <p>توركۆرگۈچ clipboard ھوقۇقىنى چەكلىشى مۇمكىن. كۆرگەزمە ۋە قوللانمىدا ئاددىي تاللاپ كۆچۈرۈش ئۇسۇلىدىن پايدىلىنىڭ؛ SVG نى ھۆججەت قىلىپ چۈشۈرۈشمۇ بار. ئۆز تۈرىڭىزدە clipboard ئەمەلگە ئاشمىسا قولدا كۆچۈرگىلى بولىدىغان تېكىست تەمىنلەڭ.</p>
 <h2 id="faq-ssr">SSR ياكى React/Vue دا ئىشلىتەمدۇ؟</h2>
-<p>DOM غا كىرمەيدىغان import، <code dir="ltr">iconSVG</code> ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا <code dir="ltr">destroy()</code> قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ تەييار React/Vue wrapper بۇ نەشرگە قوشۇلمىغان.</p>
+<p>DOM غا كىرمەيدىغان import، <code dir="ltr">iconSVG</code>، <code dir="ltr">mapSVG</code> ۋە metadata نى مۇلازىمېتىردىمۇ ئىشلىتىشكە بولىدۇ. DOM كونتروللىرىنى client تەرەپتە ئېلېمېنت mount بولغاندىن كېيىن باغلاپ، unmount بولغاندا <code dir="ltr">destroy()</code> قىلىڭ. رامكىنىڭ ئۆزى باشقۇرۇۋاتقان ئوخشاش attribute ۋە event لارنى ئىككى قېتىم باشقۇرماڭ؛ تەييار React/Vue wrapper بۇ نەشرگە قوشۇلمىغان.</p>
 <h2 id="faq-data">بۇ قورال مەزمۇننى تورغا ئەۋەتەمدۇ؟</h2>
 <p>كۈتۈپخانا ئۆزى فورما مۇلازىمىتى، analytics ياكى ھېسابات API سىنى قوشمايدۇ. ئۇسلۇبنىڭ سىرتقى خەت تەلىپى بار؛ GitHub ئۇلانمىلىرىنى ئېچىش ياكى تۈرىڭىزگە ئۆزىڭىز قوشقان API ئايرىم ھەرىكەت. كۆرسىتىش مىساللىرىدا مەزمۇن يەرلىك بىر تەرەپ قىلىنىدۇ.</p>
 <h2 id="faq-support">مەسىلە ياكى تۆھپە قانداق يوللىنىدۇ؟</h2>
@@ -424,15 +458,19 @@ ${code('html', `<button class="ug-button ug-button--icon" type="button" aria-lab
     slug: 'changelog', title: 'نەشر خاتىرىسى', en: 'Changelog', group: 'resources',
     description: 'ئېلان قىلىنغان بوغچا نەشرلىرى ۋە ھەر بىر نەشرگە كىرگەن ھەقىقىي ئۆزگىرىشلەر.',
     body: `
+<h2 id="changes-030">0.3.0 · ئىككى نۇسخىلىق مىراس توپلىمى ۋە خەرىتە</h2>
+<p>36 يېڭى مەدەنىيەت تېمىسى قوشۇلۇپ، توپلام 110 سىنبەلگىگە يەتتى. 63 مەدەنىيەت سىنبەلگىسىنىڭ ھەممىسىگە رەڭلىك نۇسخا قوشۇلدى؛ بۇرۇنقى سىزىقلىق سۈكۈتتىكى كۆرۈنۈش ۋە import يوللىرى ساقلانغان.</p>
+<ul><li>ئەنئەنىۋى كىيىم، ساپال، زىبۇزىننەت، سۇرناي، بىناكارلىق، مەنزىرە، چاي سايمانلىرى، ھايۋان ۋە بېزەك نەقىشلىرى.</li><li><code dir="ltr">iconSVG(name, { variant })</code> تاللىشى، <code dir="ltr">coloredIconNames</code> ۋە ھەر سىنبەلگىنىڭ <code dir="ltr">variants</code> metadata سى.</li><li>مۇستەقىل رەڭلىك SVG ھۆججەتلىرى ۋە ئىككى نۇسخىنى ئۆز ئىچىگە ئالغان ZIP ئارخىپلىرى.</li><li>شەرقىي تۈركىستاننىڭ سىزىقلىق ۋە تولدۇرۇلغان SVG خەرىتىسى، <code dir="ltr">mapSVG</code>، <code dir="ltr">mapMetadata</code>، ئەسلى GeoJSON ۋە مەنبە خاتىرىسى.</li><li>Natural Earth نىڭ نەشرى بەلگىلەنگەن شىنجاڭ admin-1 پولىگونى، ئاممىۋى مۈلۈك ئىجازەتنامىسى ۋە projection ئۇچۇرى.</li></ul>
+<p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.3.0">0.3.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى</a>.</p>
 <h2 id="changes-020">0.2.0 · مەدەنىيەت سىنبەلگىلىرى</h2>
-<p>24 يېڭى SVG سىنبەلگە قوشۇلدى. توپلام ھازىر 74 سىنبەلگىنى ئۆز ئىچىگە ئالىدۇ؛ مەدەنىيەت توپلىمىدا بۇرۇنقى دوپپا، بادام ۋە گۈل نەقىشلىرىنى قوشقاندا 27 سىنبەلگە بار.</p>
+<p>24 يېڭى SVG سىنبەلگە قوشۇلدى. بۇ نەشر 74 سىنبەلگىنى ئۆز ئىچىگە ئالاتتى؛ مەدەنىيەت توپلىمىدا بۇرۇنقى دوپپا، بادام ۋە گۈل نەقىشلىرىنى قوشقاندا 27 سىنبەلگە بار ئىدى.</p>
 <ul><li>دۇتار، تەمبۈر، راۋاپ، غېجەك، ساتار ۋە داپ.</li><li>ئەتلەس، گىلەم، كەشتە، توقۇش دەستگاھى ۋە ئۇرچۇق.</li><li>ئايۋان، راۋاق، ئويما ئىشىك ۋە تورلۇق دېرىزە.</li><li>نان، سامسا، پولۇ، لەغمەن، چەينەك، پىيالە، ئانار، ئۈزۈم ۋە ئۆرۈك.</li><li>ئىككى تىللىق نام، تۈرلەر ۋە يىپ ئۇچلىرى؛ <code dir="ltr">iconCatalog</code>، <code dir="ltr">iconCategories</code>، <code dir="ltr">findIcons</code> export لىرى.</li><li>تولۇق ۋە مەدەنىيەت توپلىمى ئۈچۈن ئايرىم ZIP، JSON metadata ۋە قايتا ھاسىل قىلغىلى بولىدىغان asset قۇرۇلۇشى.</li></ul>
 <p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.2.0">0.2.0 نەشر ۋە چۈشۈرۈش ھۆججەتلىرى</a>.</p>
 <h2 id="changes-010">0.1.0 · تۇنجى UI توپلىمى</h2>
 <p>CSS بۆلەكلىرى، يەرلىك كۆزنەك، RTL بەتكۈچ، فورما تەكشۈرۈش، disclosure ۋە ئاددىي تېكىست ئۇقتۇرۇشى ئېلان قىلىندى. تۇنجى توپلامدا 50 SVG سىنبەلگە، شەرقىي تۈركىستان بايرىقى، ALKATIP Basma خەت ئۇلانمىسى ۋە TypeScript ئېنىقلىمىلىرى بار ئىدى.</p>
-<p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.1.0">0.1.0 نەشر ئارخىپى</a> ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن <a href="installation.html">0.2.0 قاچىلاش ئۇسۇلى</a>نى تاللاڭ.</p>
+<p><a href="https://github.com/UyghurCommunity/uyghur-ui/releases/tag/v0.1.0">0.1.0 نەشر ئارخىپى</a> ئۆز پېتى ساقلانغان. يېڭى تۈر ئۈچۈن <a href="installation.html">0.3.0 قاچىلاش ئۇسۇلى</a>نى تاللاڭ.</p>
 <h2 id="changes-site">قوللانما ۋە بوغچا نەشرى</h2>
-<p>بۇ قوللانما ھازىرقى 0.2.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ.</p>
+<p>بۇ قوللانما ھازىرقى 0.3.0 API نى چۈشەندۈرىدۇ. تور بېتىدىكى يېڭى قوللانما ياكى لايىھە ئۆزگىرىشى ھەمىشە يېڭى بوغچا نەشرى دېگەنلىك ئەمەس. قاچىلانغان بوغچا نەشرىنى ئۆز تۈرىڭىزنىڭ قۇلۇپ ھۆججىتى ۋە package ئۇچۇرى بىلەن سېلىشتۇرۇڭ.</p>
 ${note('نەشرنى يېڭىلاش', 'نەشرى بەلگىلەنگەن GitHub ئارخىپ يولىنى ئىشلىتىڭ. يېڭى بوغچا قاچىلاشتىن بۇرۇن ئۆز تۈرىڭىزدىكى فورما، كۆزنەك، بەتكۈچ ۋە سىنبەلگە import لىرىنى تەكشۈرۈڭ.')}`,
   },
 ].map((page) => Object.freeze(page)));

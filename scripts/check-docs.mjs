@@ -151,13 +151,15 @@ const expectedHrefs = new Set([
   ...components.map(({ id }) => `index.html#component-${id}`),
   ...iconCatalog.map(({ name }) => `index.html#icon-${name}`),
   'index.html#flag',
+  'index.html#map',
 ]);
-assert.equal(expectedHrefs.size, 94, 'documentation source inventory changed; review expected search coverage');
-assert.equal(payload.entries.length, 94, 'documentation index is incomplete');
+const expectedEntryCount = guidePages.length + components.length + iconCatalog.length + 2;
+assert.equal(expectedHrefs.size, expectedEntryCount, 'documentation source inventory has duplicate destinations');
+assert.equal(payload.entries.length, expectedEntryCount, 'documentation index is incomplete');
 assert.deepEqual(new Set(payload.entries.map(({ href }) => href)), expectedHrefs, 'documentation index destinations differ from its real sources');
 const indexURL = 'https://documentation.invalid/uyghur-ui/assets/docs-search.json';
 const prepared = prepareSearchIndex(payload, indexURL);
-assert.equal(prepared.length, 94, 'search validation dropped documentation entries');
+assert.equal(prepared.length, expectedEntryCount, 'search validation dropped documentation entries');
 for (const page of guidePages) {
   const entry = payload.entries.find(({ href }) => href === `guide/${page.slug}.html`);
   assert.ok(entry && entry.title === page.title && entry.en === page.en && entry.description === page.description, `search metadata is stale for ${page.slug}`);
@@ -170,4 +172,9 @@ for (const entry of payload.entries) await localTarget(rootHTML, entry.href);
 for (const [query, expected] of [['قاچىلاش', 'guide/installation.html'], ['installation', 'guide/installation.html'], ['راۋاپ', 'index.html#icon-rawap'], ['rawab', 'index.html#icon-rawap'], ['dialog', 'index.html#component-dialog'], ['كۇنۇپكىلار', 'index.html#component-buttons']]) {
   assert.ok(searchDocumentation(prepared, query, { limit: 50 }).some(({ href }) => href === new URL(expected, 'https://documentation.invalid/uyghur-ui/').href), `documentation search lost destination for ${query}`);
 }
-console.log(`Checked 11 static guide pages, gallery/redirect, labels/ARIA, ${localReferences} local references, and all 94 searchable destinations.`);
+const mapQueries = ['خەرىتە', 'East Turkistan map', 'GeoJSON', 'Natural Earth'];
+const mapDestination = new URL('index.html#map', 'https://documentation.invalid/uyghur-ui/').href;
+for (const query of mapQueries) {
+  assert.ok(searchDocumentation(prepared, query, { limit: 50 }).some(({ href }) => href === mapDestination), `documentation search lost the map for ${query}`);
+}
+console.log(`Checked ${guidePages.length} static guide pages, gallery/redirect, labels/ARIA, ${localReferences} local references, and all ${expectedEntryCount} searchable destinations.`);

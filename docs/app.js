@@ -1,4 +1,4 @@
-import { bindDialog, bindTabs, bindDisclosure, bindForm, showToast, iconNames, iconSVG, flagSVG, iconCatalog, iconCategories, findIcons } from '../src/index.js';
+import { bindDialog, bindTabs, bindDisclosure, bindForm, showToast, iconNames, iconSVG, flagSVG, mapSVG, iconCatalog, iconCategories, findIcons } from '../src/index.js';
 import { components } from './components.js';
 import { componentSnippet } from './snippets.js';
 import { initDocsShell } from './docs-shell.js';
@@ -64,17 +64,32 @@ $('toast-demo').addEventListener('click', () => showToast($('notifications'), '�
 $('copy-install').addEventListener('click', () => copy($('install-command').textContent));
 $('copy-flag').addEventListener('click', () => copy(flagSVG({ width: 900 })));
 initDocsShell(document);
-let selectedIcon = 'flower';
+let selectedIcon = 'flower', selectedVariant = 'color';
 let iconCategory = 'traditional';
 const iconDetails = Object.fromEntries(iconCatalog.map((entry) => [entry.name, entry]));
 const categoryDetails = Object.fromEntries(iconCategories.map((entry) => [entry.id, entry]));
 const iconDialog = bindDialog($('icon-dialog'), { initialFocus: $('icon-dialog-title') }); bindings.push(iconDialog);
+function renderIconDialog() {
+  const entry = iconDetails[selectedIcon];
+  $('icon-large').dataset.variant = selectedVariant;
+  $('icon-large').innerHTML = iconSVG(selectedIcon, { size: 80, label: entry.ug, variant: selectedVariant });
+  $('icon-dialog-variant').value = selectedVariant;
+  $('icon-download').href = `assets/icons/${selectedVariant === 'color' ? 'color/' : ''}${selectedIcon}.svg`;
+  $('icon-download').download = `${selectedIcon}${selectedVariant === 'color' ? '-color' : ''}.svg`;
+}
 function openIcon(name) {
   const entry = iconDetails[name]; selectedIcon = name;
-  $('icon-large').innerHTML = iconSVG(name, { size: 80, label: entry.ug }); $('icon-dialog-title').textContent = entry.ug;
-  $('icon-dialog-name').textContent = `${entry.en} / ${name}`; $('icon-dialog-category').textContent = categoryDetails[entry.category].ug;
-  $('icon-download').href = `assets/icons/${name}.svg`; $('icon-download').download = `${name}.svg`; iconDialog.open();
+  selectedVariant = entry.variants.includes($('icon-variant').value) ? $('icon-variant').value : 'outline';
+  $('icon-dialog-variant').querySelector('[value="color"]').disabled = !entry.variants.includes('color');
+  $('icon-dialog-title').textContent = entry.ug;
+  $('icon-dialog-name').textContent = `${entry.en} / ${name}`;
+  $('icon-dialog-category').textContent = categoryDetails[entry.category].ug;
+  renderIconDialog(); iconDialog.open();
 }
+$('icon-dialog-variant').addEventListener('change', () => {
+  const variant = $('icon-dialog-variant').value;
+  if (iconDetails[selectedIcon].variants.includes(variant)) { selectedVariant = variant; renderIconDialog(); }
+});
 function renderIcons() {
   const size = Number($('icon-size').value), names = findIcons($('icon-search').value, { category: iconCategory });
   $('size-label').textContent = `${size}px`; $('icon-count').textContent = iconNames.length;
@@ -83,7 +98,7 @@ function renderIcons() {
   $('icon-empty').hidden = names.length > 0;
   const fragment = document.createDocumentFragment();
   for (const name of names) {
-    const entry = iconDetails[name], button = document.createElement('button'); button.type = 'button'; button.id = `icon-${name}`; button.className = 'icon-tile'; button.setAttribute('aria-label', `${entry.ug} سىنبەلگىسىنى كۆرۈش`); button.innerHTML = iconSVG(name, { size });
+    const entry = iconDetails[name], button = document.createElement('button'); button.type = 'button'; button.id = `icon-${name}`; button.className = 'icon-tile'; button.setAttribute('aria-label', `${entry.ug} سىنبەلگىسىنى كۆرۈش`); const variant = entry.variants.includes($('icon-variant').value) ? $('icon-variant').value : 'outline'; button.dataset.variant = variant; button.innerHTML = iconSVG(name, { size, variant });
     const label = document.createElement('span'), slug = document.createElement('span'); label.className = 'icon-label'; label.lang = 'ug'; label.dir = 'rtl'; label.textContent = entry.ug; slug.className = 'icon-name'; slug.lang = 'en'; slug.dir = 'ltr'; slug.textContent = name; button.append(label, slug);
     button.addEventListener('click', () => openIcon(name)); fragment.append(button);
   }
@@ -92,8 +107,18 @@ function renderIcons() {
 document.querySelectorAll('[data-icon-total]').forEach((node) => { node.textContent = findIcons('', { category: node.dataset.iconTotal }).length; });
 document.querySelectorAll('[data-icon-category]').forEach((button) => button.addEventListener('click', () => { iconCategory = button.dataset.iconCategory; document.querySelectorAll('[data-icon-category]').forEach((item) => item.setAttribute('aria-pressed', String(item === button))); renderIcons(); }));
 $('icon-reset').addEventListener('click', () => { iconCategory = 'all'; $('icon-search').value = ''; document.querySelectorAll('[data-icon-category]').forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.iconCategory === 'all'))); renderIcons(); $('icon-search').focus(); });
+$('icon-variant').addEventListener('change', renderIcons);
 $('icon-search').addEventListener('input', renderIcons); $('icon-size').addEventListener('input', renderIcons);
-$('icon-copy').addEventListener('click', () => copy(iconSVG(selectedIcon, { size: Number($('icon-size').value), label: iconDetails[selectedIcon].ug })));
+$('icon-copy').addEventListener('click', () => copy(iconSVG(selectedIcon, { size: Number($('icon-size').value), label: iconDetails[selectedIcon].ug, variant: selectedVariant })));
+let mapVariant = 'outline';
+document.querySelectorAll('[data-map-variant]').forEach((button) => button.addEventListener('click', () => {
+  mapVariant = button.dataset.mapVariant;
+  document.querySelectorAll('[data-map-variant]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+  $('map-image').src = `assets/maps/east-turkistan-${mapVariant}.svg`;
+  $('map-image').alt = mapVariant === 'filled' ? 'شەرقىي تۈركىستان رايونىنىڭ كۆك رەڭلىك خەرىتىسى؛ شىمال ئۈستىدە' : 'شەرقىي تۈركىستان رايونىنىڭ پاكىز سىزىق خەرىتىسى؛ شىمال ئۈستىدە';
+  $('map-status').textContent = `${mapVariant === 'filled' ? 'تولۇق رەڭ' : 'پاكىز سىزىق'} · شىمال ئۈستىدە`;
+}));
+$('map-copy').addEventListener('click', () => copy(mapSVG({ variant: mapVariant, color: mapVariant === 'filled' ? '#559EE2' : '#17364b' })));
 function openLinkedGalleryTarget() {
   const componentId = location.hash.startsWith('#component-') ? location.hash.slice(11) : '';
   const linked = cards.find(({ component }) => component.id === componentId);

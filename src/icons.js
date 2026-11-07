@@ -1,5 +1,8 @@
 import { traditionalDrawings } from './traditional-drawings.js';
 import { iconLabels, iconCategories } from './icon-labels.js';
+import { referenceClothingOutline, referenceClothingColor } from './reference-clothing.js';
+import { referencePlacesOutline, referencePlacesColor } from './reference-places.js';
+import { heritageUnderlays } from './heritage-color.js';
 export { iconCategories } from './icon-labels.js';
 /** Original 24×24 stroke drawings. The flag is a separate public-domain asset. */
 const drawings = {
@@ -54,11 +57,15 @@ const drawings = {
   'almond': '<path d="M12 2C3 8 4 18 12 22c8-4 9-14 0-20Zm0 5c-4 4-4 8 0 11m0-5 4-4m-4 7-4-3"/>',
   'doppa': '<path d="m3 10 9-6 9 6-2 9-7 3-7-3Zm0 0 9 3 9-3m-9 3v9M7 11l5-4 5 4"/>',
   ...traditionalDrawings,
+  ...referenceClothingOutline,
+  ...referencePlacesOutline,
 };
+const colorDrawings = Object.freeze({ ...Object.fromEntries(Object.entries(heritageUnderlays).map(([name, underlay]) => [name, `<g stroke="none">${underlay}</g><g fill="none">${drawings[name]}</g>`])), ...referenceClothingColor, ...referencePlacesColor });
+export const coloredIconNames = Object.freeze(Object.keys(colorDrawings).sort());
 export const iconNames = Object.freeze(Object.keys(drawings).sort());
 export const iconCatalog = Object.freeze(iconNames.map((name) => {
   if (!Object.hasOwn(iconLabels, name)) throw new Error(`Missing icon label: ${name}`);
-  return Object.freeze({ name, ...iconLabels[name] });
+  return Object.freeze({ name, ...iconLabels[name], variants: Object.freeze(Object.hasOwn(colorDrawings, name) ? ['outline', 'color'] : ['outline']) });
 }).sort((a, b) => Number(a.category === 'general') - Number(b.category === 'general') || (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)));
 const normalizeSearch = (text) => text.normalize('NFKC').toLowerCase().replace(/[’'ʻʼ]/g, '').replace(/[-_\s]+/g, ' ').trim();
 /** Search names, Uyghur labels, English labels and aliases; category and query combine. */
@@ -78,11 +85,13 @@ export function escapeMarkup(value) {
 }
 export function iconSVG(name, options = {}) {
   if (!Object.hasOwn(drawings, name)) throw new RangeError(`Unknown icon: ${name}`);
-  const { size = 24, strokeWidth = 1.7, label = '' } = options;
+  const { size = 24, strokeWidth = 1.7, label = '', variant = 'outline' } = options;
+  if (!['outline', 'color'].includes(variant)) throw new RangeError('Icon variant must be outline or color');
   if (!Number.isInteger(size) || size < 12 || size > 256) throw new RangeError('Icon size must be an integer from 12 to 256');
   if (!Number.isFinite(strokeWidth) || strokeWidth < .5 || strokeWidth > 4) throw new RangeError('Stroke width must be between 0.5 and 4');
   if (typeof label !== 'string' || label.length > 160) throw new TypeError('Use a label of at most 160 characters');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round" focusable="false" ${label ? `role="img" aria-label="${escapeMarkup(label)}"` : 'aria-hidden="true"'}>${drawings[name]}</svg>`;
+  const colored = variant === 'color' && Object.hasOwn(colorDrawings, name);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${colored ? '#17364b' : 'currentColor'}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round" focusable="false" ${label ? `role="img" aria-label="${escapeMarkup(label)}"` : 'aria-hidden="true"'}>${colored ? colorDrawings[name] : drawings[name]}</svg>`;
 }
 // Geometry from the public-domain Kokbayraq flag; see THIRD_PARTY_NOTICES.md.
 export function flagSVG(options = {}) {

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "categories": [
     {
       "id": "all",
@@ -33,13 +33,28 @@
     },
     {
       "id": "garden",
-      "ug": "باغ",
-      "en": "Garden"
+      "ug": "تەبىئەت",
+      "en": "Nature"
     },
     {
       "id": "general",
       "ug": "كۆرۈنمە يۈز",
       "en": "Interface"
+    },
+    {
+      "id": "clothing",
+      "ug": "كىيىم-كېچەك",
+      "en": "Clothing"
+    },
+    {
+      "id": "crafts",
+      "ug": "قول ھۈنەر",
+      "en": "Crafts"
+    },
+    {
+      "id": "motifs",
+      "ug": "نەقىش ۋە بەلگە",
+      "en": "Motifs and symbols"
     }
   ],
   "icons": [
@@ -53,6 +68,25 @@
         "paisley",
         "ornament",
         "نەقىش"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "ancient-ruins",
+      "ug": "قەدىمكى خارابە",
+      "en": "Ancient ruins",
+      "category": "architecture",
+      "keywords": [
+        "ruins",
+        "ancient",
+        "خارابە"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -65,6 +99,10 @@
         "fruit",
         "باغ",
         "مېۋە"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -76,6 +114,10 @@
         "arch",
         "gateway",
         "ئەگمە دەرۋازا"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -88,6 +130,10 @@
         "ikat",
         "silk",
         "رەخت"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -100,6 +146,56 @@
         "veranda",
         "courtyard",
         "ھويلا"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "boots",
+      "ug": "ئۆتۈك",
+      "en": "Boots",
+      "category": "clothing",
+      "keywords": [
+        "otuk",
+        "footwear"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "calligraphy",
+      "ug": "خەتتاتلىق",
+      "en": "Calligraphy",
+      "category": "crafts",
+      "keywords": [
+        "pen",
+        "reed pen",
+        "script",
+        "قەلەم"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "camel",
+      "ug": "تۆگە",
+      "en": "Bactrian camel",
+      "category": "garden",
+      "keywords": [
+        "camel",
+        "toge",
+        "two humps",
+        "animal"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -111,6 +207,10 @@
         "gilem",
         "rug",
         "woven"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -122,6 +222,85 @@
         "woodwork",
         "oyma",
         "ئىشىك"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "ceramic-vase",
+      "ug": "ساپال گۈلدان",
+      "en": "Ceramic vase",
+      "category": "crafts",
+      "keywords": [
+        "pottery",
+        "handicraft",
+        "vase",
+        "ساپال"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "chapan",
+      "ug": "چاپان",
+      "en": "Chapan robe",
+      "category": "clothing",
+      "keywords": [
+        "robe",
+        "chapan",
+        "تون"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "city-gate",
+      "ug": "شەھەر دەرۋازىسى",
+      "en": "City gate",
+      "category": "architecture",
+      "keywords": [
+        "gate",
+        "city",
+        "دەرۋازا"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "cotton",
+      "ug": "پاختا",
+      "en": "Cotton",
+      "category": "garden",
+      "keywords": [
+        "cotton",
+        "paxta",
+        "plant"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "crescent",
+      "ug": "ھىلال",
+      "en": "Crescent",
+      "category": "motifs",
+      "keywords": [
+        "crescent moon",
+        "ئاي"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -134,6 +313,10 @@
         "frame drum",
         "tambourine",
         "ساز"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -147,6 +330,41 @@
         "cap",
         "hat",
         "كەشتە"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "doppa-top",
+      "ug": "دوپپا ئۈستى",
+      "en": "Doppa top view",
+      "category": "textiles",
+      "keywords": [
+        "cap",
+        "embroidery",
+        "دوپپا"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "dove",
+      "ug": "تىنچلىق كەپتىرى",
+      "en": "Dove of peace",
+      "category": "motifs",
+      "keywords": [
+        "dove",
+        "peace",
+        "olive branch",
+        "كەپتەر"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -159,6 +377,10 @@
         "dotar",
         "two string lute",
         "ساز"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -171,6 +393,25 @@
         "needle",
         "thread",
         "يىپ"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "floral-rosette",
+      "ug": "گۈللۈك نەقىش",
+      "en": "Floral rosette",
+      "category": "motifs",
+      "keywords": [
+        "floral motif",
+        "flower",
+        "گۈل نەقشى"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -183,6 +424,25 @@
         "rosette",
         "ornament",
         "نەقىش"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "fur-hat",
+      "ug": "تۇماق",
+      "en": "Fur hat",
+      "category": "clothing",
+      "keywords": [
+        "tumaq",
+        "winter hat",
+        "تۈكلۈك تۇماق"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -196,6 +456,10 @@
         "غىجەك",
         "bowed fiddle",
         "ساز"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -209,6 +473,40 @@
         "fruit",
         "باغ",
         "مېۋە"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "horse",
+      "ug": "ئات",
+      "en": "Horse",
+      "category": "garden",
+      "keywords": [
+        "horse",
+        "at",
+        "animal"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "jewelry",
+      "ug": "زىبۇزىننەت",
+      "en": "Jewelry",
+      "category": "crafts",
+      "keywords": [
+        "pendant",
+        "jewellery",
+        "زىننەت"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -221,6 +519,27 @@
         "leghmen",
         "noodles",
         "ئاش"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "landscape",
+      "ug": "تاغ ۋە دەريا",
+      "en": "Mountains and river",
+      "category": "garden",
+      "keywords": [
+        "landscape",
+        "mountain",
+        "river",
+        "تاغ",
+        "دەريا"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -233,6 +552,10 @@
         "panjire",
         "woodwork",
         "پەنجىرە"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -244,6 +567,101 @@
         "toqumichiliq",
         "weaving",
         "توقۇمىچىلىق"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "madrasa",
+      "ug": "مەدرىسە",
+      "en": "Madrasa",
+      "category": "architecture",
+      "keywords": [
+        "madrasa",
+        "school",
+        "portal"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "mausoleum",
+      "ug": "مەقبەرە",
+      "en": "Mausoleum",
+      "category": "architecture",
+      "keywords": [
+        "mausoleum",
+        "tomb",
+        "مازار"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "melon",
+      "ug": "قوغۇن",
+      "en": "Melon",
+      "category": "table",
+      "keywords": [
+        "melon",
+        "qoghun",
+        "fruit",
+        "مېۋە"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "mens-coat",
+      "ug": "ئەرلەر چاپىنى",
+      "en": "Men’s coat",
+      "category": "clothing",
+      "keywords": [
+        "coat",
+        "robe",
+        "ئەرلەر كىيىمى"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "minaret",
+      "ug": "مۇنار",
+      "en": "Minaret",
+      "category": "architecture",
+      "keywords": [
+        "tower",
+        "minaret",
+        "munar"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "mosque",
+      "ug": "مەسچىت",
+      "en": "Mosque",
+      "category": "architecture",
+      "keywords": [
+        "mosque",
+        "dome",
+        "مەسچىت"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -256,6 +674,41 @@
         "bread",
         "tonur",
         "تونۇر"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "nan-stack",
+      "ug": "نان دۆۋىسى",
+      "en": "Stack of nan",
+      "category": "table",
+      "keywords": [
+        "nan",
+        "bread",
+        "naan",
+        "stack"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "ornamental-border",
+      "ug": "نەقىشلىك گىرۋەك",
+      "en": "Ornamental border",
+      "category": "motifs",
+      "keywords": [
+        "border",
+        "trim",
+        "گىرۋەك"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -269,6 +722,10 @@
         "rice",
         "گۈرۈچ",
         "پولو"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -280,6 +737,10 @@
         "anar",
         "fruit",
         "مېۋە"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -292,6 +753,10 @@
         "rubab",
         "راۋاب",
         "ساز"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -303,6 +768,25 @@
         "samosa",
         "pastry",
         "samsa"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "sash",
+      "ug": "بەلۋاغ",
+      "en": "Belt and sash",
+      "category": "clothing",
+      "keywords": [
+        "belt",
+        "sash",
+        "بەلباغ"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -314,6 +798,10 @@
         "sattar",
         "bowed lute",
         "ساز"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -326,6 +814,41 @@
         "yarn",
         "spinning",
         "يىپ"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "star-eight",
+      "ug": "سەككىز ئۇچلۇق يۇلتۇز",
+      "en": "Eight-point star",
+      "category": "motifs",
+      "keywords": [
+        "star motif",
+        "eight point",
+        "يۇلتۇز"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "surnai",
+      "ug": "سۇناي",
+      "en": "Surnai",
+      "category": "music",
+      "keywords": [
+        "sunay",
+        "zurna",
+        "wind instrument",
+        "سۇرناي"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -338,6 +861,10 @@
         "tanbur",
         "تەمبۇر",
         "ساز"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -352,6 +879,26 @@
         "cup",
         "پىگالە",
         "چاي"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "tea-set",
+      "ug": "چاي سايمانلىرى",
+      "en": "Tea set",
+      "category": "table",
+      "keywords": [
+        "tea",
+        "teapot",
+        "cup",
+        "چاي"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -365,6 +912,132 @@
         "tea",
         "چۆگۈن",
         "چاي"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "traditional-house",
+      "ug": "ئەنئەنىۋى ئۆي",
+      "en": "Traditional house",
+      "category": "architecture",
+      "keywords": [
+        "old town",
+        "house",
+        "dwelling",
+        "ئۆي"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "traditional-shoes",
+      "ug": "كەشتىلىك ئاياغ",
+      "en": "Embroidered shoes",
+      "category": "clothing",
+      "keywords": [
+        "slippers",
+        "traditional shoes",
+        "كەش"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "tree-of-life",
+      "ug": "ھايات دەرىخى",
+      "en": "Tree of life",
+      "category": "motifs",
+      "keywords": [
+        "tree",
+        "life",
+        "دەرىخ"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "unity",
+      "ug": "ئىتتىپاقلىق",
+      "en": "Unity",
+      "category": "motifs",
+      "keywords": [
+        "handshake",
+        "together",
+        "بىرلىك"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "uyghur-medallion",
+      "ug": "ئۇيغۇرچە گۈلنەقىش",
+      "en": "Uyghur medallion",
+      "category": "motifs",
+      "keywords": [
+        "pattern",
+        "ornament",
+        "نەقىش"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "womens-dress",
+      "ug": "ئاياللار كۆينىكى",
+      "en": "Women’s dress",
+      "category": "clothing",
+      "keywords": [
+        "dress",
+        "gown",
+        "كۆينەك"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "womens-headdress",
+      "ug": "ئاياللار باش كىيىمى",
+      "en": "Women’s headdress",
+      "category": "clothing",
+      "keywords": [
+        "veil",
+        "headwear",
+        "باشكىيىم"
+      ],
+      "variants": [
+        "outline",
+        "color"
+      ]
+    },
+    {
+      "name": "yurt",
+      "ug": "كىگىز ئۆي",
+      "en": "Yurt",
+      "category": "architecture",
+      "keywords": [
+        "otaq",
+        "felt tent",
+        "yurt",
+        "ئوتاق"
+      ],
+      "variants": [
+        "outline",
+        "color"
       ]
     },
     {
@@ -372,329 +1045,470 @@
       "ug": "تۆۋەنگە",
       "en": "Arrow down",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "arrow-left",
       "ug": "سولغا",
       "en": "Arrow left",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "arrow-right",
       "ug": "ئوڭغا",
       "en": "Arrow right",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "arrow-up",
       "ug": "يۇقىرىغا",
       "en": "Arrow up",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "book",
       "ug": "كىتاب",
       "en": "Book",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "calendar",
       "ug": "كالېندار",
       "en": "Calendar",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "check",
       "ug": "تەستىق",
       "en": "Check",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "check-circle",
       "ug": "تەستىق بەلگىسى",
       "en": "Check circle",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "chevron-down",
       "ug": "تۆۋەن ئوق",
       "en": "Chevron down",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "chevron-left",
       "ug": "سول ئوق",
       "en": "Chevron left",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "chevron-right",
       "ug": "ئوڭ ئوق",
       "en": "Chevron right",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "chevron-up",
       "ug": "يۇقىرى ئوق",
       "en": "Chevron up",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "close",
       "ug": "تاقاش",
       "en": "Close",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "code",
       "ug": "كود",
       "en": "Code",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "copy",
       "ug": "كۆچۈرۈش",
       "en": "Copy",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "direction-ltr",
       "ug": "سولدىن ئوڭغا",
       "en": "Left to right",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "direction-rtl",
       "ug": "ئوڭدىن سولغا",
       "en": "Right to left",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "download",
       "ug": "چۈشۈرۈش",
       "en": "Download",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "edit",
       "ug": "تەھرىرلەش",
       "en": "Edit",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "external-link",
       "ug": "تاشقى ئۇلانما",
       "en": "External link",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "globe",
       "ug": "يەر شارى",
       "en": "Globe",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "heart",
       "ug": "يۈرەك",
       "en": "Heart",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "home",
       "ug": "باش بەت",
       "en": "Home",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "image",
       "ug": "سۈرەت",
       "en": "Image",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "info",
       "ug": "ئۇچۇر",
       "en": "Information",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "keyboard",
       "ug": "كۇنۇپكا تاختىسى",
       "en": "Keyboard",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "language",
       "ug": "تىل",
       "en": "Language",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "link",
       "ug": "ئۇلانما",
       "en": "Link",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "mail",
       "ug": "ئېلخەت",
       "en": "Mail",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "menu",
       "ug": "تىزىملىك",
       "en": "Menu",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "minus",
       "ug": "كېمەيتىش",
       "en": "Minus",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "moon",
       "ug": "ئاي",
       "en": "Moon",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "palette",
       "ug": "رەڭ تاختىسى",
       "en": "Palette",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "pause",
       "ug": "توختىتىش",
       "en": "Pause",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "play",
       "ug": "قويۇش",
       "en": "Play",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "plus",
       "ug": "قوشۇش",
       "en": "Plus",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "redo",
       "ug": "قايتا ئىشلەش",
       "en": "Redo",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "search",
       "ug": "ئىزدەش",
       "en": "Search",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "settings",
       "ug": "تەڭشەك",
       "en": "Settings",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "star",
       "ug": "يۇلتۇز",
       "en": "Star",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "sun",
       "ug": "قۇياش",
       "en": "Sun",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "trash",
       "ug": "ئۆچۈرۈش",
       "en": "Trash",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "undo",
       "ug": "قايتۇرۇش",
       "en": "Undo",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "upload",
       "ug": "يۈكلەش",
       "en": "Upload",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "user",
       "ug": "ئىشلەتكۈچى",
       "en": "User",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "users",
       "ug": "جامائەت",
       "en": "Community",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     },
     {
       "name": "warning",
       "ug": "ئاگاھلاندۇرۇش",
       "en": "Warning",
       "category": "general",
-      "keywords": []
+      "keywords": [],
+      "variants": [
+        "outline"
+      ]
     }
   ]
 }

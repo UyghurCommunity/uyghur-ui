@@ -2,7 +2,7 @@ import { readFile, access, readdir } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
-import { iconSVG, iconNames, flagSVG, iconCatalog } from '../src/icons.js';
+import { iconSVG, iconNames, coloredIconNames, flagSVG, iconCatalog } from '../src/icons.js';
 import { components } from '../docs/components.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
@@ -17,7 +17,12 @@ for (const [, ref] of galleryHTML.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
   if (ref.startsWith('#')) { if (!ids.includes(ref.slice(1))) throw new Error(`Missing anchor ${ref}`); }
   else await access(resolve(root, ref.split(/[?#]/)[0]));
 }
-for (const file of ['src/index.js', 'src/icons.js', 'src/icon-labels.js', 'src/traditional-drawings.js', 'scripts/build-icons.mjs', 'scripts/build-docs.mjs', 'scripts/zip.mjs', 'docs/app.js', 'docs/components.js', 'docs/snippets.js', 'docs/docs-shell.js', 'docs/site-shell.js', 'docs/guide-content.js']) execFileSync(process.execPath, ['--check', resolve(root, file)]);
+for (const file of [
+  'src/index.js', 'src/icons.js', 'src/icon-labels.js', 'src/traditional-drawings.js',
+  'src/reference-clothing.js', 'src/reference-places.js', 'src/heritage-color.js', 'src/maps.js', 'src/map-data.js',
+  'scripts/build-map.mjs', 'scripts/build-icons.mjs', 'scripts/build-docs.mjs', 'scripts/check.mjs', 'scripts/check-docs.mjs', 'scripts/zip.mjs',
+  'docs/app.js', 'docs/components.js', 'docs/snippets.js', 'docs/docs-shell.js', 'docs/site-shell.js', 'docs/guide-content.js',
+]) execFileSync(process.execPath, ['--check', resolve(root, file)]);
 const galleryScript = await readFile(resolve(root, 'docs/app.js'), 'utf8');
 for (const [, ref] of galleryScript.matchAll(/\$\('([^']+)'\)/g)) if (!ids.includes(ref)) throw new Error(`Missing gallery JS target ${ref}`);
 for (const file of ['src/styles.css','src/font.css','docs/site.css','docs/documentation.css']) {
@@ -25,9 +30,13 @@ for (const file of ['src/styles.css','src/font.css','docs/site.css','docs/docume
   if ((css.match(/\{/g)||[]).length !== (css.match(/\}/g)||[]).length) throw new Error(`CSS blocks: ${file}`);
 }
 for (const { name, ug } of iconCatalog) if (await readFile(resolve(root, `assets/icons/${name}.svg`), 'utf8') !== iconSVG(name, { label: ug })) throw new Error(`Stale icon ${name}`);
+const labels = Object.fromEntries(iconCatalog.map(({ name, ug }) => [name, ug]));
+for (const name of coloredIconNames) if (await readFile(resolve(root, `assets/icons/color/${name}.svg`), 'utf8') !== iconSVG(name, { variant: 'color', label: labels[name] })) throw new Error(`Stale color icon ${name}`);
 const catalog = JSON.parse(await readFile(resolve(root, 'assets/icon-catalog.json'), 'utf8'));
 if (JSON.stringify(catalog.icons) !== JSON.stringify(iconCatalog)) throw new Error('Stale icon metadata');
-const stored = (await readdir(resolve(root, 'assets/icons'))).filter((name) => name.endsWith('.svg')).sort();
+const stored = (await readdir(resolve(root, 'assets/icons'))).filter((name) => name !== 'color').sort();
 if (JSON.stringify(stored) !== JSON.stringify(iconNames.map((name) => `${name}.svg`).sort())) throw new Error('SVG files do not match the public catalog');
+const storedColor = (await readdir(resolve(root, 'assets/icons/color'))).sort();
+if (JSON.stringify(storedColor) !== JSON.stringify(coloredIconNames.map((name) => `${name}.svg`).sort())) throw new Error('Color SVG files do not match the public catalog');
 if (await readFile(resolve(root,'assets/flags/east-turkistan.svg'),'utf8') !== flagSVG({width:900})) throw new Error('Stale flag asset');
-console.log(`Checked documentation assets, ${ids.length} IDs, CSS, JavaScript and ${iconNames.length} SVG icons.`);
+console.log(`Checked documentation assets, ${ids.length} IDs, CSS, JavaScript, ${iconNames.length} outline SVG icons and ${coloredIconNames.length} color variants.`);
